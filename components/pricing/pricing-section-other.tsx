@@ -1,6 +1,5 @@
 "use client"
 
-import ColorBends from '@/components/ColorBends'
 import { PlanType,  PricingPlanType } from '@/data/pricing-plans'
 import { cn } from '@/lib/utils'
 import { ArrowRight, Check, Sparkles, X } from 'lucide-react'

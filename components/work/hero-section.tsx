@@ -1,7 +1,6 @@
 "use client"
 
 import React from 'react'
-import LiquidEther from '../LiquidEther'
 import Image from 'next/image'
 import { ArrowRight, SparkleIcon } from 'lucide-react'
 import CustomBadge from '../shared/custom-badge'
