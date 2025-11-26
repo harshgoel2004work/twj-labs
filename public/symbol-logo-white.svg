@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" xmlns:bx="https://boxy-svg.com">
+  <g transform="matrix(2.391695, 0, 0, 2.391695, -348.079041, -353.105377)" style="">
+    <polygon style="paint-order: fill; stroke: rgba(255, 255, 255, 0); fill: #FFFFFF;" points="158.896 207.71 210.755 207.437 248.967 246.74 197.381 245.921"/>
+    <polygon style="paint-order: fill; stroke: rgba(255, 255, 255, 0); transform-origin: 203.775px 275.998px; fill: #FFFFFF;" points="158.739 295.378 210.598 295.651 248.81 256.348 197.224 257.167"/>
+    <polygon points="218.435 151.309 218.435 200.72 228.537 210.603 252.694 185.348" fill="#FFFFFF"/>
+    <polygon points="269.603 175.905 269.384 210.163 307.595 247.057 341.414 246.837" fill="#FFFFFF"/>
+    <polygon points="218.173 352.726 218.173 303.315 228.275 293.432 252.432 318.687" style="transform-origin: 235.303px 323.079px; fill: #FFFFFF;"/>
+    <polygon points="269.863 328.27 269.644 294.012 307.855 257.118 341.674 257.338" style="fill: #FFFFFF;"/>
+    <path d="M 264.304 244.668 L 288.604 269.031 L 240.003 269.031 L 264.304 244.668 Z" bx:shape="triangle 240.003 244.668 48.601 24.363 0.5 0 1@7cc77478" style="stroke: rgba(255, 255, 255, 0); transform-box: fill-box; transform-origin: 50% 50%; fill: #FFFFFF;" transform="matrix(0, -1, 1, 0, -18.547947, -41.773048)"/>
+    <path d="M 264.304 244.668 L 288.604 269.031 L 240.003 269.031 L 264.304 244.668 Z" bx:shape="triangle 240.003 244.668 48.601 24.363 0.5 0 1@7cc77478" style="stroke: rgba(255, 255, 255, 0); stroke-width: 1; transform-origin: 264.304px 256.85px; fill: #FFFFFF;" transform="matrix(0, -1, 1, 0, -18.548069, 31.696228)"/>
+    <polygon points="269.942 257.368 269.842 283.424 296.641 257.125" fill="#FFFFFF"/>
+    <polygon points="270.041 246.283 269.941 220.227 296.74 246.526" style="transform-origin: 283.341px 233.375px; fill: #FFFFFF;"/>
+  </g>
+</svg>
