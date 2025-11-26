@@ -109,10 +109,10 @@ const HeroWebDesign = () => {
 
         {/* Floating images */}
         {[
-          { src: "/web-design/1.jpg", className: "top-20 -left-12 w-52" },
-          { src: "/web-design/2.jpg", className: "bottom-28 -left-4 w-48" },
-          { src: "/web-design/5.jpg", className: "top-24 -right-12 w-44" },
-          { src: "/web-design/3.jpg", className: "bottom-28 -right-4 w-48" },
+          { src: "/web-design/1.jpg", className: "top-20 -left-12 w-34 md:w-52" },
+          { src: "/web-design/2.jpg", className: "bottom-34 md:bottom-28 -left-4 w-34 md:w-48" },
+          { src: "/web-design/5.jpg", className: "top-24 -right-12 w-32 md:w-44" },
+          { src: "/web-design/3.jpg", className: "bottom-34 md:bottom-28 -right-4 w-34 md:w-48" },
         ].map((img, i) => (
           <motion.div
             key={i}
