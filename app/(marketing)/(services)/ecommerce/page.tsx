@@ -2,8 +2,6 @@
 
 import EcommerceFeatures from '@/components/ecommerce/features'
 import HeroEcommerce from '@/components/ecommerce/hero'
-import PricingForEcommerce from '@/components/ecommerce/pricing'
-import EcomSubservices from '@/components/ecommerce/subservices'
 import WhyEcommerce from '@/components/ecommerce/why-ecommerce'
 import TestimonialsSection from '@/components/home/testimonials'
 import TheTWJDifference from '@/components/home/twj-difference'
