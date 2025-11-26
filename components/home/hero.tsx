@@ -65,7 +65,7 @@ const HeroSection = () => {
         <CustomBadge darkMode={true} title="Development & Design Agency" />
         
         {/* Responsive Text Size: text-3xl on mobile, 44px on desktop */}
-        <h1 className='text-3xl md:text-[44px] font-semibold tracking-wide bg-clip-text text-transparent bg-radial from-[#ffffff] to-[#999fb2] text-center leading-tight max-w-3xl z-10'>
+        <h1 className='text-4xl md:text-[44px] font-semibold tracking-wide bg-clip-text text-transparent bg-radial from-[#ffffff] to-[#999fb2] text-center leading-tight max-w-3xl z-10'>
           We build digital experiences that perform, convert, and scale
         </h1>
 
@@ -74,11 +74,11 @@ const HeroSection = () => {
         </p>
 
         {/* Buttons: Stack on very small screens, row on larger */}
-        <div className='pt-3 flex flex-row  items-center gap-4 z-10 w-full sm:w-auto'>
-          <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-6.5 py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
+        <div className='pt-3 flex flex-row  items-center gap-4 z-10 w-full sm:w-auto max-w-[80vw]'>
+          <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
             Contact Sales
           </Link>
-          <Link href={'/work'} className="w-full sm:w-auto justify-center px-6.5 py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
+          <Link href={'/work'} className="w-full sm:w-auto text-center  px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
             Our Work <ArrowRight size={16} />
           </Link>
         </div>

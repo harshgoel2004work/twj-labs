@@ -1,9 +1,25 @@
 "use client"
 
 import { saveLeadToDatabase } from '@/actions/submit-lead';
-import React from 'react'
+import Loading from '@/components/loading';
+import React, { useEffect, useState } from 'react'
 
 const APITest = () => {
+     const [loading, setLoading] = useState(true);
+    
+      useEffect(() => {
+        const timer = setTimeout(() => {
+          setLoading(false);
+        }, 3000); // Simulate a 1 second loading time
+    
+        return () => clearTimeout(timer);
+      }, []);
+    
+      if (loading) {
+        return (
+          <Loading />
+        );
+      }
     const handleSendDummyData = () => {
         const dummyData = {
             name: "John Doe",

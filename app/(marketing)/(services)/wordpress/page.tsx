@@ -10,7 +10,7 @@ import SubservicesShared from '@/components/shared/subservices';
 import HeroWebflow from '@/components/webflow-wordpres/hero-webflow'
 import HeroWordpress from '@/components/webflow-wordpres/hero-wordpress';
 import { ProcessType } from '@/types';
-import { AppWindow, ShoppingCartIcon, StoreIcon } from 'lucide-react';
+import { AppWindow, CodeIcon, GaugeIcon, PaletteIcon, PuzzleIcon, RefreshCcwIcon, ServerIcon, ShieldCheckIcon, ShoppingCartIcon, StoreIcon, WrenchIcon } from 'lucide-react';
 import React from 'react'
 import { FaCode, FaPencilRuler, FaRocket, FaSearch, FaShopify } from 'react-icons/fa';
 import { IoColorPalette } from 'react-icons/io5';
@@ -52,37 +52,55 @@ export const process: ProcessType[] = [
 
 
 const subservices = [
-    {
-        title: "Shopify Store Setup & Configuration",
-        description: "Comprehensive setup and configuration of Shopify stores tailored to your business needs.",
-        icon: StoreIcon,
-    },
-    {
-        title: 'Custom Theme Design & Development',
-        description: 'Bespoke theme design and development to create a unique and engaging shopping experience.',
-        icon: IoColorPalette,
-    },
-    {
-        title: 'Shopify App Integration',
-        description: 'Seamless integration of third-party apps to enhance store functionality and user experience.',
-        icon: AppWindow,
-    },
-    {
-        title: 'Shopify Store Optimization',
-        description: 'Improve loading speed, UX/UI, and conversion rates through strategic performance optimization, image compression, SEO improvements, and analytics-driven CRO techniques.',
-        icon: ShoppingCartIcon,
-    },
-    {
-        title: 'Shopify Migration & Replatforming',
-        description: 'Migrate your existing store from WooCommerce, Magento, or another platform to Shopify without losing data or SEO ranking. Get a cleaner, faster, and more scalable store on Shopify’s ecosystem.',
-        icon: FaShopify,
-    },
-    {
-        title: 'Ongoing Maintenance & Support',
-        description: 'Regular updates, bug fixes, and performance monitoring to ensure your Shopify store runs smoothly.',
-        icon: AppWindow,
-    }
-]
+  {
+    title: "WordPress Installation & Setup",
+    description:
+      "Complete WordPress setup including hosting configuration, database setup, essential plugins installation, and overall environment optimization.",
+    icon: ServerIcon, 
+  },
+  {
+    title: "Custom Theme Design & Development",
+    description:
+      "Fully custom WordPress themes built from scratch or tailored from premium themes to match your brand identity and vision.",
+    icon: PaletteIcon,
+  },
+  {
+    title: "Plugin Integration & Configuration",
+    description:
+      "Integration and setup of essential plugins such as SEO tools, security, caching, forms, and advanced plugins tailored to your needs.",
+    icon: PuzzleIcon,
+  },
+  {
+    title: "WordPress Performance Optimization",
+    description:
+      "Speed boost through caching, database optimization, image compression, CDN setup, and code-level improvements for top Core Web Vitals.",
+    icon: GaugeIcon,
+  },
+  {
+    title: "WordPress Migration & Replatforming",
+    description:
+      "Seamless migration from Wix, Squarespace, Webflow, Shopify, or an older WordPress installation — with no data loss or SEO impact.",
+    icon: RefreshCcwIcon,
+  },
+  {
+    title: "Security Hardening & Protection",
+    description:
+      "Advanced security setup including firewalls, malware scans, brute-force protection, secure backups, and hardening practices.",
+    icon: ShieldCheckIcon,
+  },
+  {
+    title: "Custom Plugin Development",
+    description:
+      "Development of custom WordPress plugins tailored to unique business requirements, integrations, and advanced functionality.",
+    icon: CodeIcon,
+  },
+  {
+    title: "Ongoing Maintenance & Support",
+    description:
+      "Routine updates, backups, monitoring, and issue fixes to ensure your WordPress site stays secure, fast, and fully functional.",
+    icon: WrenchIcon,
+  },
+];
 
 
 const WordpressPage = () => {

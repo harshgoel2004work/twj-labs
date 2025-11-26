@@ -19,16 +19,16 @@ const SubservicesShared = ({
   const theme = {
     bg: darkMode ? "bg-[#060609]" : "bg-[#F4F5F9]",
     gridPattern: darkMode ? "bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)]" : "bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)]",
-    textPrimary: darkMode ? "text-white" : "text-slate-900",
-    textSecondary: darkMode ? "text-white/60" : "text-slate-500",
-    badgeBg: darkMode ? "bg-white/5 border-white/10 text-violet-300" : "bg-white border-slate-200 text-violet-600",
-    headerGradient: darkMode ? "from-white via-white to-white/60" : "from-slate-900 to-slate-700",
+    textPrimary: darkMode ? "text-white" : "text-neutral-900",
+    textSecondary: darkMode ? "text-white/60" : "text-neutral-500",
+    badgeBg: darkMode ? "bg-white/5 border-white/10 text-violet-300" : "bg-white border-neutral-200 text-violet-600",
+    headerGradient: darkMode ? "from-white via-white to-white/60" : "from-neutral-900 to-neutral-700",
   };
 
   return (
     <section
       className={cn(
-        "relative w-full py-24 px-6 md:px-12 lg:px-24 font-manrope overflow-hidden transition-colors duration-500",
+        "relative w-full py-24 px-6 md:px-12 -mt-1 lg:px-24 font-manrope overflow-hidden transition-colors duration-500",
         theme.bg
       )}
     >

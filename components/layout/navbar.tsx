@@ -195,6 +195,7 @@ const MobileMenu = ({ onClose }: { onClose: () => void }) => {
                           <Link href="/about" onClick={onClose} className="text-white/70 hover:text-white text-sm">About</Link>
                           <Link href="/blog" onClick={onClose} className="text-white/70 hover:text-white text-sm">Blog</Link>
                           <Link href="/work" onClick={onClose} className="text-white/70 hover:text-white text-sm">Work</Link>
+                          <Link href="/careers" onClick={onClose} className="text-white/70 hover:text-white text-sm">Careers</Link>
                           <Link href="/contact" onClick={onClose} className="text-white/70 hover:text-white text-sm">Contact</Link>
                         </div>
                     )}

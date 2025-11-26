@@ -2,15 +2,16 @@ import { SparkleIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import CustomBadge from '../shared/custom-badge'
+import Image from 'next/image'
 
 
 const HeroWordpress = () => {
   return (
-    <div className='w-full min-h-screen font-manrope relative text-white z-0 lg:px-24'>
+    <div className='w-full min-h-screen font-manrope relative text-white z-0 px-6  md:px-12 lg:px-24'>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-8 pt-40'>
-            <div className=' w-full  flex flex-col items-start px-4 top-0 left-0 font-manrope space-y-4 '>
+            <div className=' w-full  flex flex-col items-start top-0 left-0 font-manrope space-y-4 '>
                     <CustomBadge darkMode={true} title="WordPress Development" />
-                    <h1 className='text-[44px] font-medium tracking-wide bg-clip-text text-transparent bg-radial from-[#ffffff] to-[#999fb2]  leading-tight max-w-3xl z-10'>
+                    <h1 className='text-4xl md:text-[42px]  font-medium tracking-wide bg-clip-text text-transparent bg-radial from-[#ffffff] to-[#999fb2]  leading-tight max-w-3xl z-10'>
                         Building <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Stunning</span> and <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Responsive</span> <span className='text-transparent bg-clip-text bg-linear-to-r from-[#897bdb] to-[#5449e8]'>WordPress</span> Websites
                     </h1>
                     
@@ -27,14 +28,14 @@ const HeroWordpress = () => {
             <div
                 className="
                     [transform:perspective(800px)_rotateY(-12deg)_rotateX(4deg)]
-                    transition-transform duration-1000 ease-in-out
+                    transition-transform duration-1000 ease-in-out mt-6 md:mt-0
                     rounded-md
                     shadow-[0_0_0_1px_rgba(0,0,0,0.024),0_1px_0_0_rgba(0,0,0,0.05),0_0_8px_0_rgba(0,0,0,0.03),0_20px_30px_0_rgba(0,0,0,0.1)]
                     hover:[transform:perspective(800px)_rotateY(-4deg)]
                     bg-linear-to-b from-[#baa1e3]/7 to-[#e5e5e5]/2 p-1.5 z-3
                 "
                 >
-                <img src="/hero/hero-wordpress.png" alt="Webflow Development" className='w-full h-auto object-contain rounded-lg'/>
+                <Image src="/hero/hero-wordpress.png" alt="Webflow Development" width={1000} height={1000} className='w-full h-auto object-contain rounded-lg'/>
             </div>
 
             <div className='absolute w-full h-screen top-0 left-0'>

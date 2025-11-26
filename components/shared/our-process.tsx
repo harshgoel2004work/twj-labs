@@ -62,7 +62,7 @@ const OurProcessDynamic = ({
       <div className="flex flex-col items-center gap-4 md:gap-6 relative z-10 mb-3 text-center">
         <CustomBadge darkMode={darkMode} title="How we work" />
 
-        <h2 className={cn("text-4xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight leading-[1.2] max-w-3xl bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/60 py-3")}>
+        <h2 className={cn("text-4xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight leading-[1.2] max-w-3xl bg-clip-text text-transparent bg-gradient-to-b  py-3", darkMode ? " from-white via-white to-white/60" : "from-neutral-900 to-neutral-700")}>
           {title}
         </h2>
       </div>
