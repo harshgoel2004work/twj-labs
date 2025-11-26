@@ -1,9 +1,9 @@
 "use server";
 
-import { GoogleGenerativeAI, Part, SchemaType } from "@google/generative-ai";
+import { GoogleGenerativeAI, Part, SchemaType, Tool } from "@google/generative-ai";
 import { servicesForAI } from "@/data/services"; // Your services array
 import { getPricingPlans } from "./get-pricing";
-import { LeadData, submitLeadData } from "./submit-lead"; // Import the helper above
+import { submitLeadData } from "./submit-lead"; // Import the helper above
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
@@ -36,7 +36,7 @@ const tools = {
   }
 };
 
-const toolDefinitions = [
+const toolDefinitions:Tool[] = [
   {
     functionDeclarations: [
       {

@@ -178,7 +178,7 @@ const ChatbotWidget = () => {
       setMessages((prev) => [...prev, newBotMsg]);
 
       if (response.uiComponent) {
-        setActiveUI(response.uiComponent);
+        setActiveUI(response.uiComponent as UIComponentState);
       }
 
     } catch (error) {

@@ -2,11 +2,9 @@
 import CurvedLoop from "@/components/CurvedLoop";
 import HeroSection from "@/components/home/hero";
 import TestimonialsSection from "@/components/home/testimonials";
-import ToolsWeUseSection from "@/components/home/tools";
 import TheTWJDifference from "@/components/home/twj-difference";
 import WhatWeDoSection from "@/components/home/what-we-do";
-import FooterWithCTA from "@/components/layout/footer-with-cta";
-import Navbar from "@/components/layout/navbar";
+
 import Loading from "@/components/loading"; // Make sure this path matches your file structure
 import PricingHero from "@/components/pricing/pricing-section-other";
 import CaseStudiesSection from "@/components/shared/case-studies";

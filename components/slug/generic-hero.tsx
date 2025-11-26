@@ -71,7 +71,7 @@ const GenericHeroPage = ({ data }: { data: HeroSection }) => {
         
         {/* LEFT SIDE: Content */}
         {/* Removed h-full justify-between to allow natural stacking on mobile */}
-        <div className="w-full flex flex-col items-start justify-center font-manrope space-y-8 lg:space-y-12 order-1">
+        <div className="w-full flex flex-col items-start justify-between font-manrope space-y-8 lg:space-y-12 order-1">
           
           <div className="flex flex-col items-start gap-5">
             <CustomBadge darkMode={true} title={data.tag} />

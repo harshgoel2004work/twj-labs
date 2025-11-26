@@ -21,9 +21,9 @@ const EcomSubservices = () => {
       <div className='mt-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto gap-8 relative z-0'>
         <div className='absolute -top-1/3 left-1/2 -translate-x-1/2 w-140 aspect-square rounded-full bg-[#654be9]/10 blur-[150px] z-[3]' />
         <div className='absolute -bottom-1/3 left-1/2 -translate-x-1/2 w-170 aspect-square rounded-full bg-[#4b70e9]/10 blur-[150px] z-[3]' />
-        {subservices.map((service, index) => (
+        {/* {subservices.map((service, index) => (
             <GlowingCard key={index} item={service} />
-        ))}
+        ))} */}
       </div>
     </div>
   )

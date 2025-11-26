@@ -2,7 +2,7 @@
 
 import { Scaling, SparkleIcon, Globe, Clock, BarChart3, ShieldCheck } from 'lucide-react'
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
 const ecommerceBenefits = [
@@ -47,7 +47,7 @@ const containerVariants = {
   },
 }
 
-const cardVariants = {
+const cardVariants:Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 

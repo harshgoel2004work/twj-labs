@@ -183,7 +183,7 @@ const LeftSideOurWork = () => {
 // --- REUSABLE FORM COMPONENT ---
 
 const ContactForm = ({ className, isMobileExpanded, onMobileClose, serviceInterest, plan, areThereSearchParams }: { className?: string, isMobileExpanded?: boolean, onMobileClose?: () => void, serviceInterest?: string | null, plan?: string | null, areThereSearchParams?: boolean }) => {
-  const ServiceMap = {
+  const ServiceMap: Record<string, string> = {  // 👈 Add ": Record<string, string>" here
     webflow: "Webflow Development",
     wordpress: "WordPress Development",
     ecommerce: "E-commerce Solutions",
@@ -192,7 +192,7 @@ const ContactForm = ({ className, isMobileExpanded, onMobileClose, serviceIntere
     "design-branding": "Design & Branding",
     maintainence: "Website Maintenance",
     accessibility: "Accessibility Testing & Compliance",
-  }
+}
 
     const [selectedServices, setSelectedServices] = React.useState<string[]>(
       serviceInterest ? [ServiceMap[serviceInterest] || serviceInterest] : []

@@ -113,7 +113,7 @@ const OurProcessDynamic = ({
                   )}
                   onClick={() => setCurrentStep(item.step)}
                 >
-                  <item.icon size={16} />
+                  {item.icon && <item.icon size={16} />}
                 </div>
 
                 {/* Vertical Line */}

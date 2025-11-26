@@ -2,7 +2,7 @@
 
 import CaseStudiesSection from '@/components/shared/case-studies'
 import WorkDetailsHero from '@/components/work/hero-section'
-import { OurWorkType, work } from '@/data/work-sample'
+import { OurWorkType } from '@/data/work-sample'
 import { cn } from '@/lib/utils'
 import { SparkleIcon, Target, Lightbulb, Quote, TrendingUp } from 'lucide-react'
 import React from 'react'

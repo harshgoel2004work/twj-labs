@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { SparkleIcon, CheckCircle2 } from "lucide-react";
 import { UseCase } from '@/data/use-cases'
 import CustomBadge from "../shared/custom-badge";
@@ -16,7 +16,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants:Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
     opacity: 1, 

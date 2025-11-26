@@ -1,6 +1,5 @@
 import { SparkleIcon } from 'lucide-react'
 import React from 'react'
-import { BentoGridSecondDemo } from '../ecommerce/features'
 
 const CustomFeatures = () => {
   return (
@@ -13,7 +12,7 @@ const CustomFeatures = () => {
       </div>
       
       <div className='mt-16'>
-        <BentoGridSecondDemo />
+        {/* <BentoGridSecondDemo /> */}
       </div>
     </div>
   )

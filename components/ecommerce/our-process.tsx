@@ -138,7 +138,7 @@ const OurProcessForEcommerce = () => {
               // Add a data-step attribute to be read by the observer
               data-step={item.step}
               // Use a callback ref to add the element to our ref array
-              ref={(el) => (stepRefs.current[index] = el)}
+              ref={(el) => {stepRefs.current[index] = el}}
             >
               <div className='flex flex-col items-center'>
                 <div 

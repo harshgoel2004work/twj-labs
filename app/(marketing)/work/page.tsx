@@ -4,7 +4,7 @@ import { OurWorkType } from '@/data/work-sample'
 import { SparkleIcon, ArrowUpRight, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
-import { motion } from 'framer-motion'
+import { motion, Variants } from 'framer-motion'
 import Link from 'next/link'
 import { getPortfolio } from '@/actions/get-portfolio'
 import { safeParse } from '@/components/pricing/pricing-hero'
@@ -21,7 +21,7 @@ const containerVariants = {
 }
 
 // Animation variants for individual cards
-const cardVariants = {
+const cardVariants:Variants = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
 }

@@ -150,7 +150,7 @@ const BentoCard = ({
 }: { 
   title: string, 
   description: string, 
-  icon: any, 
+  icon: React.ComponentType<{ size?: number; className?: string }>, 
   className?: string 
 }) => {
   return (

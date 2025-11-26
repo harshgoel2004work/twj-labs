@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { m, motion } from "framer-motion";
+import { m, motion, Variants } from "framer-motion";
 import { ArrowRight, Scaling, SparkleIcon, TrendingUp, Users } from "lucide-react";
 import CustomBadge from "../shared/custom-badge";
 import { cn } from "@/lib/utils";
@@ -47,7 +47,7 @@ const containerVariants = {
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { opacity: 0, x: 20 },
   visible: { 
     opacity: 1, 
