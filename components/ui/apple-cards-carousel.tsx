@@ -17,7 +17,7 @@ import Image, { ImageProps } from "next/image";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
 interface CarouselProps {
-  items: JSX.Element[];
+  items: React.ReactNode[]; // Fixed: Changed JSX.Element to React.ReactNode
   initialScroll?: number;
 }
 
@@ -42,13 +42,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
   const [canScrollRight, setCanScrollRight] = React.useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    if (carouselRef.current) {
-      carouselRef.current.scrollLeft = initialScroll;
-      checkScrollability();
-    }
-  }, [initialScroll]);
-
+  // Fixed: Moved checkScrollability ABOVE useEffect
   const checkScrollability = () => {
     if (carouselRef.current) {
       const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
@@ -68,6 +62,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
       carouselRef.current.scrollBy({ left: 300, behavior: "smooth" });
     }
   };
+
+  // Fixed: useEffect is now below the function definition
+  useEffect(() => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollLeft = initialScroll;
+      checkScrollability();
+    }
+  }, [initialScroll]);
 
   const handleCardClose = (index: number) => {
     if (carouselRef.current) {
@@ -98,14 +100,14 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
         >
           <div
             className={cn(
-              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l",
+              "absolute right-0 z-[1000] h-auto w-[5%] overflow-hidden bg-gradient-to-l"
             )}
           ></div>
 
           <div
             className={cn(
               "flex flex-row justify-start gap-4 pl-4",
-              "mx-auto max-w-7xl", // remove max-w-4xl if you want the carousel to span the full width of its container
+              "mx-auto max-w-7xl"
             )}
           >
             {items.map((item, index) => (
@@ -121,7 +123,7 @@ export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
                     duration: 0.5,
                     delay: 0.2 * index,
                     ease: "easeOut",
-                    once: true,
+                    // Fixed: Removed 'once: true' (invalid property for transition)
                   },
                 }}
                 key={"card" + index}
@@ -166,6 +168,16 @@ export const Card = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const { onCardClose, currentIndex } = useContext(CarouselContext);
 
+  // Fixed: Moved handleClose ABOVE useEffect
+  const handleClose = () => {
+    setOpen(false);
+    onCardClose(index);
+  };
+
+  const handleOpen = () => {
+    setOpen(true);
+  };
+
   useEffect(() => {
     function onKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
@@ -183,16 +195,8 @@ export const Card = ({
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [open]);
 
-  useOutsideClick(containerRef, () => handleClose());
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    onCardClose(index);
-  };
+  // Fixed: Cast the ref to fix "Type 'null' is not assignable to type 'HTMLElement'"
+  useOutsideClick(containerRef as React.RefObject<HTMLElement>, () => handleClose());
 
   return (
     <>
@@ -277,14 +281,14 @@ export const BlurImage = ({
 }: ImageProps) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <img
+    <Image
       className={cn(
-        "h-full w-full transition duration-300",
+        "transition duration-300",
         isLoading ? "blur-sm" : "blur-0",
-        className,
+        className
       )}
       onLoad={() => setLoading(false)}
-      src={src as string}
+      src={src}
       width={width}
       height={height}
       loading="lazy"
