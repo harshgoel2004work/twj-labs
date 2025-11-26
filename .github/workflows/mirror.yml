@@ -1,4 +1,4 @@
-name: Mirror Sync Final
+name: Mirror Sync Final Fix
 on:
   push:
     branches: [ main ]
@@ -7,21 +7,19 @@ on:
 jobs:
   mirror-force:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pages: write
-      id-token: write
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
-        
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false  # <--- THIS IS THE FIX. It kicks the robot out.
 
       - name: Push to Destination
-        # We map the secret to a variable here to ensure it loads
         env:
           TARGET_TOKEN: ${{ secrets.DESTINATION_PAT }}
           TARGET_USER: harshgoel2004work
           TARGET_REPO: harshgoel2004work/twj-labs
         run: |
-          # We use the mapped variable $TARGET_TOKEN
-          git push "https://$TARGET_USER:$TARGET_TOKEN@github.com/$TARGET_REPO.git" main --force
+          # We construct the URL manually. 
+          # Because persist-credentials is false, Git MUST use this token.
+          git push https://$TARGET_USER:$TARGET_TOKEN@github.com/$TARGET_REPO.git main --force
