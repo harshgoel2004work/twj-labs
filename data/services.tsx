@@ -21,7 +21,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Webflow Development',
     tagline: 'High-converting, scalable websites',
     description: 'We specialize in building high-converting, scalable websites using Webflow. Our team creates custom designs that are optimized for performance and user experience, ensuring your website not only looks great but also drives results.',
-    url: '/services/webflow',
+    url: '/webflow',
     icon: FaWebflow,
     category: 'Main Service'
   },
@@ -30,7 +30,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Wordpress Development',
     tagline: 'Custom WordPress solutions',
     description: 'We create custom WordPress solutions tailored to your business needs. Our team is experienced in building responsive, user-friendly websites that drive engagement and conversions.',
-    url: '/services/wordpress',
+    url: '/wordpress',
     icon: FaWordpress,
     category: 'Main Service'
   },
@@ -39,7 +39,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Web Design',
     tagline: 'visually stunning & user-friendly',
     description: 'Our web design services focus on creating visually stunning and user-friendly interfaces that enhance the user experience. We work closely with clients to understand their brand and create designs that resonate with their target audience.',
-    url: '/services/web-design',
+    url: '/web-design',
     icon: FiFigma,
     category: 'Main Service'
   },
@@ -48,7 +48,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'E-commerce Solutions',
     tagline: 'Boost Online Sales',
     description: 'Our e-commerce solutions are designed to help you boost online sales and grow your business. We create user-friendly, high-converting online stores that provide a seamless shopping experience.',
-    url: '/services/ecommerce',
+    url: '/ecommerce',
     icon: FaShopify,
     category: 'Main Service'
   },
@@ -57,7 +57,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Custom Software Development',
     tagline: 'Tailored software solutions',
     description: 'We offer custom software development services to help businesses streamline their operations and improve efficiency. Our team works closely with clients to understand their unique requirements and deliver solutions that drive results.',
-    url: '/services/custom-software',
+    url: '/custom-software',
     icon: RiNextjsFill,
     category: 'Main Service'
   },
@@ -66,7 +66,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'AI Integration & Automation',
     tagline: 'Enhancing efficiency with AI',
     description: 'We help modern businesses integrate AI and automation into their websites and workflows — saving time, scaling personalization, and boosting conversions.',
-    url: '/services/ai-integration',
+    url: '/ai-integration',
     icon: FaBrain,
     category: 'Main Service'
   },
@@ -75,7 +75,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Accessibility Testing & Compliance',
     tagline: 'Ensuring digital inclusivity',
     description: 'Our accessibility testing and compliance services help businesses ensure their digital products are inclusive and accessible to all users. We conduct thorough audits and provide actionable recommendations to improve accessibility.',
-    url: '/services/accessibility',
+    url: '/accessibility',
     icon: BiAccessibility,
     category: 'Main Service'
   },
@@ -84,7 +84,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'SEO Optimization',
     tagline: 'Improving your website’s visibility',
     description: 'Our SEO optimization services help improve your website’s visibility on search engines, driving more organic traffic and increasing conversions. We use the latest SEO techniques and best practices to ensure your website ranks high and reaches your target audience.',
-    url: '/services/seo-optimization',
+    url: '/seo-optimization',
     category: 'Other Service'
   },
   {
@@ -92,7 +92,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Social Media Management',
     tagline: 'Managing social media presence',
     description: 'Our social media management services help businesses maintain a strong and consistent presence across various social media platforms. We create and curate content, engage with your audience, and analyze performance to optimize your social media strategy.',
-    url: '/services/social-media-management',
+    url: '/social-media-management',
     category: 'Other Service'
   },
   {
@@ -100,7 +100,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Website Maintenance',
     tagline: 'Ongoing support and maintenance',
     description: 'Our website maintenance services provide ongoing support to ensure your website remains up-to-date, secure, and performing optimally. We handle updates, backups, and troubleshooting to keep your online presence running smoothly.',
-    url: '/services/website-maintenance',
+    url: '/website-maintenance',
     category: 'Other Service'
   },
   {
@@ -108,7 +108,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Copywriting Services',
     tagline: 'Compelling content that converts',
     description: 'Our copywriting services provide compelling content that engages your audience and drives conversions. We craft clear, persuasive messages tailored to your brand and target market.',
-    url: '/services/copywriting',
+    url: '/copywriting',
     category: 'Other Service'
   },
   {
@@ -116,7 +116,7 @@ export const servicesForAI: { id: number; name: string; tagline: string; descrip
     name: 'Migration & Integration',
     tagline: 'Seamless transitions for your digital landscape',
     description: 'Our migration and integration services ensure smooth transitions for your digital landscape. We handle data migration, system integration, and platform upgrades with minimal disruption to your business.',
-    url: '/services/migration-integration',
+    url: '/migration-integration',
     category: 'Other Service'
   },
 ]
