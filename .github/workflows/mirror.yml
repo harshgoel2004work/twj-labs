@@ -1,4 +1,4 @@
-name: Mirror Sync Raw
+name: Mirror Sync Final
 on:
   push:
     branches: [ main ]
@@ -13,10 +13,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Force Push to Destination
+      - name: Push to Destination
+        # We map the secret to a variable here to ensure it loads
+        env:
+          TARGET_TOKEN: ${{ secrets.DESTINATION_PAT }}
+          TARGET_USER: harshgoel2004work
+          TARGET_REPO: harshgoel2004work/twj-labs
         run: |
-          # This command manually constructs the URL using your Secret
-          git remote add destination https://harshgoel2004work:${{ secrets.DESTINATION_PAT }}@github.com/harshgoel2004work/twj-labs.git
-          
-          # This forces the push using that specific URL
-          git push -f destination main
+          # We use the mapped variable $TARGET_TOKEN
+          git push "https://$TARGET_USER:$TARGET_TOKEN@github.com/$TARGET_REPO.git" main --force
