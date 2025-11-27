@@ -1,4 +1,4 @@
-import { SparkleIcon } from 'lucide-react'
+import { ArrowRight, SparkleIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import LaserFlow from '../LaserFlow'
@@ -11,27 +11,30 @@ const HeroWebflow = () => {
         <div className='w-full flex flex-col gap-8 max-w-[96rem] mx-auto'>
             
             {/* Text Section: Adjusted height to be flexible on mobile (min-h) and fixed on desktop */}
-            <div className='w-full flex flex-col items-start top-0 left-0 font-manrope space-y-4 min-h-[60vh] lg:h-[71vh] pt-28 md:pt-36 lg:pt-40 relative z-20'>
+            <div className='w-full flex flex-col items-center md:items-start top-0 left-0 font-manrope space-y-4 min-h-[60vh] lg:h-[71vh] pt-28 md:pt-36 lg:pt-[21vh]  relative z-20'>
                     <CustomBadge darkMode={true} title="Webflow Development" />
                     
                     {/* Responsive Text Sizes */}
-                    <h1 className='text-3xl md:text-4xl lg:text-[44px] font-medium tracking-wide bg-clip-text text-transparent bg-radial from-[#ffffff] to-[#999fb2] leading-tight max-w-2xl z-10'>
+                    <h1 className='text-3xl md:text-4xl lg:text-[44px] 2xl:text-5xl font-medium tracking-wide bg-clip-text text-transparent bg-radial text-center md:text-start from-[#ffffff] to-[#999fb2] leading-snug max-w-2xl 2xl:max-w-3xl z-10'>
                         Building <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Stunning</span> and <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Responsive</span> <span className='text-transparent bg-clip-text bg-linear-to-r from-[#897bdb] to-[#5449e8]'>Webflow</span> Websites
                     </h1>
                     
-                    <p className='text-white/60 text-sm md:text-base font-medium max-w-lg pt-1 z-10'>
+                    <p className='text-white/60 text-sm md:text-base font-medium max-w-lg pt-1 z-10 text-center md:text-start'>
                         Crafting compelling brand identities that resonate with your audience and drive business success.
                     </p>
 
-                    <div className='pt-2 flex items-center gap-4 z-10 w-full sm:w-auto'>
-                        <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-6.5 py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
+                   <div className='pt-2 flex flex-row  items-center gap-4 z-10 w-full sm:w-auto max-w-[80vw]'>
+                        <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
                             Contact Sales
+                        </Link>
+                        <Link href={'/work'} className="w-full sm:w-auto text-center  px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                            Our Work <ArrowRight size={16} />
                         </Link>
                     </div>
             </div>
 
             {/* Laser Background - Hidden on very small screens if needed, or kept as background */}
-            <div className='absolute right-0 top-0 h-[100vh] lg:h-[155vh] w-full lg:w-auto pointer-events-none opacity-50 lg:opacity-100'>
+            <div className='absolute right-0 top-0 h-[150vh] lg:h-[155vh] w-full lg:w-auto pointer-events-none opacity-50 lg:opacity-100'>
                 <LaserFlow 
                   color='#544990'
                 />
@@ -51,7 +54,7 @@ const HeroWebflow = () => {
                     />
                 </div>
                 
-                <div className='bg-[#060508] w-full scale-150 h-40 lg:h-60 rounded-full absolute bottom-0 blur-2xl z-[10]'></div>
+                <div className='bg-[#060508] w-full scale-150 h-40 lg:h-60 rounded-full absolute bottom-0 blur-xl z-[10]'></div>
             </div>
 
             {/* Background Blob Animation */}

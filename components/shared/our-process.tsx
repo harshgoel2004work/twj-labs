@@ -4,8 +4,11 @@ import { cn } from '@/lib/utils'
 import { ProcessType } from '@/types'
 import { SparkleIcon } from 'lucide-react'
 import Image from 'next/image'
-import React from 'react'
 import CustomBadge from './custom-badge'
+import React from 'react'
+import { iconMap } from '../icon-map'
+
+
 
 const OurProcessDynamic = ({
   process,
@@ -20,6 +23,8 @@ const OurProcessDynamic = ({
 }) => {
   const [currentStep, setCurrentStep] = React.useState<number>(1)
   const stepRefs = React.useRef<(HTMLDivElement | null)[]>([])
+
+  const IconComponent = iconMap[process[currentStep - 1]?.icon || ''] || SparkleIcon;
 
   const activeProcessStep = React.useMemo(() => {
     return process.find((p) => p.step === currentStep) || process[0]
@@ -113,7 +118,7 @@ const OurProcessDynamic = ({
                   )}
                   onClick={() => setCurrentStep(item.step)}
                 >
-                  {item.icon && <item.icon size={16} />}
+                  {item.icon && <IconComponent size={16} />}
                 </div>
 
                 {/* Vertical Line */}

@@ -4,7 +4,7 @@ import OurProcessDynamic from '@/components/shared/our-process'
 import HeroWebDesign from '@/components/web-design/hero'
 import React from 'react'
 
-import { SearchIcon, LayoutDashboardIcon, PenToolIcon, Share2Icon, MonitorSmartphoneIcon, GitBranchIcon, PlayCircleIcon, BoxesIcon,  PaletteIcon, SmartphoneIcon } from 'lucide-react'
+
 
 import { ProcessType } from '@/types'
 import SubservicesShared from '@/components/shared/subservices'
@@ -21,7 +21,7 @@ const process: ProcessType[] = [
     description:
       "We begin by understanding your brand, audience, competitors, and goals to shape a design direction that aligns with your vision.",
     image: "/mnt/data/8b6a8783-faae-46cc-a37b-ad98a09bd0d2.png", // You can replace with a Figma-style mock later
-    icon: SearchIcon, // Lucide: Search
+    icon: 'SearchIcon', // Lucide: Search
   },
   {
     step: 2,
@@ -29,7 +29,7 @@ const process: ProcessType[] = [
     description:
       "We map out page layouts, user flow, and structure using low-fidelity wireframes to define how users will navigate your website.",
     image: "/mnt/data/8b6a8783-faae-46cc-a37b-ad98a09bd0d2.png",
-    icon: LayoutDashboardIcon, // Lucide: LayoutDashboard or PanelsTopLeft
+    icon: 'LayoutDashboardIcon', // Lucide: LayoutDashboard or PanelsTopLeft
   },
   {
     step: 3,
@@ -37,7 +37,7 @@ const process: ProcessType[] = [
     description:
       "We craft polished UI designs—components, interactions, typography, and visual system—all built in Figma with pixel-perfect precision.",
     image: "/mnt/data/8b6a8783-faae-46cc-a37b-ad98a09bd0d2.png",
-    icon: PenToolIcon, // Lucide: PenTool
+    icon: 'PenToolIcon', // Lucide: PenTool
   },
   {
     step: 4,
@@ -45,7 +45,7 @@ const process: ProcessType[] = [
     description:
       "We create interactive prototypes, document components, and prepare developer-ready design systems for seamless handoff.",
     image: "/mnt/data/8b6a8783-faae-46cc-a37b-ad98a09bd0d2.png",
-    icon: Share2Icon, // Lucide: Share2 or Handshake
+    icon: 'Share2Icon', // Lucide: Share2 or Handshake
   },
 ];
 
@@ -54,37 +54,37 @@ const subservices = [
     title: "UI/UX Design",
     description:
       "User-centered design crafted for clarity, usability, and conversion—using modern UX principles.",
-    icon: MonitorSmartphoneIcon, // Lucide: MonitorSmartphone
+    icon: 'MonitorSmartphoneIcon', // Lucide: MonitorSmartphone
   },
   {
     title: "Wireframing & User Flows",
     description:
       "Low-fidelity wireframes and detailed user journeys that define how users interact with your website.",
-    icon: GitBranchIcon, // Lucide: GitBranch or FlowChart icon
+    icon: 'GitBranchIcon', // Lucide: GitBranch or FlowChart icon
   },
   {
     title: "Figma Prototyping",
     description:
       "Clickable prototypes showcasing animations, transitions, and interactions for a realistic preview.",
-    icon: PlayCircleIcon, // Lucide: PlayCircle
+    icon: 'PlayCircleIcon', // Lucide: PlayCircle
   },
   {
     title: "Design Systems & Component Libraries",
     description:
       "Reusable UI components and scalable design systems built in Figma for consistency and speed.",
-    icon: BoxesIcon, // Lucide: Boxes or Layers
+    icon: 'BoxesIcon', // Lucide: Boxes or Layers
   },
   {
     title: "Branding Alignment",
     description:
       "Color palettes, typography, spacing, and visual identity applied consistently across your site for a unified brand feel.",
-    icon: PaletteIcon, // Lucide: Palette
+    icon: 'PaletteIcon', // Lucide: Palette
   },
   {
     title: "Responsive & Adaptive Layouts",
     description:
       "Designs optimized for all screen sizes—mobile, tablet, laptop, and ultra-wide displays.",
-    icon: SmartphoneIcon, // Lucide: Smartphone or Phone
+    icon: 'SmartphoneIcon', // Lucide: Smartphone or Phone
   },
 ];
 

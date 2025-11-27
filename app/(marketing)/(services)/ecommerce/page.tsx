@@ -11,10 +11,7 @@ import OurProcessDynamic from '@/components/shared/our-process'
 import PricingShared from '@/components/shared/pricing'
 import SubservicesShared from '@/components/shared/subservices'
 import { ProcessType } from '@/types'
-import { AppWindow, ShoppingCartIcon, StoreIcon } from 'lucide-react'
-import React from 'react'
-import { FaCode, FaPencilRuler, FaRocket, FaSearch, FaShopify } from 'react-icons/fa'
-import { IoColorPalette } from 'react-icons/io5'
+
 
 const process: ProcessType[] = [
   {
@@ -23,7 +20,7 @@ const process: ProcessType[] = [
     description:
       "Understanding your business goals, target audience, and unique requirements to create a tailored e-commerce solution.",
     image: "/our-process/ecommerce/1.png",
-    icon: FaSearch,
+    icon: 'FaSearch',
   },
   {
     step: 2,
@@ -31,7 +28,7 @@ const process: ProcessType[] = [
     description:
       "Crafting visually appealing and user-friendly designs that reflect your brand identity and enhance the shopping experience.",
     image: "/our-process/ecommerce/2.png",
-    icon: FaPencilRuler,
+    icon: 'FaPencilRuler',
   },
   {
     step: 3,
@@ -39,7 +36,7 @@ const process: ProcessType[] = [
     description:
       "Building a robust e-commerce platform with seamless integration of payment gateways, inventory management, and other essential features.",
     image: "/our-process/ecommerce/3.png",
-    icon: FaCode,
+    icon: 'FaCode',
   },
   {
     step: 4,
@@ -47,7 +44,7 @@ const process: ProcessType[] = [
     description:
       "Conducting thorough testing to ensure functionality, performance, and security before launching your online store to the world.",
     image: "/our-process/ecommerce/4.png",
-    icon: FaRocket,
+    icon: 'FaRocket',
   },
 ];
 
@@ -55,32 +52,32 @@ const subservices = [
     {
         title: "Shopify Store Setup & Configuration",
         description: "Comprehensive setup and configuration of Shopify stores tailored to your business needs.",
-        icon: StoreIcon,
+        icon: 'StoreIcon',
     },
     {
         title: 'Custom Theme Design & Development',
         description: 'Bespoke theme design and development to create a unique and engaging shopping experience.',
-        icon: IoColorPalette,
+        icon: 'IoColorPalette',
     },
     {
         title: 'Shopify App Integration',
         description: 'Seamless integration of third-party apps to enhance store functionality and user experience.',
-        icon: AppWindow,
+        icon: 'AppWindow',
     },
     {
         title: 'Shopify Store Optimization',
         description: 'Improve loading speed, UX/UI, and conversion rates through strategic performance optimization, image compression, SEO improvements, and analytics-driven CRO techniques.',
-        icon: ShoppingCartIcon,
+        icon: 'ShoppingCartIcon',
     },
     {
         title: 'Shopify Migration & Replatforming',
         description: 'Migrate your existing store from WooCommerce, Magento, or another platform to Shopify without losing data or SEO ranking. Get a cleaner, faster, and more scalable store on Shopify’s ecosystem.',
-        icon: FaShopify,
+        icon: 'FaShopify',
     },
     {
         title: 'Ongoing Maintenance & Support',
         description: 'Regular updates, bug fixes, and performance monitoring to ensure your Shopify store runs smoothly.',
-        icon: AppWindow,
+        icon: 'AppWindow',
     }
 ]
 

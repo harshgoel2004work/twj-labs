@@ -15,7 +15,7 @@ export default function WhatWeDoSection() {
     <div className='w-full min-h-screen px-6 md:px-24 pt-14 pb-20 font-manrope'>
       <div className='flex flex-col items-center gap-0'>
         <CustomBadge darkMode={true} title="What We Do" />
-        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] max-w-4xl bg-clip-text text-transparent bg-linear-to-b from-white via-white to-white/60 pt-2">
+        <h1 className="text-4xl md:text-4xl lg:text-5xl font-bold tracking-tight text-center leading-[1.1] max-w-4xl bg-clip-text text-transparent bg-linear-to-b from-white via-white to-white/60 pt-2">
           What are we great at?
         </h1>
 

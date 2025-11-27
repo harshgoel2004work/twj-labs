@@ -7,7 +7,13 @@ export type ProcessType = {
   description: string
   image?: string
   tagline?: string
-  icon?: IconType | LucideIcon
+  icon?: string
+}
+
+export type SubserviceType = {
+  title: string
+  description: string
+  icon: string
 }
 
 export interface WebPageContent {
@@ -16,7 +22,14 @@ export interface WebPageContent {
     title: string;
     features: FeatureItem[]
   };
-  process?: ProcessType[];
+  process?: {
+    step: number
+    title: string
+    description: string
+    image?: string
+    tagline?: string
+    icon?: IconType | LucideIcon | React.ComponentType<{ size?: number, className?: string }>;
+  }[];
 }
 
 export interface HeroSection {
@@ -31,7 +44,7 @@ export interface ServiceItem {
   id: number;
   name: string;
   tagline: string;
-  icon: IconType;
+  icon: IconType | LucideIcon | React.ComponentType<{ size?: number, className?: string }>;
   description: string;
   url: string;
   slug?: string;

@@ -10,7 +10,7 @@ const SubservicesShared = ({
   title,
   darkMode = false,
 }: {
-  subservices: { title: string; description: string; icon: IconType }[];
+  subservices: { title: string; description: string; icon: string }[];
   title: string;
   darkMode?: boolean;
 }) => {

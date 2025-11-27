@@ -31,13 +31,39 @@ const HeroSection = () => {
   return (
     // Added overflow-hidden to prevent side cards from causing horizontal scroll on smaller desktops
     <div className='w-full pb-16 relative overflow-hidden'>
-      <div className="absolute top-0 left-0 inset-0 w-full overflow-hidden">
+      <div className="absolute top-0 left-0 inset-0 w-full overflow-hidden hidden md:block">
         <LightRays
           raysOrigin="top-center"
           raysColor="#baa1e3"
           raysSpeed={0.1}
           lightSpread={2}
           rayLength={2}
+          followMouse={true}
+          mouseInfluence={0.05}
+          noiseAmount={0.1}
+          distortion={0.12}
+          className="custom-rays"
+        />
+
+        <div className='absolute top-0 left-0 w-full h-full z-10 opacity-5'>
+          <SparklesCore
+            id="tsparticlesfullpage"
+            background="transparent"
+            minSize={0.6}
+            maxSize={1.4}
+            particleDensity={100}
+            className="w-full h-full"
+            particleColor="#FFFFFF"
+          />
+        </div>
+      </div>
+      <div className="absolute top-0 left-0 inset-0 w-full overflow-hidden block md:hidden">
+          <LightRays
+          raysOrigin="top-center"
+          raysColor="#baa1e3"
+          raysSpeed={0.1}
+          lightSpread={3}
+          rayLength={5}
           followMouse={true}
           mouseInfluence={0.05}
           noiseAmount={0.1}

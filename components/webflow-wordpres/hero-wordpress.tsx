@@ -7,11 +7,11 @@ import Image from 'next/image'
 
 const HeroWordpress = () => {
   return (
-    <div className='w-full min-h-screen font-manrope relative text-white z-0 px-6  md:px-12 lg:px-24'>
-        <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-8 pt-40'>
-            <div className=' w-full  flex flex-col items-start top-0 left-0 font-manrope space-y-4 '>
+    <div className='w-full font-manrope relative text-white z-0 px-6  md:px-12 lg:px-24 pb-40'>
+        <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-8 pt-28 md:pt-36 lg:pt-[21vh] max-w-[96rem] mx-auto min-h-[60vh] '>
+            <div className=' w-full  flex flex-col items-start justify-center top-0 left-0 font-manrope space-y-4 '>
                     <CustomBadge darkMode={true} title="WordPress Development" />
-                    <h1 className='text-4xl md:text-[42px]  font-medium tracking-wide bg-clip-text text-transparent bg-radial from-[#ffffff] to-[#999fb2]  leading-tight max-w-3xl z-10'>
+                    <h1 className='text-3xl md:text-4xl lg:text-[44px] 2xl:text-5xl font-medium tracking-wide bg-clip-text text-transparent bg-radial text-center md:text-start from-[#ffffff] to-[#999fb2] leading-snug  z-10 '>
                         Building <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Stunning</span> and <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Responsive</span> <span className='text-transparent bg-clip-text bg-linear-to-r from-[#897bdb] to-[#5449e8]'>WordPress</span> Websites
                     </h1>
                     

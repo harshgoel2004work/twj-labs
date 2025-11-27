@@ -3,18 +3,21 @@
 import { IconType } from 'react-icons'
 import React, { useRef, useState } from 'react'
 import { cn } from '@/lib/utils' // Assuming you have a cn utility, or standard className string
+import { iconMap } from '../icon-map'
 
 export default function GlowingCard({
   item,
   darkMode = false,
 }: {
-  item: { title: string; description: string; icon: IconType }
+  item: { title: string; description: string; icon: string }
   darkMode?: boolean
 }) {
   const divRef = useRef<HTMLDivElement>(null)
   const [, setIsFocused] = useState(false)
   const [position, setPosition] = useState({ x: 0, y: 0 })
   const [opacity, setOpacity] = useState(0)
+
+  const IconComponent = iconMap[item.icon] || null;
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!divRef.current) return
@@ -87,7 +90,7 @@ export default function GlowingCard({
                 ? "bg-white/5 border-white/10 group-hover:bg-white/10" 
                 : "bg-indigo-50 border-indigo-100 group-hover:bg-indigo-100"
         )}>
-           <item.icon
+           {IconComponent && <IconComponent
             size={22}
             className={cn(
                 "transition-colors duration-300",
@@ -95,7 +98,7 @@ export default function GlowingCard({
                     ? "text-indigo-300 group-hover:text-white" 
                     : "text-indigo-600 group-hover:text-indigo-700"
             )}
-          />
+          />}
         </div>
 
         {/* Content: Title & Desc */}

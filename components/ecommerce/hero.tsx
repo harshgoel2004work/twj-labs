@@ -66,7 +66,7 @@ const HeroEcommerce = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, ease: "easeOut", delay: 0.6 }}
           viewport={{ once: true }}
-          className="rounded-xl w-[80vw] overflow-hidden max-w-7xl p-1 mt-14 opacity-80 bg-black/50 backdrop-blur-md border border-white/10"
+          className="rounded-xl w-[98vw] md:w-[80vw] overflow-hidden max-w-7xl p-1 mt-14 opacity-80 bg-black/50 backdrop-blur-md border border-white/10"
         >
           <Image
             src="/shopify.png"
