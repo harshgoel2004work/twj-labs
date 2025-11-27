@@ -1,5 +1,3 @@
-"use client"
-
 import EcommerceFeatures from '@/components/ecommerce/features'
 import HeroEcommerce from '@/components/ecommerce/hero'
 import WhyEcommerce from '@/components/ecommerce/why-ecommerce'
@@ -11,6 +9,7 @@ import OurProcessDynamic from '@/components/shared/our-process'
 import PricingShared from '@/components/shared/pricing'
 import SubservicesShared from '@/components/shared/subservices'
 import { ProcessType } from '@/types'
+import { Metadata } from 'next'
 
 
 const process: ProcessType[] = [
@@ -81,6 +80,26 @@ const subservices = [
     }
 ]
 
+export const metadata:Metadata = {
+  title: "E-commerce Development Services",
+  description: "Professional e-commerce development services including Shopify store setup, custom theme design, app integration, and ongoing support by TWJ Labs.",
+  keywords:[
+    "E-commerce Development Services",
+
+  
+    "E-commerce Development Company",
+  
+
+    "Website Design in India",
+    "Website Design in US",
+    "Website Design in UK",
+    "Website Design in Canada",
+    "Website Design in Europe",
+    "Website Design in Australia",
+    "Website Design in New Zealand",
+    "Website Design Agency",
+  ]
+}
 
 const EcommercePage = () => {
   return (

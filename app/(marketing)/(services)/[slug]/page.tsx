@@ -1,18 +1,36 @@
-"use client"
-
 import TestimonialsSection from '@/components/home/testimonials'
 import CaseStudiesSection from '@/components/shared/case-studies'
 import FaqsSection from '@/components/shared/faqs'
-import OurProcessDynamic from '@/components/shared/our-process'
+
 import OurProcessDynamicAlt from '@/components/shared/our-process-2'
 import GenericFeaturesSection from '@/components/slug/generic-features'
 import GenericHeroPage from '@/components/slug/generic-hero'
 import { services } from '@/data/services'
+import { Metadata, ResolvingMetadata } from 'next'
 import React from 'react'
 
-const OtherServicesSlugPage = ({ params }: { params: Promise<{ slug: string }> }) => {
-  // ✅ unwrap params using React.use()
-  const { slug } = React.use(params)
+export async function generateMetadata(
+  { params, searchParams }: { params: Promise<{ slug: string }>; searchParams: Record<string, string | string[]> },
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = (await params).slug
+ 
+  // fetch post information
+  const activeSlug = services[1].servicesList.find(service => service.slug === slug)
+
+  if (!activeSlug) {
+    return {};
+  }
+ 
+  return {
+    title: `Best ${activeSlug.name} services`,
+    description: activeSlug.description || "Learn more about our services.",
+  }
+}
+
+
+const OtherServicesSlugPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
+   const slug = (await params).slug
 
   const activeSlug = services[1].servicesList.find(service => service.slug === slug)
 
@@ -27,10 +45,9 @@ const OtherServicesSlugPage = ({ params }: { params: Promise<{ slug: string }> }
   return (
     <div>
       <GenericHeroPage data={activeSlug.webPageContent.heroSection} />
-      <GenericFeaturesSection data={activeSlug.webPageContent.featuresSection.features} title={activeSlug.webPageContent.featuresSection.title} />
+      {activeSlug.slug && <GenericFeaturesSection slug={activeSlug.slug} title={activeSlug.webPageContent.featuresSection.title} />}
 
-      {/* <OurProcessDynamic process={[]} darkMode={false} title="Process For SEO" /> */}
-      <OurProcessDynamicAlt processArr={activeSlug.webPageContent.process || []} darkMode={false} title={`Process For ${activeSlug.name}`}/>
+      {activeSlug.slug && <OurProcessDynamicAlt slug={activeSlug.slug} darkMode={false} title={`Process For ${activeSlug.name}`}/>}
 
       <CaseStudiesSection darkMode={false} />
       <TestimonialsSection darkMode={true}/>

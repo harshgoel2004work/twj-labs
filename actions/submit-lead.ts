@@ -52,7 +52,7 @@ export async function submitLeadData(data: LeadData, source?:string) {
 
     // 1. Send Email (CRITICAL STEP - Await this for reliable immediate confirmation)
     await sendEmail({
-      to: "thewalkingjumbo@gmail.com", 
+      to: "sales@twjlabs.com, thewalkingjumbo@gmail.com",
       subject: `🔥 New Lead: ${data.name} - ${data.company || "No Company"} ${source || "JumboBot"}`,
       data: data,
       source: source
@@ -94,7 +94,7 @@ async function sendEmail({
   data: LeadData;
   source?: string;
 }) {
-  const { SMTP_EMAIL, SMTP_PASSWORD } = process.env;
+  const { SMTP_EMAIL, SMTP_PASSWORD, } = process.env;
 
   // 1. Create Transporter
   const transporter = nodemailer.createTransport({

@@ -1,4 +1,3 @@
-"use client"
 
 import AIBento from '@/components/ai/bento'
 import AiHero from '@/components/ai/hero'
@@ -11,9 +10,7 @@ import OurProcessDynamic from '@/components/shared/our-process'
 import PricingShared from '@/components/shared/pricing'
 import SubservicesShared from '@/components/shared/subservices'
 import { ProcessType } from '@/types'
-import { BarChart3Icon, BrainIcon, DatabaseIcon, MessageSquareIcon, PenToolIcon, PuzzleIcon, RepeatIcon, SparklesIcon, StoreIcon } from 'lucide-react'
-import React from 'react'
-import { FaCode, FaPencilRuler, FaRocket, FaSearch } from 'react-icons/fa'
+import { Metadata } from 'next'
 
 const process: ProcessType[] = [
   {
@@ -83,6 +80,27 @@ const subservices = [
     icon: 'BrainIcon',
   },
 ];
+
+export const metadata:Metadata = {
+  title: "AI Integration & Automation Services",
+  description: "Professional AI integration and automation services including chatbot integration, workflow automation, custom AI APIs, and ongoing support by TWJ Labs.",
+  keywords:[
+    "AI Integration Services",
+
+  
+    "Custom Software Development Company",
+  
+
+    "Website Design in India",
+    "Website Design in US",
+    "Website Design in UK",
+    "Website Design in Canada",
+    "Website Design in Europe",
+    "Website Design in Australia",
+    "Website Design in New Zealand",
+    "Website Design Agency",
+  ]
+}
 
 const AiIntegrationAndAutomation = () => {
   return (

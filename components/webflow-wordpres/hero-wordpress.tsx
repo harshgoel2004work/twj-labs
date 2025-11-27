@@ -1,4 +1,4 @@
-import { SparkleIcon } from 'lucide-react'
+import { ArrowRight, SparkleIcon } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import CustomBadge from '../shared/custom-badge'
@@ -9,19 +9,22 @@ const HeroWordpress = () => {
   return (
     <div className='w-full font-manrope relative text-white z-0 px-6  md:px-12 lg:px-24 pb-40'>
         <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-8 pt-28 md:pt-36 lg:pt-[21vh] max-w-[96rem] mx-auto min-h-[60vh] '>
-            <div className=' w-full  flex flex-col items-start justify-center top-0 left-0 font-manrope space-y-4 '>
+            <div className=' w-full  flex flex-col items-center md:items-start justify-center top-0 left-0 font-manrope space-y-4 '>
                     <CustomBadge darkMode={true} title="WordPress Development" />
                     <h1 className='text-3xl md:text-4xl lg:text-[44px] 2xl:text-5xl font-medium tracking-wide bg-clip-text text-transparent bg-radial text-center md:text-start from-[#ffffff] to-[#999fb2] leading-snug  z-10 '>
                         Building <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Stunning</span> and <span className='bg-radial bg-clip-text text-transparent from-[#ffffff] to-[#999fb2]'>Responsive</span> <span className='text-transparent bg-clip-text bg-linear-to-r from-[#897bdb] to-[#5449e8]'>WordPress</span> Websites
                     </h1>
                     
-                    <p className='text-white/60 text-sm font-medium max-w-lg  pt-1 z-10'>
+                    <p className='text-white/60 text-sm text-center md:text-start font-medium max-w-lg  pt-1 z-10'>
                         Crafting compelling brand identities that resonate with your audience and drive business success.
                     </p>
 
-                    <div className='pt-2 flex items-center gap-4 z-10'>
-                        <Link href={'/contact-sales'} className="px-6.5 py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
+                     <div className='pt-2 flex flex-row  items-center gap-4 z-10 w-full sm:w-auto max-w-[80vw]'>
+                        <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
                             Contact Sales
+                        </Link>
+                        <Link href={'/work'} className="w-full sm:w-auto text-center  px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+                            Our Work <ArrowRight size={16} />
                         </Link>
                     </div>
               </div>

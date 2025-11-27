@@ -34,7 +34,7 @@ const HeroWebflow = () => {
             </div>
 
             {/* Laser Background - Hidden on very small screens if needed, or kept as background */}
-            <div className='absolute right-0 top-0 h-[150vh] lg:h-[155vh] w-full lg:w-auto pointer-events-none opacity-50 lg:opacity-100'>
+            <div className='absolute right-0 top-0 h-[129vh] md:h-[150vh] lg:h-[155vh] w-full lg:w-auto pointer-events-none opacity-50 lg:opacity-100'>
                 <LaserFlow 
                   color='#544990'
                 />

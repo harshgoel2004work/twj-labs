@@ -1,5 +1,3 @@
-"use client"
-
 import OurProcessDynamic from '@/components/shared/our-process'
 import HeroWebDesign from '@/components/web-design/hero'
 import React from 'react'
@@ -13,6 +11,7 @@ import TheTWJDifference from '@/components/home/twj-difference'
 import CaseStudiesSection from '@/components/shared/case-studies'
 import TestimonialsSection from '@/components/home/testimonials'
 import FaqsSection from '@/components/shared/faqs'
+import { Metadata } from 'next'
 
 const process: ProcessType[] = [
   {
@@ -87,6 +86,28 @@ const subservices = [
     icon: 'SmartphoneIcon', // Lucide: Smartphone or Phone
   },
 ];
+
+export const metadata:Metadata = {
+  title: "Web Design Services",
+  description: "Professional web design services including custom UI/UX design, responsive layouts, prototyping, and branding alignment by TWJ Labs.",
+  keywords:[
+    "Web Design Services",
+
+  
+    "Website Design Company",
+  
+
+    "Website Design in India",
+    "Website Design in US",
+    "Website Design in UK",
+    "Website Design in Canada",
+    "Website Design in Europe",
+    "Website Design in Australia",
+    "Website Design in New Zealand",
+    "Website Design Agency",
+  ]
+}
+
 
 
 const WebDesignPage = () => {

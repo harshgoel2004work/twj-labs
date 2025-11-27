@@ -1,6 +1,4 @@
-"use client"
 
-import CustomFeatures from '@/components/custom-soft/features'
 import HeroCustomSoft from '@/components/custom-soft/hero'
 import TestimonialsSection from '@/components/home/testimonials';
 import TheTWJDifference from '@/components/home/twj-difference';
@@ -10,10 +8,8 @@ import OurProcessDynamic from '@/components/shared/our-process'
 import PricingShared from '@/components/shared/pricing';
 import SubservicesShared from '@/components/shared/subservices';
 import { ProcessType } from '@/types';
-import { AppWindow, ShoppingCartIcon, StoreIcon } from 'lucide-react';
-import React from 'react'
-import { FaCode, FaPencilRuler, FaRocket, FaSearch, FaShopify } from 'react-icons/fa';
-import { IoColorPalette } from 'react-icons/io5';
+import { Metadata } from 'next';
+
 
 export const process: ProcessType[] = [
   {
@@ -101,6 +97,27 @@ const subservices = [
     icon: 'WrenchIcon', // lucide-react
   },
 ];
+
+export const metadata:Metadata = {
+  title: "Custom Software Development Services",
+  description: "Professional custom software development services including Next.js web applications, API integration, UI/UX design, and ongoing support by TWJ Labs.",
+  keywords:[
+    "Custom Software Development Services",
+
+  
+    "Custom Software Development Company",
+  
+
+    "Website Design in India",
+    "Website Design in US",
+    "Website Design in UK",
+    "Website Design in Canada",
+    "Website Design in Europe",
+    "Website Design in Australia",
+    "Website Design in New Zealand",
+    "Website Design Agency",
+  ]
+}
 
 
 const CustomSoftwarePage = () => {

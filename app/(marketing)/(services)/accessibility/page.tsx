@@ -1,4 +1,3 @@
-"use client"
 
 import HeroAccessibility from '@/components/accessibility/hero'
 import TestimonialsSection from '@/components/home/testimonials'
@@ -13,6 +12,7 @@ import React from 'react'
 
 import { ProcessType } from '@/types'
 import WhyAccessibility from '@/components/accessibility/why'
+import { Metadata } from 'next'
 
 const process: ProcessType[] = [
   {
@@ -99,6 +99,28 @@ const subservices = [
     icon: 'ShieldCheckIcon', // e.g. Lucide: ShieldCheck
   },
 ];
+
+
+export const metadata:Metadata = {
+  title: "Accessibility Services",
+  description: "Comprehensive accessibility services including automated and manual audits, remediation, testing, and certification support by TWJ Labs.",
+  keywords:[
+    "Accessibility Services",
+
+  
+    "Custom Software Development Company",
+  
+
+    "Website Design in India",
+    "Website Design in US",
+    "Website Design in UK",
+    "Website Design in Canada",
+    "Website Design in Europe",
+    "Website Design in Australia",
+    "Website Design in New Zealand",
+    "Website Design Agency",
+  ]
+}
 
 
 const AccessibilityPage = () => {

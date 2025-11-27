@@ -2,12 +2,10 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { memo } from 'react' // Import memo to prevent unnecessary re-renders
+import { memo } from 'react'
 import { services } from '@/data/services'
 import CustomBadge from '../shared/custom-badge'
 
-// Shared Image Sizes string to reduce repetition
-// This tells the browser: "On mobile, this image is 100% width. On Tablet, 50%. On Desktop, 33%."
 const IMAGE_SIZES = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 
 export default function WhatWeDoSection() {
@@ -54,22 +52,21 @@ const BentoGrid = () => {
   )
 }
 
-// Optimization: Memoize cards to prevent re-renders when parent state changes
 const WordpressCard = memo(() => {
   return (
     <div className='card md:col-span-4 relative min-h-[380px] w-full max-w-full p-px rounded-[20px] font-light overflow-hidden transition-all duration-300 ease-in-out z-10 group bg-linear-to-b from-white/10 to-white/5'>
       <div className='relative flex flex-col justify-between w-full h-full p-5 rounded-[19px] overflow-hidden bg-[#09090B] backface-hidden'>
         
-        {/* OPTIMIZATION: Added transform-gpu and will-change-transform */}
         <div className='group-hover:-translate-y-2 transition duration-[1.5s] absolute left-0 top-0 px-6 pt-10 md:px-16 md:pt-10 group-hover:scale-105 w-full transform-gpu will-change-transform'>
           <Image
             src='/bento-res/wordpress-console.svg'
             alt='Wordpress Development'
             width={1000}
             height={1000}
-            sizes={IMAGE_SIZES} // OPTIMIZATION: Added sizes
+            sizes={IMAGE_SIZES}
             className='w-full object-cover z-3 rounded-2xl opacity-90 max-w-2xl mx-auto'
-            priority // Load this early as it is near the top
+            // 🔴 REMOVED 'priority': This is below the fold. 
+            // Keeping priority here hurts your Hero Section speed.
           />
         </div>
         <Image
@@ -81,7 +78,6 @@ const WordpressCard = memo(() => {
           className='w-full object-cover z-3 rounded-2xl opacity-90 max-w-2xl mx-auto absolute top-0 left-0 pointer-events-none select-none'
         />
         
-        {/* OPTIMIZATION: Reduced blur intensity slightly or ensure it's static */}
         <div className='absolute top-0 left-0 bg-[#6952FB]/10 w-[30%] aspect-square rounded-full z-4 blur-[80px] pointer-events-none transform-gpu' />
         <div className='absolute bottom-8 right-6 bg-[#3F9BD4]/10 w-[30%] aspect-square rounded-full z-4 blur-[80px] pointer-events-none transform-gpu' />
 
@@ -98,6 +94,10 @@ const WordpressCard = memo(() => {
   );
 });
 WordpressCard.displayName = "WordpressCard";
+
+// ... (Keep the rest of your Cards exactly as they are) ...
+// The memo and layout of the other cards are fine. 
+// Just ensure you include them when you paste the file.
 
 const WebflowCard = memo(() => {
   return (
@@ -140,7 +140,7 @@ const AccessibilityCard = memo(() => {
         <Image
           src='/bento-res/acc-color.png'
           alt='Accessibility'
-          width={800} // Reduced width as it's a smaller card
+          width={800} 
           height={800}
           sizes={IMAGE_SIZES}
           className='absolute w-[60%] -bottom-20 -right-12 object-left z-[3] rounded-2xl opacity-90 max-w-2xl mx-auto group-hover:-translate-x-3 transition-transform duration-1000 ease-in-out group-hover:scale-110 will-change-transform'
@@ -193,7 +193,6 @@ const AIIntegrationCard = memo(() => {
         />
       </div>
 
-      {/* Use opacity transition instead of complex transforms for the overlay */}
       <div className='w-full h-full absolute top-0 left-0 opacity-20 group-hover:opacity-100 transition-opacity duration-700 ease-in-out will-change-[opacity]'>
         <Image
           src='/bento-res/ai/ai.svg'
@@ -242,14 +241,12 @@ const CustomDevCard = memo(() => {
           sizes={IMAGE_SIZES}
           className='w-[24%] aspect-square z-[3] opacity-100 mx-auto border-2 border-white/5 rounded-full absolute top-2/5 -translate-1/2 left-1/2'
         />
-        {/* Render smaller SVGs with minimal dimensions */}
         <Image src='/bento-res/custom/c-2.svg' alt='c' width={100} height={100} className='w-[16%] aspect-square z-[3] opacity-80 mx-auto border-2 border-white/5 rounded-full absolute top-10 left-10 ' />
         <Image src='/bento-res/custom/c-3.svg' alt='c' width={100} height={100} className='w-[17%] aspect-square z-[3] opacity-90 mx-auto border-2 border-white/5 rounded-full absolute top-14 right-7 ' />
         <Image src='/bento-res/custom/c-3.svg' alt='c' width={100} height={100} className='w-[14%] aspect-square z-[3] opacity-100 mx-auto border-2 border-white/5 rounded-full absolute bottom-20 right-12 blur-[1px]' />
         <Image src='/bento-res/custom/c4.svg' alt='c' width={100} height={100} className='w-[14%] aspect-square z-[3] opacity-90 mx-auto border-2 border-white/5 rounded-full absolute bottom-17 left-1/4 blur-[1px]' />
         <Image src='/bento-res/custom/c5.svg' alt='c' width={100} height={100} className='w-[14%] aspect-square z-[3] opacity-80 mx-auto border-2 border-white/5 rounded-full absolute -top-4 left-1/2 -translate-x-1/2 blur-[1px]' />
 
-        {/* Optimized Lines: Removed extra divs, using CSS borders on spans directly */}
         <span className="absolute top-[33%] left-[49%] w-[1px] h-[20%] translate-y-[-24%] translate-x-[-34%] bg-white/5 opacity-30 origin-top rotate-[185deg] overflow-hidden group-hover:bg-violet-500/100 transition-colors duration-500" />
         <span className="absolute top-[38%] left-[40%] w-[1px] h-[17%] translate-y-[-24%] translate-x-[-34%] bg-white/5 opacity-30 origin-top rotate-[123deg] group-hover:bg-violet-500/100 transition-colors duration-500" />
         <span className="absolute top-[38%] right-[40%] w-[1px] h-[17%] translate-y-[-24%] translate-x-[-34%] bg-white/5 opacity-30 origin-top rotate-[-110deg] group-hover:bg-violet-500/100 transition-colors duration-500" />
@@ -341,14 +338,12 @@ const WebDesignCard = memo(() => {
           xmlns="http://www.w3.org/2000/svg"
           className="w-full h-full [&_path]:fill-white [&_path]:transition-colors [&_path]:duration-500 group-hover:[&_path:nth-child(1)]:fill-[#24CB71] group-hover:[&_path:nth-child(2)]:fill-[#FF7237] group-hover:[&_path:nth-child(3)]:fill-[#00B6FF] group-hover:[&_path:nth-child(4)]:fill-[#FF3737] group-hover:[&_path:nth-child(5)]:fill-[#874FFF]"
         >
-          <path d="M0 500C0 444.772 44.772 400 100 400H200V500C200 555.228 155.228 600 100 600C44.772 600 0 555.228 0 500Z" />
+          <path d="M0 500C0 444.772 44.772 400 100 400H200V500C200 555.228 155.228 600 100 600C44.772 600 0 555.228 0 555.228 0 500Z" />
           <path d="M200 0V200H300C355.228 200 400 155.228 400 100C400 44.772 355.228 0 300 0H200Z" />
           <path d="M299.167 400C354.395 400 399.167 355.228 399.167 300C399.167 244.772 354.395 200 299.167 200C243.939 200 199.167 244.772 199.167 300C199.167 355.228 243.939 400 299.167 400Z" />
           <path d="M0 100C0 155.228 44.772 200 100 200H200V0H100C44.772 0 0 44.772 0 100Z" />
           <path d="M0 300C0 355.228 44.772 400 100 400H200V200H100C44.772 200 0 244.772 0 300Z" />
         </svg>
-
-        {/* Removed redundant spans for performance, relying on SVG fill change which is cheaper */}
       </div>
 
       <div className='absolute top-0 left-0 bg-[#6952FB]/10 w-[50%] aspect-square rounded-full z-[4] blur-[80px] pointer-events-none transform-gpu' />

@@ -101,10 +101,10 @@ const HeroSection = () => {
 
         {/* Buttons: Stack on very small screens, row on larger */}
         <div className='pt-3 flex flex-row  items-center gap-4 z-10 w-full sm:w-auto max-w-[80vw]'>
-          <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
+          <Link href={'/contact-sales'} aria-label='Contact Sales' className="w-full sm:w-auto text-center px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
             Contact Sales
           </Link>
-          <Link href={'/work'} className="w-full sm:w-auto text-center  px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
+          <Link href={'/work'} aria-label='Our Work' className="w-full sm:w-auto text-center  px-4 py-3 md:px-6.5 md:py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2">
             Our Work <ArrowRight size={16} />
           </Link>
         </div>

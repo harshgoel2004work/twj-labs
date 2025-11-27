@@ -5,8 +5,19 @@ import React, { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CustomBadge from "../shared/custom-badge";
 import { ProcessType } from "@/types";
+import { LucideIcon } from "lucide-react";
+import { IconType } from "react-icons";
+import { services } from "@/data/services";
 
-const OurProcessDynamicAlt = ({ processArr, title, darkMode }: { processArr: ProcessType[], title: string, darkMode: boolean }) => {
+const OurProcessDynamicAlt = ({ slug, title, darkMode }: { slug:string, title: string, darkMode: boolean }) => {
+  const processArr:{
+    step: number
+    title: string
+    description: string
+    image?: string
+    tagline?: string
+    icon?: IconType | LucideIcon | React.ComponentType<{ size?: number, className?: string }>;
+  }[] = services[1].servicesList.find(service => service.slug === slug)?.webPageContent?.process || [];
   const [activeStep, setActiveStep] = useState<number>(1);
   const [progress, setProgress] = useState<number>(0);
   const [isPaused, setIsPaused] = useState<boolean>(false);

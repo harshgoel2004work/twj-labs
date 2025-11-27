@@ -6,11 +6,13 @@ import React, { useRef } from "react";
 import { IconType } from "react-icons";
 import { SiWebflow } from "react-icons/si";
 import CustomBadge from "../shared/custom-badge";
+import { services } from "@/data/services";
 
 
 
 
-const GenericFeaturesSection = ({data, title}:{data: FeatureItem[], title: string}) => {
+const GenericFeaturesSection = ({slug, title}:{slug: string, title: string}) => {
+  const data = services[1].servicesList.find(service => service.slug === slug)?.webPageContent?.featuresSection?.features || [];
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const state = useRef({
     isDown: false,
