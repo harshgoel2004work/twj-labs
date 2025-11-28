@@ -132,11 +132,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <Script
-      async
-      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5202236007367090"
-      crossOrigin="anonymous"
-    />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5202236007367090"
+     crossOrigin="anonymous"></script>
       </head>
       <body
         className={`${geistSans.variable} antialiased`}
