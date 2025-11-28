@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
 
-const CustomBadge = ({darkMode, title}:{darkMode: boolean, title: string}) => {
+const CustomBadge = ({darkMode=true, title}:{darkMode?: boolean, title: string}) => {
   return (
     <>
     {darkMode ? (
