@@ -3,6 +3,8 @@ import { client } from "@/sanity/client";
 import { Metadata, ResolvingMetadata } from "next";
 
 import { notFound } from "next/navigation";
+import Script from "next/script";
+
 
 // 1. Update Interface to reflect that fields from Sanity can be null
 export interface SanityPostResponse {
@@ -127,7 +129,19 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
     headings: headings,
   };
 
-  return <ArticleClient post={formattedPost} />;
+  return (
+    <>
+    <Script
+      id="adsense-script"
+      strategy="afterInteractive"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5202236007367090"
+      crossOrigin="anonymous"
+    />
+    <ArticleClient post={formattedPost} />
+    </>
+  
+);
 }
 
 export async function generateStaticParams() {
