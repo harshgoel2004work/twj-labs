@@ -120,13 +120,13 @@ const CareersClient = ({ jobs }: { jobs: JobPost[] }) => {
         </motion.div>
 
         {/* --- FOOTER CTA --- */}
-        <div className="mt-24 text-center p-8 rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.02] to-transparent">
+        {/* <div className="mt-24 text-center p-8 rounded-3xl border border-white/10 bg-gradient-to-b from-white/[0.02] to-transparent">
             <h3 className="text-2xl font-bold mb-2">Don&apos;t see the right role?</h3>
             <p className="text-neutral-400 mb-6">We are always open to cold applications from talented individuals.</p>
-            <a href="mailto:careers@twj.com" className="inline-flex items-center gap-2 text-sm font-bold text-white border-b border-indigo-500 pb-1 hover:text-indigo-400 transition-colors">
+            <a href="mailto:careers@twjlabs.com" className="inline-flex items-center gap-2 text-sm font-bold text-white border-b border-indigo-500 pb-1 hover:text-indigo-400 transition-colors">
                 Email Us Your Resume <ArrowRight size={16} />
             </a>
-        </div>
+        </div> */}
 
       </div>
     </div>

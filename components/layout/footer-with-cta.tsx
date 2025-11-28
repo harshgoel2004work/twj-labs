@@ -110,7 +110,7 @@ const FooterWithCTA = () => {
               <LogoWhite />
             </div>
             <p className='text-sm text-neutral-400 leading-relaxed max-w-sm'>
-              We are a team of Webflow, brand, and design experts passionate about building sites that accelerate growth for B2B brands.
+              The Walking Jumbo is dedicated to propelling businesses into the future with cutting-edge AI solutions, innovative web development, and captivating digital experiences.
             </p>
           </div>
 
@@ -124,7 +124,7 @@ const FooterWithCTA = () => {
             <div className='flex flex-col gap-4'>
                 <h3 className='text-sm font-semibold text-white tracking-wide'>Company</h3>
                 <ul className='flex flex-col gap-3'>
-                    {['Home', 'About', 'Work', 'Contact Sales'].map((item) => (
+                    {['Home', 'About', 'Work', 'Blog', 'Careers', 'Contact Sales' ].map((item) => (
                         <li key={item}>
                              <Link href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} className='text-sm text-neutral-400 hover:text-white transition-colors duration-200 block hover:tranneutral-x-1 transform'>
                                 {item}

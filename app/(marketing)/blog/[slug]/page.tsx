@@ -70,6 +70,18 @@ export async function generateMetadata(
   return {
     title: post.title,
     description: post.subtitle || "Read this insightful blog post.",
+    openGraph:{
+      title: post.title,
+      description: post.subtitle || "Read this insightful blog post.",
+      images: [
+        {
+          url: post.mainImage || '/opengraph-image.png',
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        }
+      ]
+    }
   }
 }
 
