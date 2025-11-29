@@ -126,7 +126,7 @@ const FooterWithCTA = () => {
                 <ul className='flex flex-col gap-3'>
                     {['Home', 'About', 'Work', 'Blog', 'Careers', 'Contact Sales', 'Free Website Audit' ].map((item) => (
                         <li key={item}>
-                             <Link href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(' ', '-')}`} className='text-sm text-neutral-400 hover:text-white transition-colors duration-200 block hover:tranneutral-x-1 transform'>
+                             <Link href={item === 'Home' ? '/' : `/${item.toLowerCase().replaceAll(' ', '-')}`} className='text-sm text-neutral-400 hover:text-white transition-colors duration-200 block hover:tranneutral-x-1 transform'>
                                 {item}
                             </Link>
                         </li>
