@@ -16,7 +16,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 import { contactFormSubmit } from "@/actions/contact-form-submit";
 import { OurWorkType } from "@/data/work-sample";
-import { getPortfolio } from "@/actions/get-portfolio";
+import { getSanityCaseStudies } from "@/actions/get-portfolio";
+
 
 // --- CONSTANTS ---
 const TECHNOLOGIES = [
@@ -139,7 +140,7 @@ const LeftSideOurWork = () => {
                   const loadData = async () => {
                       setLoading(true);
                       try {
-                          const portfolio = await getPortfolio();
+                          const portfolio = await getSanityCaseStudies();
                           if (!mounted) return;
                           setWork(portfolio);
                       } catch (error) {
