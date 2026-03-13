@@ -4,19 +4,21 @@ import { FaLanguage, FaSearchengin } from "react-icons/fa";
 
 
 export type PricingPlanType = {
-  id: number;
+  id: string;
   title: string;
   plans: PlanType[];
+  category: string;
 }
 
 export type PlanType = {
-  id: number;
+  id: string;
     name: string;
+    
     description: string;
     featured: boolean;
     price: string;
-    features: string;
-    featuresNotIncluded?: string;
+    features: string[];
+    featuresNotIncluded?: string[];
     everythingIncludedPrev?: boolean;
 }
 

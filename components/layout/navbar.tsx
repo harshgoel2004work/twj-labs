@@ -193,6 +193,7 @@ const MobileMenu = ({ onClose }: { onClose: () => void }) => {
                     {link.megaMenuid === "company-mega-menu" && (
                        <div className="flex flex-col gap-4">
                           <Link href="/about" onClick={onClose} className="text-white/70 hover:text-white text-sm">About</Link>
+                          <Link href="/white-labeling" onClick={onClose} className="text-white/70 hover:text-white text-sm">White Labeling</Link>
                           <Link href="/blog" onClick={onClose} className="text-white/70 hover:text-white text-sm">Blog</Link>
                           <Link href="/work" onClick={onClose} className="text-white/70 hover:text-white text-sm">Work</Link>
                           <Link href="/careers" onClick={onClose} className="text-white/70 hover:text-white text-sm">Careers</Link>
@@ -446,11 +447,24 @@ const CompanyMegaMenu = () => {
                     <div className="text-[10px] text-white/50 leading-tight group-hover:text-white/70">Discover our projects and case studies.</div>
                   </div>
                 </Link>
+                  <Link
+                 
+                   href={"/white-labeling"}
+                   className={`group flex items-start gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors`}
+                 >
+                   <div className="w-8 h-8 shrink-0 rounded border border-white/10 bg-[#1e1e24] flex items-center justify-center group-hover:border-white/10 transition-colors">
+                     <Layers size={14} className="text-white/80" />
+                   </div>
+                   <div>
+                     <div className="text-xs font-bold text-white mb-0.5">White Labeling</div>
+                     <div className="text-[10px] text-white/50 leading-tight group-hover:text-white/70">Partnership for other agencies.</div>
+                   </div>
+                 </Link>
                  <Link
-                
-                  href={"/careers"}
-                  className={`group flex items-start gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors`}
-                >
+                 
+                   href={"/careers"}
+                   className={`group flex items-start gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors`}
+                 >
                   <div className="w-8 h-8 shrink-0 rounded border border-white/10 bg-[#1e1e24] flex items-center justify-center group-hover:border-white/10 transition-colors">
                     <Briefcase size={14} className="text-white/80" />
                   </div>

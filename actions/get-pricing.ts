@@ -1,23 +1,12 @@
-// server-action.ts (or wherever your function is)
-"use server"
+'use server'
 
-// 'https://twj-lab-dashboard-xxp5.vercel.app/api/pricing'
+import { fetchAllPricingPlans } from '@/lib/sanity-queries'
+import type { PricingPlanType } from '@/data/pricing-plans'
 
-const serverURL = 'https://twj-lab-dashboard.vercel.app/api/pricing'
-
-export async function getPricingPlans() {
-    // fetching data from an external API
-    const res = await fetch(serverURL, {
-        next: { 
-            // This caches the result for 7200 seconds (2 hours)
-            revalidate: 7200
-        }
-    });
-
-    if (!res.ok) {
-        throw new Error('Failed to fetch pricing plans');
-    }
-
-    const data = await res.json();
-    return data;
+/**
+ * Drop-in replacement for the previous SQLite-backed `getPricingPlans`.
+ * Returns all pricing categories ordered by the Sanity category field.
+ */
+export const getPricingPlans = async (): Promise<PricingPlanType[]> => {
+  return fetchAllPricingPlans()
 }
