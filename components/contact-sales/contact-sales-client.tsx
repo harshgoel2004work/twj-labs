@@ -203,7 +203,7 @@ const ContactForm = ({ className, isMobileExpanded, onMobileClose, serviceIntere
     );
 
     const [formData, setFormData] = React.useState({
-      name: "", email: "", company: "", website: "", projectDetails: areThereSearchParams ? t('searchParamsText', { service: ServiceMap[serviceInterest || ""] || serviceInterest, plan }) : "", budget: "",
+      name: "", email: "", company: "", website: "", projectDetails: areThereSearchParams ? t('searchParamsText', { service: ServiceMap[serviceInterest || ""] || serviceInterest || "", plan: plan || "" }) : "", budget: "",
     });
     const [submitted, setSubmitted] = React.useState(false);
   

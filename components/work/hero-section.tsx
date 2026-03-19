@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { ArrowUpRight, ExternalLink } from 'lucide-react'
-import { SanityDetailedWorkType } from '@/app/[locale]/(marketing)/work/[id]/page'
+import { SanityDetailedWorkType } from './case-study-client'
 
 const WorkDetailsHero = ({ work }: { work: SanityDetailedWorkType }) => {
   const techList = Array.isArray(work.technologies) ? work.technologies : []
