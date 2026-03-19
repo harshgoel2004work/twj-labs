@@ -14,7 +14,7 @@ export function GoOnlinePricing() {
       id: 1,
       name: t("plans.essentials.name"),
       tag: null,
-      price: "Custom",
+      price: "₹8999",
       body: t("plans.essentials.description"),
       features: [
         "Google Business Profile Setup",
@@ -28,7 +28,7 @@ export function GoOnlinePricing() {
       id: 2,
       name: t("plans.webPresence.name"),
       tag: t("mostPopular"),
-      price: "Custom",
+      price: "₹16999",
       body: t("plans.webPresence.description"),
       features: [
         "5-Page Premium Website",
@@ -43,7 +43,7 @@ export function GoOnlinePricing() {
       id: 3,
       name: t("plans.growth.name"),
       tag: null,
-      price: "Custom",
+      price: "₹32999",
       body: t("plans.growth.description"),
       features: [
         "Unlimited Pages (up to 15)",
@@ -58,7 +58,7 @@ export function GoOnlinePricing() {
       id: 4,
       name: t("plans.custom.name"),
       tag: t("enterprise"),
-      price: "Contact TWJ",
+      price: "Contact us",
       body: t("plans.custom.description"),
       features: [
         "Custom Web Applications",
@@ -163,7 +163,7 @@ export function GoOnlinePricing() {
                   {/* Pricing & CTA */}
                   <div className="mt-auto">
                     <div className="mb-6 pt-6 border-t border-white/5">
-                      <span className="text-xs text-neutral-500 uppercase tracking-widest font-bold">Pricing</span>
+                      <span className="text-xs text-neutral-500 uppercase tracking-widest font-bold">Price starting at</span>
                       <div
                         className="text-3xl font-black text-white mt-1"
                       >

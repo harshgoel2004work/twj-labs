@@ -19,6 +19,62 @@ const logos = [
 // Triplicate for a perfectly seamless infinite scroll
 const marqueeLogos = [...logos, ...logos, ...logos];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15,
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const simpleItemVariants: any = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+    },
+  },
+};
+
+// --- Letter-by-letter blur reveal ---
+function BlurRevealText({
+  text,
+  delayOffset = 0,
+  className = "",
+}: {
+  text: string;
+  delayOffset?: number;
+  className?: string;
+}) {
+  const letters = text.split("");
+  return (
+    <span className={`inline-flex flex-wrap justify-center ${className}`}>
+      {letters.map((char, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{
+            duration: 0.6,
+            delay: delayOffset + i * 0.03,
+            ease: [0.22, 1, 0.36, 1],
+          } as any}
+          className="inline-block"
+          style={{ willChange: "transform, filter, opacity" }}
+        >
+          {char === " " ? "\u00A0" : char}
+        </motion.span>
+      ))}
+    </span>
+  );
+}
+
 export default function HeroSection() {
   const t = useTranslations('Home.Hero');
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
@@ -95,13 +151,17 @@ export default function HeroSection() {
         <div className="flex flex-col items-center justify-center gap-16">
 
           {/* ── Left column ── */}
-          <div className="flex-1 w-full  items-center flex flex-col justify-center">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate={isLoaded ? "visible" : "hidden"}
+            className="flex-1 w-full items-center flex flex-col justify-center"
+          >
 
             {/* Badge */}
-            <div
-              className={`inline-flex items-center gap-2.5 mb-8 transition-all duration-700 ease-out rounded-full px-2 py-1.5 backdrop-blur-lg bg-white/5 border border-white/5 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
-              style={{ transitionDelay: "0ms" }}
+            <motion.div
+              variants={simpleItemVariants}
+              className="inline-flex items-center gap-2.5 mb-8 rounded-full px-2 py-1.5 backdrop-blur-lg bg-white/5 border border-white/5"
             >
               <span className="rounded-full bg-linear-to-b from-violet-700 to-violet-500 px-2.5 py-1 text-[11px] font-bold tracking-wider text-white uppercase">
                 {t('agency')}
@@ -109,35 +169,38 @@ export default function HeroSection() {
               <span className="text-[13px] text-white/80 tracking-wide pr-2">
                 {t('badge')}
               </span>
-            </div>
+            </motion.div>
 
-            {/* Headline */}
-            <h1
-              className={`text-[clamp(3rem,8vw,5.5rem)] font-light leading-[1.05] tracking-tight text-center text-white mb-6 transition-all duration-700 ease-out px-4 md:px-0 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-              style={{
-                transitionDelay: "120ms",
-                fontFamily: "'DM Sans', sans-serif",
-                fontWeight: 300,
-              }}
-            >
-              Building Experiences for <br /> the web.
-            </h1>
+            {/* Headline — letter-by-letter blur reveal */}
+            {isLoaded && (
+              <h1
+                className="text-[clamp(3rem,8vw,5.5rem)] font-light leading-[1.05] tracking-tight text-center text-white mb-6 px-4 md:px-0"
+                style={{
+                  fontFamily: "'DM Sans', sans-serif",
+                  fontWeight: 300,
+                }}
+              >
+                <span className="block">
+                  <BlurRevealText text="Building Experiences for" delayOffset={0.4} />
+                </span>
+                <span className="block">
+                  <BlurRevealText text="the web." delayOffset={1.1} />
+                </span>
+              </h1>
+            )}
 
             {/* Subheading */}
-            <p
-              className={`text-[14px] md:text-[15px] leading-relaxed text-white/50 mb-10 max-w-[280px] sm:max-w-md text-center transition-all duration-700 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-              style={{ transitionDelay: "220ms" }}
+            <motion.p
+              variants={simpleItemVariants}
+              className="text-[14px] md:text-[15px] leading-relaxed text-white/50 mb-10 max-w-[280px] sm:max-w-md text-center"
             >
               {t('subtitle')}
-            </p>
+            </motion.p>
 
             {/* CTA buttons */}
-            <div
-              className={`flex flex-col sm:flex-row items-center gap-3 mb-16 transition-all duration-700 ease-out ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-                }`}
-              style={{ transitionDelay: "320ms" }}
+            <motion.div
+              variants={simpleItemVariants}
+              className="flex flex-col sm:flex-row items-center gap-3 mb-16"
             >
               <Link href={'/contact-sales'} className="w-full sm:w-auto text-center group relative overflow-hidden rounded-full bg-white px-8 py-3.5 text-[14px] font-medium text-black transition-all duration-300 hover:bg-white/90 hover:shadow-[0_0_24px_rgba(255,255,255,0.25)] active:scale-[0.97]">
                 <span className="relative z-10">{t('ctaConnect')}</span>
@@ -146,15 +209,15 @@ export default function HeroSection() {
               <Link href={'/work'} className="w-full sm:w-auto text-center group rounded-full border border-white/20 bg-white/5 px-8 py-3.5 text-[14px] font-medium text-white/80 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-white/40 hover:text-white active:scale-[0.97]">
                 {t('ctaWork')}
               </Link>
-            </div>
+            </motion.div>
+
             {/* ── Marquee Logo Strip ── */}
-            <div
-              className={`transition-all duration-700 ease-out w-full max-w-md ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-                }`}
-              style={{ transitionDelay: "420ms" }}
+            <motion.div
+              variants={simpleItemVariants}
+              className="w-full max-w-md"
             >
               {/* Divider */}
-              <div className="mb-5 h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+              <div className="mb-5 h-px w-full bg-linear-to-r from-transparent via-white/10 to-transparent" />
 
 
 
@@ -197,7 +260,7 @@ export default function HeroSection() {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* SCREEN */}
             <div ref={containerRef} className="relative w-full px-4 md:px-0">
@@ -268,7 +331,7 @@ export default function HeroSection() {
             </div>
 
 
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -164,7 +164,7 @@ export default function ProcessSection() {
                 {/* Image Container */}
                 <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-white/10 bg-gray-900 shadow-2xl">
                   <Image
-                    src="/ww2.svg"
+                    src="/ww2.webp"
                     alt="Call"
                     width={1000}
                     height={1000}

@@ -10,8 +10,37 @@ const bundleAnalyzer = withBundleAnalyzer({
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['drive.google.com', 'cdn.sanity.io', 'scontent.cdninstagram.com'],
-  }
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'drive.google.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.cdninstagram.com',
+      },
+      {
+        protocol: 'https',
+        hostname: '*.fbcdn.net',
+      },
+    ],
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/:locale/our-work/:path*',
+        destination: '/:locale/work/:path*',
+      },
+      {
+        source: '/our-work/:path*',
+        destination: '/work/:path*',
+      },
+    ];
+  },
 };
 
 export default bundleAnalyzer(withNextIntl(nextConfig));

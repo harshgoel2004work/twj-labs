@@ -505,14 +505,30 @@
     },
     "Pricing": {
       "badge": "Pricing",
-      "titlePart1": "Tailored Pricing Plans to",
-      "titlePart2": "Suit Your Business Needs",
+      "title": "Tailored Pricing Plans to \n<span>Suit Your Business Needs</span>",
       "description": "All packages are customizable to fit your needs. Let's hop on a call and scope out your project details to find the perfect fit.",
-      "loading": "Loading pricing plans...",
-      "error": "Unable to load plans. Please try again later.",
       "mostPopular": "Most Popular",
-      "everythingPrev": "Everything in previous +",
-      "cta": "Contact Sales"
+      "enterprise": "Enterprise",
+      "pricingLabel": "Custom",
+      "CTA": "Get Started",
+      "plans": {
+        "essentials": {
+          "name": "Essentials\nPlan",
+          "description": "Perfect for businesses looking to establish a solid initial presence on Google."
+        },
+        "webPresence": {
+          "name": "Web Presence\nPlan",
+          "description": "Ideal for businesses wanting a professional, high-performing website alongside Google presence."
+        },
+        "growth": {
+          "name": "Growth\nPlan",
+          "description": "Comprehensive solution for businesses ready to scale their online impact and engagement."
+        },
+        "custom": {
+          "name": "Custom\nBusiness Solution",
+          "description": "Fully bespoke web applications and advanced systems for complex business needs."
+        }
+      }
     }
   },
   "OtherServices": {

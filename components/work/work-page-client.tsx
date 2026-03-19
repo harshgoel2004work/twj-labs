@@ -167,7 +167,7 @@ export default function WorkPageClient() {
 export const OurWorkCard = ({ work }: { work: SanityWorkType }) => {
   return (
     <div className='z-20 bg-white/5 rounded-4xl p-1.5 border border-white/5'>
-        <Link href={`/work/${work._id}`} className="block h-full ">
+        <Link href={`/our-work/${work._id}`} className="block h-full ">
             <div className="group relative bg-[#0c0c12] border border-black/80 rounded-3xl overflow-hidden hover:border-black/50 transition-all duration-500 h-full flex flex-col shadow-[inset_0_1px_1px_rgba(255,255,255,0.05),_0_20px_40px_-10px_rgba(0,0,0,0.5)]">
                 
                 {/* 1. Image Area - Simplified and full-aspect */}

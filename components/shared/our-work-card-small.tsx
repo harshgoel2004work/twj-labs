@@ -12,7 +12,7 @@ const OurWorkCardSmall = ({work}:{work:OurWorkType}) => {
         <div className='w-[60%]  flex flex-col py-3 pr-4 pl-1'>
             <h3 className='text-white font-semibold mb-2'>{work.companyName}</h3>
             <p className='text-gray-400 text-sm line-clamp-2'>{work.description}</p>
-            <Link href={`/work/${work.id}`} className='text-sm text-violet-300 inline-block mt-2'>View Case Study</Link>
+            <Link href={`/our-work/${work.id}`} className='text-sm text-violet-300 inline-block mt-2'>View Case Study</Link>
         </div>
         
     </div>

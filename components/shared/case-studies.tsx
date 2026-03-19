@@ -151,7 +151,7 @@ const CaseStudiesSection = ({ darkMode = false }: { darkMode: boolean }) => {
 
             {/* CTA */}
             <Link
-              href={`/work/${caseStudy._id}`}
+              href={`/our-work/${caseStudy._id}`}
               className={cn(
                 "inline-flex w-fit items-center gap-2 text-sm font-semibold border-b pb-0.5 transition-all hover:gap-4",
                 darkMode ? "text-white border-white/30 hover:text-indigo-300 hover:border-indigo-300" : "text-black border-black/20 hover:text-indigo-600 hover:border-indigo-600"
