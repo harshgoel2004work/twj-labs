@@ -9,6 +9,7 @@ import ResultsSection from "@/components/home/results-section";
 import ServicesSection from "@/components/home/services-section";
 import TheTWJDifference from "@/components/home/twj-difference";
 import MagicRings from "@/components/MagicRings";
+import InstagramFeed from "@/components/home/instagram-feed";
 
 import PricingHero from "@/components/pricing/pricing-section-other";
 import CaseStudiesSection from "@/components/shared/case-studies";
@@ -27,36 +28,8 @@ const WhatWeDoSection = dynamic(() => import('@/components/home/what-we-do'), {
 })
 
 export default function Home() {
-  // const [showLoading, setShowLoading] = useState(() => {
-  //   // Guard for environments where window/sessionStorage may be unavailable
-  //   if (typeof window === "undefined" || typeof sessionStorage === "undefined") {
-  //     return false;
-  //   }
-  //   // 1. Check if we've already shown the splash this session
-  //   const hasSeenSplash = sessionStorage.getItem("splash_shown");
-
-  //   // 2. Check if device is desktop (wider than 768px)
-  //   const isDesktop = window.innerWidth >= 768;
-
-  //   // Show loading only when not desktop and not already shown this session
-  //   return !(hasSeenSplash || isDesktop);
-  // });
-
-  // const handleLoadingComplete = () => {
-  //   // Unmount the component
-  //   setShowLoading(false);
-  //   // Mark as shown for this session
-  //   sessionStorage.setItem("splash_shown", "true");
-  // };
-
   return (
     <div className="bg-[#050508] text-white w-full min-h-screen font-manrope relative">
-
-      {/* Conditionally render Loading. 
-          The 'md:hidden' class inside Loading.tsx handles the visual hiding on desktop 
-          immediately to prevent FOUC (Flash of Unstyled Content) 
-      */}
-      {/* {showLoading && <Loading onComplete={handleLoadingComplete} />} */}
 
       <HeroSection />
       <AboutSection />
@@ -103,15 +76,11 @@ export default function Home() {
       <ServicesSection />
       <Features2Section />
 
-      {/* <WhatWeDoSection /> */}
-
-
-
       <TheTWJDifference />
 
       <CaseStudiesSection darkMode={true} />
 
-      {/* <TestimonialsSection darkMode={false}/> */}
+      <InstagramFeed />
 
       <PricingHero />
 

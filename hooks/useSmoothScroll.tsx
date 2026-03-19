@@ -18,6 +18,9 @@ export function useSmoothScroll(ease = 0.08) {
   }, [pathname]);
 
   useEffect(() => {
+    const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+    if (isTouchDevice) return;
+
     // Lock native scroll on <html>
     document.documentElement.style.overflow = "hidden";
 

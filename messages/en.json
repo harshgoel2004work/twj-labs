@@ -306,6 +306,11 @@
       "loading": "Loading case studies...",
       "error": "Unable to load case studies."
     },
+    "Instagram": {
+      "badge": "Instagram",
+      "title": "Follow Our Journey",
+      "description": "Peek behind the scenes and stay updated with our latest design explorations, workspace shifts, and digital innovations."
+    },
     "Pricing": {
       "badge": "Pricing",
       "titleLine1": "Tailored Pricing Plans to",
