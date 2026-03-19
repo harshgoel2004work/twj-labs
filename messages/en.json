@@ -1,0 +1,1173 @@
+{
+  "Navbar": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "blog": "Blog",
+    "contact": "Contact",
+    "pricing": "Pricing",
+    "useCases": "Use Cases",
+    "company": "Company",
+    "contactSales": "Contact Sales",
+    "readyToElevate": "Ready to elevate your digital presence?",
+    "coreServices": "Core Services",
+    "specialized": "Specialized",
+    "aboutDesc": "Learn more about our company",
+    "work": "Our Work",
+    "workDesc": "Discover our projects and case studies.",
+    "whiteLabeling": "White Labeling",
+    "whiteLabelingDesc": "Partnership for other agencies.",
+    "goOnline": "Go Online",
+    "goOnlineDesc": "Get your business online.",
+    "careers": "Careers",
+    "careersDesc": "Explore job opportunities with us.",
+    "blogDesc": "Read our latest articles and insights.",
+    "freeAudit": "Free Website Audit",
+    "freeAuditDesc": "Get a detailed analysis",
+    "resources": "Resources"
+  },
+  "Footer": {
+    "ctaTitle": "Ready to transform",
+    "ctaTitleSpan": "your business?",
+    "ctaDescription": "Schedule a call with us to start your brand's trip to the stars... or maybe just to talk shop.",
+    "contactSales": "Contact Sales",
+    "rights": "All rights reserved.",
+    "company": "Company",
+    "services": "Services",
+    "resources": "Resources",
+    "brandDescription": "The Walking Jumbo is dedicated to propelling businesses into the future with cutting-edge AI solutions, innovative web development, and captivating digital experiences.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "sitemap": "Sitemap"
+  },
+  "CountrySelector": {
+    "label": "Select Country",
+    "en": "English",
+    "hi": "Hindi"
+  },
+  "Services": {
+    "webflow": "Webflow Development",
+    "wordpress": "WordPress Development",
+    "webDesign": "Web Design",
+    "ecommerce": "E-commerce Solutions",
+    "customSoftware": "Custom Software Development",
+    "aiIntegration": "AI Integration & Automation",
+    "accessibility": "Accessibility Testing & Compliance",
+    "seo": "SEO Optimization",
+    "socialMedia": "Social Media Management",
+    "maintenance": "Website Maintenance",
+    "copywriting": "Copywriting Services",
+    "migration": "Migration & Integration",
+    "webflowTagline": "High-converting, scalable websites",
+    "wordpressTagline": "Custom WordPress solutions",
+    "webDesignTagline": "visually stunning & user-friendly",
+    "ecommerceTagline": "Boost Online Sales",
+    "customSoftwareTagline": "Tailored software solutions",
+    "aiIntegrationTagline": "Enhancing efficiency with AI",
+    "accessibilityTagline": "Ensuring digital inclusivity",
+    "seoTagline": "Improving your website’s visibility",
+    "socialMediaTagline": "Managing social media presence",
+    "maintenanceTagline": "Ongoing support and maintenance",
+    "copywritingTagline": "Compelling content that converts",
+    "migrationTagline": "Seamless transitions for your digital landscape"
+  },
+  "UseCases": {
+    "industry": "Industry",
+    "b2b": "B2B",
+    "ecommerce": "E-Commerce",
+    "saas": "SaaS",
+    "healthcare": "Healthcare",
+    "education": "Education",
+    "finance": "Finance & FinTech",
+    "realestate": "Real Estate",
+    "hospitality": "Hospitality",
+    "b2bDesc": "Websites tailored for B2B companies to drive leads and conversions.",
+    "ecommerceDesc": "High-converting online stores built for performance, UX, and growth.",
+    "saasDesc": "Landing pages, dashboards, and product experiences built for SaaS companies.",
+    "healthcareDesc": "Accessible, trustworthy healthcare websites built to serve patients effectively.",
+    "educationDesc": "Digital experiences for schools, educators, and e-learning platforms.",
+    "financeDesc": "Secure, compliant, and high-trust websites for finance brands.",
+    "realestateDesc": "Modern real estate websites with property listings and lead funnels.",
+    "hospitalityDesc": "Beautiful, conversion-focused websites for hotels and hospitality brands."
+  },
+  "Home": {
+    "Hero": {
+      "agency": "Agency",
+      "badge": "Development & Design Agency",
+      "title": "Building Experiences for the web.",
+      "subtitle": "We transform your ideas into high-performing digital products that drive growth and deliver exceptional user experiences.",
+      "ctaConnect": "Connect With Us",
+      "ctaWork": "Our Work"
+    },
+    "About": {
+      "badge": "About us",
+      "content": "Fueled by curiosity and a deep love for the craft, we are a team who believe that extraordinary work is the only standard worth building toward.",
+      "cta": "Book an appointment"
+    },
+    "Features": {
+      "platformIntegrations": "Seamless Platform Integrations",
+      "platformIntegrationsDesc": "We connect your website with the tools you already use — CRMs, payment gateways, analytics, and more.",
+      "aiAutomation": "AI Integration & Automation",
+      "aiAutomationDesc": "Leverage cutting-edge AI to automate workflows, reduce manual work, and scale your operations intelligently.",
+      "accessibility": "Accessibility & Compliance always",
+      "accessibilityDesc": "Ensure your website is usable by everyone — we test and build to WCAG standards so no user is left behind.",
+      "seo": "SEO Optimized",
+      "seoDesc": "Built to rank, every site we ship is structured for search from day one.",
+      "ecommerce": "E-commerce Ready",
+      "ecommerceDesc": "Scalable online stores built on Shopify or custom stacks that convert.",
+      "performance": "Lightning Performance",
+      "performanceDesc": "Fast-loading, optimized code that scores high on Core Web Vitals.",
+      "maintenance": "Ongoing Maintenance",
+      "maintenanceDesc": "We don't disappear at launch — dedicated support keeps your site at its peak."
+    },
+    "Results": {
+      "badge": "Results",
+      "titleLine1": "Delivering Digital Results",
+      "titleLine2": "That Scale With You.",
+      "sub": "We build for where you are today and architect for where you're going tomorrow.",
+      "cta": "Book a 15-min call",
+      "growth": "Growth"
+    },
+    "HowWeWork": {
+      "badge": "How we work?",
+      "titleLine1": "Every Project Starts",
+      "titleLine2": "With A Conversation.",
+      "sub": "A streamlined workflow designed to take your idea from concept to reality efficiently.",
+      "stage": "Stage",
+      "stage1": {
+        "title": "Discover & Strategize",
+        "description": "We start by learning everything about your business, goals, and audience. Through in-depth discovery calls and competitive research, we map out a clear roadmap before a single pixel is designed.",
+        "tag1": "Strategy Session",
+        "tag2": "Project Roadmap"
+      },
+      "stage2": {
+        "title": "Design & Build",
+        "description": "With a solid strategy in place, our team gets to work. We design, develop, and iterate — keeping you involved at every milestone so nothing ships without your approval.",
+        "tag1": "UI/UX Design",
+        "tag2": "Development",
+        "tag3": "Weekly Updates"
+      },
+      "stage3": {
+        "title": "Launch & Grow",
+        "description": "After rigorous QA and performance testing, we take your product live. But we don't stop there — we monitor, optimise, and support you as your business scales.",
+        "tag1": "Quality Assurance",
+        "tag2": "Deployment Strategy",
+        "tag3": "Ongoing Support"
+      }
+    },
+    "Services": {
+      "badge": "Services",
+      "title": "What are we great at?",
+      "sub": "Explore our services and what are we great at.",
+      "webflow": {
+        "title": "Webflow Development",
+        "subtitle": "High-Converting Sites",
+        "description": "Custom, responsive Webflow websites built to convert visitors into clients."
+      },
+      "wordpress": {
+        "title": "WordPress Development",
+        "subtitle": "Scalable & Flexible",
+        "description": "Fully custom WordPress websites tailored to your business needs and goals."
+      },
+      "webDesign": {
+        "title": "Web Design",
+        "subtitle": "Visually Stunning",
+        "description": "Purposeful, brand-led design that looks exceptional and performs even better."
+      },
+      "ecommerce": {
+        "title": "E-commerce Solutions",
+        "subtitle": "Boost Online Sales",
+        "description": "Scalable online stores built on Shopify or custom stacks that convert browsers into buyers."
+      },
+      "customSoftware": {
+        "title": "Custom Software Development",
+        "subtitle": "Built For You",
+        "description": "From ERP systems to fully bespoke web apps — engineered on your tech stack."
+      },
+      "ai": {
+        "title": "AI Integration & Automation",
+        "subtitle": "Work Smarter",
+        "description": "Embed AI into your business workflows to automate tasks, cut costs, and scale intelligently."
+      },
+      "accessibility": {
+        "title": "Accessibility & Compliance",
+        "subtitle": "Inclusive By Design",
+        "description": "WCAG-compliant testing and development so your site is usable by every visitor."
+      },
+      "custom": {
+        "title": "Custom Solutions",
+        "subtitle": "Tailored for You",
+        "description": "Bespoke digital products designed and built to solve your unique business challenges."
+      },
+      "tags": {
+        "seo": "SEO Optimization",
+        "social": "Social Media Management",
+        "maintenance": "Website Maintenance",
+        "copywriting": "Copywriting Services",
+        "migration": "Migration & Integration"
+      }
+    },
+    "Features2": {
+      "badge": "Features",
+      "titleLine1": "Everything Your Business Needs",
+      "titleLine2": "Built Into Every Project",
+      "sub": "Every engagement comes with the full stack — strategy, design, development, and support baked in from day one.",
+      "conversion": {
+        "title": "Conversion-First Design",
+        "subtitle": "Built To Perform",
+        "description": "Every layout, button, and flow is crafted with one goal — turning your visitors into paying clients."
+      },
+      "cleanCode": {
+        "title": "Clean, Scalable Code",
+        "subtitle": "Future-Proof Builds",
+        "description": "No bloated plugins or shortcuts. We write code that's fast, maintainable, and ready to grow with you."
+      },
+      "seo": {
+        "title": "SEO From The Ground Up",
+        "subtitle": "Built To Rank",
+        "description": "Structured, semantic, and performance-optimised — your site is engineered to be found before we hit publish."
+      },
+      "fast": {
+        "title": "Lightning Fast Delivery",
+        "subtitle": "Quick Turnaround",
+        "description": "Tight timelines without cutting corners. We work in focused sprints so your project ships on schedule, every time."
+      },
+      "branding": {
+        "title": "Brand-Led Visuals",
+        "badge": "Branding",
+        "subtitle": "Distinctly Yours",
+        "description": "Cohesive typography, colour, and identity work that makes your business instantly recognisable online."
+      },
+      "mobile": {
+        "title": "Mobile-First Always",
+        "subtitle": "Every Screen, Perfect",
+        "description": "Designed and tested across every device — your site looks and performs flawlessly whether on desktop, tablet, or phone."
+      }
+    },
+    "Difference": {
+      "badge": "The TWJ Difference",
+      "title": "We Just Don't Design, We Build.",
+      "sub": "Just Dream it!",
+      "contact": "Contact Now",
+      "ux": "Enhanced UX",
+      "conversions": "Boosted Conversions",
+      "loading": "Fast Loading",
+      "seo": "SEO Optimized",
+      "customizable": "Customizable",
+      "scalable": "Scalable",
+      "engagement": "Increased Engagement",
+      "expandable": "Expandable",
+      "secure": "Secure",
+      "userFriendly": "User-Friendly",
+      "new": "NEW",
+      "next": "Next",
+      "framer": "Framer",
+      "appStore": "App Store",
+      "publish": "Publish",
+      "references": "References"
+    },
+    "Bento": {
+      "requestsTitle": "Submit Your Requests",
+      "requestsDesc": "Enjoy the freedom to submit requests without restrictions. Whether design tweaks or full builds — we're here at every step.",
+      "revisionsTitle": "Requests & Revisions",
+      "revisionsDesc": "Multiple revision rounds ensure your feedback is fully incorporated, delivering a product that truly meets your expectations.",
+      "turnaroundTitle": "Quick Turnaround",
+      "turnaroundDesc": "Efficiency without compromise. We deliver on time, every time.",
+      "publishTitle": "Publish in Seconds",
+      "publishDesc": "Streamlined deployment — from final approval to live site in moments.",
+      "pricingTitle": "Worry‑Free Pricing",
+      "pricingDesc": "Flexible plans designed to scale with you — start lean and grow without financial stress or hidden surprises.",
+      "cta": "Book a 15-min call",
+      "new": "New",
+      "discovery": "Discovery",
+      "design": "Design",
+      "build": "Build",
+      "launch": "Launch",
+      "draft1": "DRAFT 1",
+      "draft2": "DRAFT 2",
+      "final": "FINAL",
+      "dev": "Dev",
+      "performance": "Performance",
+      "scope": "Project Scope",
+      "launchSupport": "Launch Support",
+      "noFees": "No hidden fees",
+      "transparent": "Transparent ✓"
+    },
+    "CaseStudies": {
+      "badge": "Case Studies",
+      "titleLine1": "Digital Transformation Stories",
+      "titleLine2": "Built for Scale",
+      "sub": "A collection of deep dives into how we architect, build, and ship scalable solutions for the modern web.",
+      "industryDefault": "Tech",
+      "transforming": "Transforming",
+      "conversionRate": "Conversion Rate",
+      "userGrowth": "User Growth",
+      "cta": "Read Full Case Study",
+      "loading": "Loading case studies...",
+      "error": "Unable to load case studies."
+    },
+    "Pricing": {
+      "badge": "Pricing",
+      "titleLine1": "Tailored Pricing Plans to",
+      "titleLine2": "Suit Your Business Needs",
+      "sub": "All packages are customizable to fit your needs. Let's hop on a call and scope out your project details to find the perfect fit.",
+      "cta": "Contact Sales",
+      "mostPopular": "Most Popular",
+      "prev": "Everything in previous +",
+      "loading": "Loading pricing plans…",
+      "error": "Unable to load plans. Please try again later."
+    },
+    "Faqs": {
+      "badge": "FAQs",
+      "title": "Frequently Asked Questions",
+      "sub": "Here are some of the most common questions we get asked about our services and processes.",
+      "q1": "What services does your agency specialize in?",
+      "a1": "We design, build, and optimize high-performing digital experiences. Our core services include Webflow development, WordPress development, e-commerce solutions, AI integration & automation, custom software development, accessibility testing & compliance, web design, SEO optimization, website maintenance, migration, and copywriting.",
+      "q2": "How does your project process work?",
+      "a2": "Every project begins with discovery—understanding your goals, challenges, and audience. We then move into UX planning, UI design, development, testing, and final deployment. Throughout the process, you receive consistent updates, previews, and opportunities to provide feedback.",
+      "q3": "What is the typical timeline for a project?",
+      "a3": "Timelines vary depending on project scope. A standard website takes 3–6 weeks, an e-commerce build 4–8 weeks, AI integrations 1–4 weeks, and custom software projects can range from 1–3 months. We provide a clear timeline before starting.",
+      "q4": "Do you offer maintenance or ongoing support?",
+      "a4": "Yes. We provide monthly and quarterly maintenance plans that include updates, performance monitoring, security fixes, SEO maintenance, content updates, and ongoing support. Clients who build with us often choose long-term maintenance to keep their website healthy.",
+      "q5": "Can you improve or fix my existing website?",
+      "a5": "Absolutely. Whether your site needs design improvements, performance fixes, bug resolution, migrations, accessibility upgrades, or new features—we can help. We frequently work on inherited or partially completed projects.",
+      "q6": "How do payments and contracts work?",
+      "a6": "We typically take a 40–50% upfront deposit to secure your project, followed by one or two milestone payments. All projects include a clear scope, timeline, and agreement before work begins.",
+      "q7": "Do you work with clients internationally?",
+      "a7": "Yes. We work with clients across the US, Europe, Asia, and the Middle East. All communication is done through email, Notion, Slack, Zoom, or your preferred workflow."
+    },
+    "marquee": "Think ✦ Grow ✦ Imagine ✦ Build ✦"
+  },
+  "About": {
+    "Hero": {
+      "badge": "About Us",
+      "missionTitle": "Our Mission",
+      "missionContent": "Our mission is to deliver high-quality products and services that exceed our customers' expectations. We are committed to innovation, excellence, and customer satisfaction.",
+      "collaborationContent": "We believe in the power of collaboration and innovation, and we strive to create a positive impact in everything we do. Our team is committed to continuous improvement and we are always looking for ways to enhance our offerings. We value our customers and partners, and we work hard to build long-lasting relationships based on trust and mutual respect.",
+      "cards": {
+        "mission": {
+          "title": "Our Mission",
+          "description": "To deliver high-quality products and services that exceed our customers' expectations."
+        },
+        "vision": {
+          "title": "Our Vision",
+          "description": "To be a global leader in our industry, recognized for our innovation and customer-centric approach."
+        },
+        "values": {
+          "title": "Our Values",
+          "description": "Integrity, Excellence, Innovation, and Customer Focus are the core values that guide our actions."
+        }
+      }
+    },
+    "Tools": {
+      "badge": "Tools we use",
+      "titlePart1": "Tools and Tech that",
+      "titlePart2": "Power our Productivity",
+      "description": "Our toolkit is made up of the latest and most reliable tech to ensure your project is executed to perfection.",
+      "categories": {
+        "automation": "Automation",
+        "communication": "Communication",
+        "cloudStorage": "Cloud Storage",
+        "payments": "Payments",
+        "emailMarketing": "Email Marketing",
+        "versionControl": "Version Control"
+      },
+      "descriptions": {
+        "zapier": "Zapier connects your favorite apps and automates your workflows.",
+        "slack": "Slack is our go-to platform for real-time communication and collaboration.",
+        "dropbox": "Dropbox provides secure cloud storage, enabling us to share files and collaborate.",
+        "stripe": "Stripe is our payment processing tool, providing a secure way to process transactions.",
+        "mailchimp": "Mailchimp helps us craft effective email marketing campaigns to nurture clients.",
+        "github": "GitHub is our version control system, enabling smooth collaboration."
+      }
+    }
+  },
+  "Work": {
+    "badge": {
+      "name": "Agency",
+      "description": "Development & Design Agency"
+    },
+    "titlePart1": "Check Out Some",
+    "titlePart2": "Extra-Ordinary Work.",
+    "subtitle": "From startups to established brands, we create tailored solutions that drive success and make a real impact.",
+    "cta": "Book a 15-min call",
+    "loading": "Loading portfolio…",
+    "noItems": "No portfolio items found.",
+    "error": "Unable to load portfolio. Please try again later."
+  },
+  "PricingPage": {
+    "Hero": {
+      "badge": "Pricing",
+      "titlePart1": "Tailored Pricing Plans to",
+      "titlePart2": "Suit Your Business Needs",
+      "description": "All packages are customizable to fit your needs. Let's hop on a call and scope out your project details to find the perfect fit.",
+      "loading": "Loading pricing plans…",
+      "error": "Unable to load plans. Please try again later.",
+      "mostPopular": "Most Popular",
+      "everythingInPrevious": "Everything in previous +",
+      "contactSales": "Contact Sales"
+    },
+    "Retainers": {
+      "badge": "Monthly Retainers",
+      "title": "Dedicated support for ongoing growth",
+      "description": "Secure our time for maintenance, updates, and continuous improvements.",
+      "startingAt": "Starting at",
+      "billingPeriod": "month",
+      "cta": "Contact Sales",
+      "includedFeatures": "Included Features",
+      "packages": {
+        "monthlySupport": "Comprehensive monthly support package."
+      }
+    },
+    "Process": {
+      "badge": "How we work",
+      "title": "A proven process for consistent results.",
+      "description": "We've refined our workflow over hundreds of projects to ensure efficiency, transparency, and top-tier quality every time."
+    }
+  },
+  "WhiteLabeling": {
+    "Hero": {
+      "badge": "Explore Our Partnership",
+      "titlePart1": "Pioneering AI Innovation",
+      "titlePart2": "with White Labeling!",
+      "description": "TWJ is your trusted agency for creative strategy. We specialize in cutting-edge white-label digital business solutions.",
+      "cta": "View about TWJ",
+      "workspace": "TWJ Agency Workspace"
+    },
+    "AboutPartners": {
+      "badge": "About TWJ Partners",
+      "titlePart1": "Elevate Brands with",
+      "titlePart2": "Innovation Tech!",
+      "feature1Title": "Smart Digital Solutions",
+      "feature1Desc": "We combine technology and creativity to build future-ready solutions that help businesses thrive in a competitive landscape.",
+      "feature2Title": "Elevating Brands with Strategy",
+      "feature2Desc": "Our expertise in branding, marketing, and design ensures your business stands out, leaving a lasting impact on your audience.",
+      "cta": "Book an appointment"
+    }
+  },
+  "GoOnline": {
+    "Badge": "Now available for your industry",
+    "TitlePart1": "Take your Business Online",
+    "TitlePart2": "with The Walking Jumbo",
+    "Subtitle": "We help traditional offline businesses transition seamlessly into the digital world — premium websites, local SEO, and powerful marketing tools.",
+    "CTA": "Get Started",
+    "Discover": "Discover More",
+    "Stats": {
+      "leads": "More Leads Online",
+      "satisfaction": "Client Satisfaction",
+      "turnaround": "Avg. Turnaround",
+      "launched": "Businesses Launched"
+    },
+    "Features": {
+      "badge": "Why go online?",
+      "titlePart1": "Everything you gain",
+      "titlePart2": "by going digital.",
+      "visibility": {
+        "title": "Global Visibility",
+        "description": "Break geographical barriers. Reach customers worldwide with a professional online presence that works while you sleep."
+      },
+      "accessibility": {
+        "title": "24/7 Accessibility",
+        "description": "Your business never closes online. Let customers find you and engage with your services anytime, anywhere."
+      },
+      "growth": {
+        "title": "Data-Driven Growth",
+        "description": "Understand your customers with advanced analytics. Optimize every marketing dollar with real insights."
+      },
+      "trust": {
+        "title": "Established Trust",
+        "description": "Build credibility with a premium digital storefront that reflects the quality of your offline brand."
+      }
+    },
+    "Process": {
+      "badge": "Our Process",
+      "title": "From offline to online in 3 simple steps.",
+      "description": "We've refined a battle-tested process that gets your business live quickly without compromising on quality or performance.",
+      "steps": {
+        "Discovery": {
+          "title": "Discovery Call",
+          "body": "We audit your offline brand, understand your goals, and map out the exact digital strategy your business needs."
+        },
+        "Build": {
+          "title": "Build & Launch",
+          "body": "Our team designs, develops, and deploys your complete digital presence — website, SEO, Google Business — in days, not months."
+        },
+        "Grow": {
+          "title": "Grow & Scale",
+          "body": "Post-launch we track performance, refine your SEO, and help you convert online traffic into paying customers."
+        }
+      }
+    },
+    "Pricing": {
+      "badge": "Pricing",
+      "titlePart1": "Tailored Pricing Plans to",
+      "titlePart2": "Suit Your Business Needs",
+      "description": "All packages are customizable to fit your needs. Let's hop on a call and scope out your project details to find the perfect fit.",
+      "loading": "Loading pricing plans...",
+      "error": "Unable to load plans. Please try again later.",
+      "mostPopular": "Most Popular",
+      "everythingPrev": "Everything in previous +",
+      "cta": "Contact Sales"
+    }
+  },
+  "OtherServices": {
+    "badge": "Monthly Retainers",
+    "title": "Dedicated support for ongoing growth",
+    "description": "Secure our time for maintenance, updates, and continuous improvements.",
+    "cardDescription": "Comprehensive monthly support package.",
+    "included": "Included Features",
+    "cta": "Contact Sales",
+    "startingAt": "Starting at",
+    "plans": {
+      "socialmedia": {
+        "name": "Social Media Management",
+        "description": "Comprehensive management of your social media channels.",
+        "billingPeriod": "month",
+        "features": [
+          "Content creation & scheduling",
+          "Audience engagement",
+          "Performance analytics",
+          "Monthly strategy sessions"
+        ]
+      },
+      "seo": {
+        "name": "SEO Services",
+        "description": "Ongoing SEO optimization.",
+        "billingPeriod": "",
+        "features": [
+          "Keyword research",
+          "On-page improvements",
+          "Link building"
+        ]
+      },
+      "copywriting": {
+        "name": "Copywriting Services",
+        "description": "Professional copywriting.",
+        "billingPeriod": "per word",
+        "features": [
+          "Website copywriting",
+          "Blog posts",
+          "Marketing materials"
+        ]
+      },
+      "maintenance": {
+        "name": "Website Maintenance",
+        "description": "Regular updates and maintenance for your website.",
+        "billingPeriod": "month",
+        "features": [
+          "Regular updates",
+          "Security patches",
+          "Performance monitoring",
+          "Backup management"
+        ]
+      }
+    }
+  },
+  "Ticker": {
+    "transform": "Transform",
+    "scale": "Scale",
+    "digitalize": "Digitalize",
+    "succeed": "Succeed",
+    "grow": "Grow",
+    "launch": "Launch",
+    "dominate": "Dominate",
+    "convert": "Convert"
+  },
+  "Contact": {
+    "Hero": {
+      "badge": "Contact Sales",
+      "titlePart1": "Let's Build Something",
+      "titlePart2": "Great Together.",
+      "description": "Our team is ready to help you achieve your goals and bring your vision to life. Reach out to us today to discuss your project.",
+      "features": {
+        "design": {
+          "title": "Design That Converts",
+          "description": "Our design approach focuses on creating visually stunning and high-converting websites that drive results."
+        },
+        "presence": {
+          "title": "Boost Your Online Presence",
+          "description": "Our team will work with you to create a tailored strategy that enhances your brand visibility and drives traffic."
+        },
+        "solutions": {
+          "title": "Custom Solutions",
+          "description": "We understand that every business is unique, which is why we offer custom solutions tailored to your specific needs."
+        },
+        "support": {
+          "title": "Dedicated Support",
+          "description": "Our dedicated support team is here to assist you every step of the way, ensuring a smooth and successful project."
+        }
+      }
+    },
+    "Tools": {
+      "title": "Technologies We Use"
+    },
+    "Testimonial": {
+      "quote": "At TWJ Labs, we transform businesses not just websites",
+      "initials": "HG",
+      "name": "Harsh Goel",
+      "designation": "Founder, TWJ"
+    },
+    "Work": {
+      "badge": "Recent Work",
+      "title": "Crafting Digital Experiences."
+    },
+    "Form": {
+      "title": "Project Details",
+      "description": "Tell us a bit about what you need.",
+      "searchParamsText": "I am interested in the {service} service and the {plan} plan. My requirements are ",
+      "labels": {
+        "name": "Name",
+        "email": "Email",
+        "company": "Company",
+        "website": "Website",
+        "interests": "I'm interested in...",
+        "projectDetails": "Project Details",
+        "budget": "Budget Range"
+      },
+      "placeholders": {
+        "name": "John Doe",
+        "email": "john@company.com",
+        "company": "Acme Inc.",
+        "website": "https://",
+        "projectDetails": "Tell us about your goals, timeline, and requirements...",
+        "budget": "$5k - $10k"
+      },
+      "button": "Book a Free Consultation",
+      "footer": "By clicking submit, you agree to our Terms & Privacy Policy.",
+      "success": {
+        "title": "Message Received!",
+        "description": "We’ve received your inquiry and will get back to you shortly.",
+        "button": "Send another message"
+      }
+    },
+    "Peek": {
+      "title": "Ready to start?",
+      "description": "Book your free consultation"
+    }
+  },
+  "ServicePages": {
+    "webflow": {
+      "Hero": {
+        "badge": "Webflow Development",
+        "titlePart1": "Building ",
+        "titlePart2": "Stunning ",
+        "titlePart3": "and ",
+        "titlePart4": "Responsive ",
+        "titlePart5": "Webflow ",
+        "titlePart6": "Websites",
+        "description": "Crafting compelling brand identities that resonate with your audience and drive business success."
+      },
+      "Process": {
+        "title": "Our Webflow Development Process",
+        "steps": [
+          {
+            "title": "Discovery & Planning",
+            "description": "We analyze your goals, target audience, and brand requirements to define a clear, strategic roadmap for your Webflow project."
+          },
+          {
+            "title": "Design & Prototyping",
+            "description": "We create high-fidelity designs and interactive prototypes that match your brand identity and deliver an intuitive, conversion-focused experience."
+          },
+          {
+            "title": "Webflow Development",
+            "description": "We bring your designs to life using Webflow’s powerful CMS, animations, and responsive capabilities while ensuring clean structure and highly maintainable builds."
+          },
+          {
+            "title": "Testing, Launch & Handover",
+            "description": "We test performance, accessibility, and responsiveness across devices. After launch, we provide training, documentation, and support to help you manage your Webflow site with ease."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "All the Webflow Services We Offer",
+        "items": [
+          {
+            "title": "Webflow Website Setup & Build",
+            "description": "Full Webflow setup and development of high-performance websites tailored to your brand, goals, and audience."
+          },
+          {
+            "title": "Custom Webflow Design",
+            "description": "Pixel-perfect UI/UX design with modern layouts, stunning visuals, and fully responsive designs built exclusively for your brand."
+          },
+          {
+            "title": "Webflow CMS Setup & Collections",
+            "description": "Structured, scalable CMS collections for blogs, case studies, team pages, services, portfolios, and dynamic content."
+          },
+          {
+            "title": "Webflow Interactions & Animations",
+            "description": "Custom animations and interactions using Webflow’s native tools to create smooth, delightful user experiences that elevate your brand."
+          },
+          {
+            "title": "Migration to Webflow",
+            "description": "Move your website from WordPress, Wix, Squarespace, or custom platforms to Webflow with SEO-safe migration and improved performance."
+          },
+          {
+            "title": "Ongoing Maintenance & Support",
+            "description": "Continuous updates, bug fixes, performance optimization, CMS management, and technical support to keep your Webflow site running flawlessly."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's talk money",
+        "forTitle": "Webflow"
+      },
+      "Metadata": {
+        "title": "Webflow Development Services | TWJ Labs",
+        "description": "Professional Webflow development services including custom themes, plugin integration, performance optimization, and secure maintenance by The Walking Jumbo"
+      }
+    },
+    "wordpress": {
+      "Hero": {
+        "badge": "WordPress Development",
+        "titlePart1": "Crafting ",
+        "titlePart2": "Reliable ",
+        "titlePart3": "and ",
+        "titlePart4": "Performant ",
+        "titlePart5": "WordPress ",
+        "titlePart6": "Websites",
+        "description": "Empowering your business with scalable, secure, and fully customized WordPress solutions that drive growth."
+      },
+      "Process": {
+        "title": "Our WordPress Development Process",
+        "steps": [
+          {
+            "title": "Planning & Requirements",
+            "description": "We understand your website needs, features, and integrations to define a scalable WordPress plan."
+          },
+          {
+            "title": "Design & Wireframing",
+            "description": "We create clean layouts and user-focused designs while establishing overall structure and navigation."
+          },
+          {
+            "title": "Development & Customization",
+            "description": "We develop custom themes, plugins, and integrations while ensuring security, performance, and SEO readiness."
+          },
+          {
+            "title": "Testing & Deployment",
+            "description": "After thorough QA and optimization, we launch your site and hand over full access with training."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "All the WordPress Services We Offer",
+        "items": [
+          {
+            "title": "WordPress Installation & Setup",
+            "description": "Complete WordPress setup including hosting configuration, database setup, essential plugins installation, and overall environment optimization."
+          },
+          {
+            "title": "Custom Theme Design & Development",
+            "description": "Fully custom WordPress themes built from scratch or tailored from premium themes to match your brand identity and vision."
+          },
+          {
+            "title": "Plugin Integration & Configuration",
+            "description": "Integration and setup of essential plugins such as SEO tools, security, caching, forms, and advanced plugins tailored to your needs."
+          },
+          {
+            "title": "WordPress Performance Optimization",
+            "description": "Speed boost through caching, database optimization, image compression, CDN setup, and code-level improvements for top Core Web Vitals."
+          },
+          {
+            "title": "WordPress Migration & Replatforming",
+            "description": "Seamless migration from Wix, Squarespace, Webflow, Shopify, or an older WordPress installation — with no data loss or SEO impact."
+          },
+          {
+            "title": "Security Hardening & Protection",
+            "description": "Advanced security setup including firewalls, malware scans, brute-force protection, secure backups, and hardening practices."
+          },
+          {
+            "title": "Custom Plugin Development",
+            "description": "Development of custom WordPress plugins tailored to unique business requirements, integrations, and advanced functionality."
+          },
+          {
+            "title": "Ongoing Maintenance & Support",
+            "description": "Routine updates, backups, monitoring, and issue fixes to ensure your WordPress site stays secure, fast, and fully functional."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's talk money",
+        "forTitle": "WordPress"
+      },
+      "Metadata": {
+        "title": "Expert WordPress Development Services | TWJ Labs",
+        "description": "Professional WordPress development services including custom themes, plugin integration, performance optimization, and secure maintenance by TWJ Labs."
+      }
+    },
+    "ai": {
+      "Hero": {
+        "badge": "AI Integration & Automation",
+        "titlePart1": "Building ",
+        "titlePart2": "Stunning ",
+        "titlePart3": "and ",
+        "titlePart4": "Responsive ",
+        "titlePart5": "AI Solutions",
+        "description": "Empowering your business with scalable, secure, and fully customized AI & Automation solutions that drive growth."
+      },
+      "Process": {
+        "title": "Our AI Integration & Automation Process",
+        "steps": [
+          {
+            "title": "Discovery & AI Strategy",
+            "description": "We analyze your workflow, challenges, and goals to identify where AI and automation can deliver the most impact and efficiency."
+          },
+          {
+            "title": "Model Selection & Prototyping",
+            "description": "We choose the right AI tools and models—GPT, embeddings, vector search, or automation platforms—and build prototypes to validate functionality."
+          },
+          {
+            "title": "Integration & Automation Development",
+            "description": "We integrate AI into your systems and develop automations using APIs, webhooks, and platforms like n8n or Zapier to streamline operations."
+          },
+          {
+            "title": "Testing, Optimization & Deployment",
+            "description": "We test accuracy, reliability, and performance, optimize prompts and flows, and deploy your AI system with monitoring and continuous improvements."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "AI Integration & Automation Solutions",
+        "items": [
+          {
+            "title": "Chatbot Integration",
+            "description": "Integrate intelligent AI chatbots into your website or platform to enhance engagement, automate support, and generate leads 24/7."
+          },
+          {
+            "title": "Workflow Automation",
+            "description": "Streamline operations by automating repetitive tasks and connecting your tools using platforms like n8n, Make, or Zapier."
+          },
+          {
+            "title": "AI-Powered Personalization",
+            "description": "Deliver dynamic website experiences tailored to user behavior, preferences, and actions in real-time."
+          },
+          {
+            "title": "Custom AI Integrations",
+            "description": "Build and integrate custom AI APIs using OpenAI, Anthropic, or Google Gemini for unique business functionality."
+          },
+          {
+            "title": "AI Content Generation",
+            "description": "Automatically create on-brand content, SEO copy, and product descriptions powered by advanced language models."
+          },
+          {
+            "title": "AI Knowledge Bots",
+            "description": "Deploy intelligent assistants trained on your data to answer FAQs, onboard customers, and support your team."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's talk money",
+        "forTitle": "AI Integration & Automation"
+      },
+      "Metadata": {
+        "title": "AI Integration & Automation Services | TWJ Labs",
+        "description": "Professional AI integration and automation services including chatbot integration, workflow automation, custom AI APIs, and ongoing support by TWJ Labs."
+      }
+    },
+    "ecommerce": {
+      "Hero": {
+        "badge": "E-commerce Development",
+        "title": "Turn Your Website Into an Intelligent Growth Machine.",
+        "description": "Building high-performance e-commerce stores using Shopify and other leading platforms to help you scale your online business."
+      },
+      "Process": {
+        "title": "Our E-commerce Development Process",
+        "steps": [
+          {
+            "title": "Discovery & Planning",
+            "description": "Understanding your business goals, target audience, and unique requirements to create a tailored e-commerce solution."
+          },
+          {
+            "title": "Design & Prototyping",
+            "description": "Crafting visually appealing and user-friendly designs that reflect your brand identity and enhance the shopping experience."
+          },
+          {
+            "title": "Development & Integration",
+            "description": "Building a robust e-commerce platform with seamless integration of payment gateways, inventory management, and other essential features."
+          },
+          {
+            "title": "Testing & Launch",
+            "description": "Conducting thorough testing to ensure functionality, performance, and security before launching your online store to the world."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "Complete E-commerce Solutions",
+        "items": [
+          {
+            "title": "Shopify Store Setup & Configuration",
+            "description": "Comprehensive setup and configuration of Shopify stores tailored to your business needs."
+          },
+          {
+            "title": "Custom Theme Design & Development",
+            "description": "Bespoke theme design and development to create a unique and engaging shopping experience."
+          },
+          {
+            "title": "Shopify App Integration",
+            "description": "Seamless integration of third-party apps to enhance store functionality and user experience."
+          },
+          {
+            "title": "Shopify Store Optimization",
+            "description": "Improve loading speed, UX/UI, and conversion rates through strategic performance optimization, image compression, SEO improvements, and analytics-driven CRO techniques."
+          },
+          {
+            "title": "Shopify Migration & Replatforming",
+            "description": "Migrate your existing store from WooCommerce, Magento, or another platform to Shopify without losing data or SEO ranking."
+          },
+          {
+            "title": "Ongoing Maintenance & Support",
+            "description": "Regular updates, bug fixes, and performance monitoring to ensure your Shopify store runs smoothly."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's Talk Money",
+        "forTitle": "Ecommerce"
+      },
+      "Metadata": {
+        "title": "E-commerce Development Services | TWJ Labs",
+        "description": "Professional e-commerce development services including Shopify store setup, custom theme design, app integration, and ongoing support by TWJ Labs."
+      }
+    },
+    "customSoftware": {
+      "Hero": {
+        "badge": "Custom Software Development",
+        "titlePart1": "Building ",
+        "titlePart2": "Stunning ",
+        "titlePart3": "and ",
+        "titlePart4": "Responsive ",
+        "titlePart5": "Custom Software",
+        "description": "Empowering your business with scalable, secure, and fully customized software solutions that drive growth."
+      },
+      "Process": {
+        "title": "Our Custom Software Development Process",
+        "steps": [
+          {
+            "title": "Requirements & Scope",
+            "description": "We analyze your workflows and requirements to define the scope, technical strategy, and architecture."
+          },
+          {
+            "title": "System Design & Prototyping",
+            "description": "We create flow diagrams, prototypes, and technical specifications to visualize the solution."
+          },
+          {
+            "title": "Development & Integration",
+            "description": "We build secure, scalable software using modern technologies and integrate APIs, databases, and automations."
+          },
+          {
+            "title": "Testing & Deployment",
+            "description": "We ensure reliability, security, and performance before deploying your software to the production environment."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "All the Services We Offer",
+        "items": [
+          {
+            "title": "Custom Next.js Web Application Development",
+            "description": "Build fast, scalable, and modern web applications powered by Next.js with server-side rendering, optimized routing, and exceptional performance."
+          },
+          {
+            "title": "API Development & Integration",
+            "description": "Design and integrate custom REST or GraphQL APIs to connect your application with external services, internal systems, and third-party platforms."
+          },
+          {
+            "title": "UI/UX Design to Production Build",
+            "description": "Transform Figma or custom UI/UX designs into pixel-perfect, responsive, and interactive Next.js front-end experiences."
+          },
+          {
+            "title": "Database & Backend Architecture",
+            "description": "Set up secure and scalable backend architecture using technologies like PostgreSQL, MongoDB, Prisma, Supabase, or Firebase."
+          },
+          {
+            "title": "Performance Optimization",
+            "description": "Improve site speed, Core Web Vitals, SEO structure, and page load performance using Next.js best practices and advanced caching techniques."
+          },
+          {
+            "title": "Full E2E Application Development",
+            "description": "End-to-end development including planning, architecture, UI design, frontend, backend, API integrations, deployment, and QA testing."
+          },
+          {
+            "title": "Migration to Next.js",
+            "description": "Seamlessly migrate your existing website from WordPress, Wix, Shopify, or custom frameworks to a modern, high-performance Next.js stack."
+          },
+          {
+            "title": "Ongoing Maintenance & Support",
+            "description": "Continuous improvements, bug fixes, monitoring, and feature enhancements to keep your application fast and secure."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's talk money",
+        "forTitle": "Custom Development"
+      },
+      "Metadata": {
+        "title": "Custom Software Development Services | TWJ Labs",
+        "description": "Professional custom software development services including Next.js web applications, API integration, UI/UX design, and ongoing support by TWJ Labs."
+      }
+    },
+    "accessibility": {
+      "Hero": {
+        "badge": "Digital Accessibility Services",
+        "title": "Making the Web Accessible & Inclusive for Everyone.",
+        "description": "We help businesses achieve WCAG compliance, improve user experience for people with disabilities, and mitigate legal risks through expert audits and remediation."
+      },
+      "Process": {
+        "title": "Our Accessibility Services Process",
+        "steps": [
+          {
+            "title": "Audit & Evaluation",
+            "description": "Comprehensive automated and manual audits to identify WCAG, ARIA and keyboard-navigation issues across your site."
+          },
+          {
+            "title": "Issue Prioritization & Roadmap",
+            "description": "We classify findings by severity and impact, produce a remediation roadmap, and estimate effort and business risk for each fix."
+          },
+          {
+            "title": "Remediation & Implementation",
+            "description": "Our team implements fixes—semantic HTML, ARIA attributes, contrast adjustments, keyboard support and accessible components—while preserving design intent."
+          },
+          {
+            "title": "Verification, Testing & Certification",
+            "description": "We re-test, validate fixes across devices and screen readers, produce an accessibility report and help you achieve WCAG/Section 508 compliance evidence."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "Accessibility Solutions",
+        "items": [
+          {
+            "title": "Automated Site Scans",
+            "description": "Run scheduled automated scans (axe, Lighthouse, WAVE) to continuously surface regressions and new issues."
+          },
+          {
+            "title": "Manual Accessibility Audits",
+            "description": "Human-led testing with keyboard-only navigation, screen readers (VoiceOver/NVDA/JAWS), and mobile accessibility checks."
+          },
+          {
+            "title": "Contrast & Color Testing",
+            "description": "Contrast analysis and color-blindness simulations with suggested palette adjustments to meet WCAG ratios."
+          },
+          {
+            "title": "Keyboard & Focus Management",
+            "description": "Ensure logical tab order, visible focus states, and no keyboard traps for complete keyboard operability."
+          },
+          {
+            "title": "ARIA & Semantic Markup Remediation",
+            "description": "Add correct semantic HTML and ARIA roles/labels to ensure assistive technologies interpret content correctly."
+          },
+          {
+            "title": "Screen Reader Testing",
+            "description": "VoiceOver / NVDA / JAWS testing and narration tuning so content reads clearly and in the right order for users."
+          },
+          {
+            "title": "Accessibility Training & Documentation",
+            "description": "Developer and content-team training, plus an accessibility handbook and remediation guides for long-term compliance."
+          },
+          {
+            "title": "Policy & Certification Support",
+            "description": "We prepare reports, remediation logs, and help coordinate third-party certification or legal review for compliance requirements."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's talk money",
+        "forTitle": "Accessibility"
+      },
+      "Metadata": {
+        "title": "Accessibility Services | TWJ Labs",
+        "description": "Comprehensive accessibility services including automated and manual audits, remediation, testing, and certification support by TWJ Labs."
+      }
+    },
+    "webDesign": {
+      "Hero": {
+        "badge": "Web Design Services",
+        "title": "Crafting High-Performance Websites with Pixel perfection.",
+        "description": "We specialize in creating visually stunning and user-centric designs that elevate your brand and drive results."
+      },
+      "Process": {
+        "title": "Our Web Design Services Process",
+        "steps": [
+          {
+            "title": "Discovery & Research",
+            "description": "We begin by understanding your brand, audience, competitors, and goals to shape a design direction that aligns with your vision."
+          },
+          {
+            "title": "Wireframing & UX Architecture",
+            "description": "We map out page layouts, user flow, and structure using low-fidelity wireframes to define how users will navigate your website."
+          },
+          {
+            "title": "High-Fidelity UI Design in Figma",
+            "description": "We craft polished UI designs—components, interactions, typography, and visual system—all built in Figma with pixel-perfect precision."
+          },
+          {
+            "title": "Prototyping & Handoff",
+            "description": "We create interactive prototypes, document components, and prepare developer-ready design systems for seamless handoff."
+          }
+        ]
+      },
+      "Subservices": {
+        "title": "Web Design Solutions",
+        "items": [
+          {
+            "title": "UI/UX Design",
+            "description": "User-centered design crafted for clarity, usability, and conversion—using modern UX principles."
+          },
+          {
+            "title": "Wireframing & User Flows",
+            "description": "Low-fidelity wireframes and detailed user journeys that define how users interact with your website."
+          },
+          {
+            "title": "Figma Prototyping",
+            "description": "Clickable prototypes showcasing animations, transitions, and interactions for a realistic preview."
+          },
+          {
+            "title": "Design Systems & Component Libraries",
+            "description": "Reusable UI components and scalable design systems built in Figma for consistency and speed."
+          },
+          {
+            "title": "Branding Alignment",
+            "description": "Color palettes, typography, spacing, and visual identity applied consistently across your site for a unified brand feel."
+          },
+          {
+            "title": "Responsive & Adaptive Layouts",
+            "description": "Designs optimized for all screen sizes—mobile, tablet, laptop, and ultra-wide displays."
+          }
+        ]
+      },
+      "Pricing": {
+        "title": "Let's talk money",
+        "forTitle": "Web Design"
+      },
+      "Metadata": {
+        "title": "Web Design Services | TWJ Labs",
+        "description": "Professional web design services including custom UI/UX design, responsive layouts, prototyping, and branding alignment by TWJ Labs."
+      }
+    }
+  },
+  "CaseStudies": {
+    "hero": {
+      "date": "Project Date",
+      "projectType": "Project Type",
+      "category": "Category",
+      "client": "Client",
+      "viewSite": "View Live Site"
+    },
+    "analysis": {
+      "title": "Analysis & Insight",
+      "description": "A deep dive into the project's core objectives, research phase, and the strategic thinking that shaped our architectural decisions.",
+      "resultsTitle": "The Results"
+    },
+    "problem": {
+      "title": "The Challenge",
+      "description": "Identifying the critical pain points and business obstacles that needed a robust digital solution.",
+      "issueTitle": "Core Issue"
+    },
+    "solution": {
+      "title": "The Solution",
+      "description": "How we engineered a custom, high-performance platform to solve the client's unique challenges.",
+      "communicationTitle": "Communication",
+      "emailBadge": "Email"
+    },
+    "notFound": "Case Study Not Found"
+  }
+}

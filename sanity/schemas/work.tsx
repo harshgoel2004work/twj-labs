@@ -86,6 +86,12 @@ const work = defineType({
       of: [defineArrayMember({ type: 'image', options: { hotspot: true } })],
       options: { layout: 'grid' },
     }),
+    defineField({
+      name: 'fullPageImage',
+      title: 'Full Page Image',
+      type: 'image',
+      options: { hotspot: true },
+    }),
 
     // --- Case Study Details Fieldset ---
     defineField({

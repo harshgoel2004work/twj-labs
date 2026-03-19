@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import React, { useEffect } from 'react'
 import CustomBadge from '@/components/shared/custom-badge'
 import { getPricingPlans } from '@/actions/get-pricing'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 type ServiceType = 'webflow' | 'wordpress' | 'ecommerce' | 'ai' | 'custom' | 'webDesign' | 'accessibility';
@@ -35,6 +36,8 @@ export const safeParse = (data: string | string[] | undefined | null): string[] 
 };
 
 const PricingHero = () => {
+  const t = useTranslations('Home.Pricing');
+  const tServices = useTranslations('Home.Services');
   const [activeService, setActiveService] = React.useState<ServiceType>('webflow');
   const darkMode = true;
 
@@ -101,15 +104,20 @@ const PricingHero = () => {
         
         {/* Header Section */}
         <div className='flex flex-col items-center gap-6 text-center'>
-          <CustomBadge title='Pricing' darkMode={darkMode} />
+          <CustomBadge title={t('badge')} darkMode={darkMode} />
           
-          <h1 className='text-4xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] max-w-4xl bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/60'>
-            Tailored Pricing Plans to <br className='hidden md:block' /> Suit Your Business Needs
-          </h1>
-          
-          <p className='text-sm md:text-base md:text-lg text-neutral-400 max-w-2xl leading-relaxed'>
-            All packages are customizable to fit your needs. Let&apos;s hop on a call and scope out your project details to find the perfect fit.
-          </p>
+           {/* ── headline ── */}
+        <h2 className="text-center text-[clamp(2rem,5vw,3.5rem)] leading-[1.12] tracking-tight">
+          <span className="text-white">{t('titleLine1')}
+</span>
+          <br />
+          <span className="text-white/30">{t('titleLine2')}</span>
+        </h2>
+
+        {/* ── sub ── */}
+        <p className="text-center text-[14.5px] leading-relaxed text-white/40 max-w-md mb-4">
+          {t('sub')}
+        </p>
         </div>
 
         {/* Navigation Tabs */}
@@ -135,7 +143,7 @@ const PricingHero = () => {
                     />
                   )}
                   {/* Fallback title from static data if dynamic fails, or strict mapping */}
-                  <span className="relative z-10">{plansCategory?.[serviceMap[service]]?.title || service}</span>
+                  <span className="relative z-10">{plansCategory?.[serviceMap[service]]?.title || tServices(`${service}.title`)}</span>
                 </button>
               ))}
             </div>
@@ -173,7 +181,7 @@ const PricingHero = () => {
 
               {!loading && !displayedPlans && (
                 <div className='col-span-full text-center text-slate-400 py-12'>
-                  Unable to load plans. Please try again later.
+                  {t('error')}
                 </div>
               )}
             </motion.div>
@@ -187,7 +195,7 @@ const PricingHero = () => {
           <div className="backdrop-blur-sm bg-black/40 absolute inset-0" />
           <div className="relative z-10 flex flex-col items-center gap-4">
             <Spinner />
-            <span className="text-sm text-slate-300">Loading pricing plans…</span>
+            <span className="text-sm text-slate-300">{t('loading')}</span>
           </div>
         </div>
       )}
@@ -200,6 +208,7 @@ const PricingHero = () => {
 }
 
 export const SkeletonCard = ({ index = 0 }: { index?: number }) => {
+  const t = useTranslations('Home.Pricing');
   return (
     <motion.div
       initial={{ opacity: 0, y: 10 }}
@@ -229,7 +238,7 @@ export const SkeletonCard = ({ index = 0 }: { index?: number }) => {
 
         <div className="relative z-10 mt-auto pt-6 border-t border-white/5">
           <button disabled className="w-full py-4 rounded-xl text-sm font-bold tracking-wide uppercase bg-white/5 text-white/30 cursor-not-allowed">
-            Loading...
+            {t('loading')}
           </button>
         </div>
       </div>
@@ -255,6 +264,7 @@ const PricingCard = ({
   index: number;
   activeServiceName?: string;
 }) => {
+  const t = useTranslations('Home.Pricing');
 
   // ✅ 2. Parse the strings here before rendering
   // Even if TypeScript says it's a string[], runtime might be a JSON string from SQLite
@@ -301,7 +311,7 @@ const PricingCard = ({
         {plan.featured && (
           <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 text-[10px] font-bold uppercase tracking-widest text-white border border-white/20">
-              <Sparkles size={10} className="fill-white" /> Most Popular
+              <Sparkles size={10} className="fill-white" /> {t('mostPopular')}
             </span>
           </div>
         )}
@@ -341,7 +351,7 @@ const PricingCard = ({
           {plan.everythingIncludedPrev && (
             <p className="text-xs font-bold uppercase tracking-widest text-indigo-400 mb-4 flex items-center gap-2">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse" />
-              Everything in previous +
+              {t('prev')}
             </p>
           )}
 
@@ -384,27 +394,26 @@ const PricingCard = ({
 
         {/* --- CTA BUTTON --- */}
         <div className="relative z-10 mt-8 pt-6 border-t border-white/5">
-          <button
+          <Link
+            href={`/contact-sales?ser-int=${activeServiceName}&plan=${plan.name}`}
             className={cn(
-              "group/btn relative w-full px-5 py-3 rounded-xl text-sm font-bold tracking-wide uppercase overflow-hidden transition-all duration-300 cursor-pointer",
+              "group/btn relative w-full px-5 py-3 rounded-xl text-sm font-bold tracking-wide uppercase overflow-hidden transition-all duration-300 cursor-pointer flex items-center justify-center gap-2",
               plan.featured
-                ? "  font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] text-white hover:shadow-violet-400 transition-all duration-500"
+                ? "font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] text-white hover:shadow-violet-400 transition-all duration-500"
                 : "bg-white/5 text-white border border-white/10 hover:bg-white/10 hover:border-white/20"
             )}
           >
-            <Link href={`/contact-sales?ser-int=${activeServiceName}&plan=${plan.name}`}>
             {/* Shimmer Effect on Hover */}
             <div className="absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out z-20" />
             
             <span className="relative z-10 flex items-center justify-center gap-2 ">
-              Contact Sales
+              {t('cta')}
               <ArrowRight size={16} className={cn(
                   "transition-transform duration-300 group-hover/btn:translate-x-1",
                   plan.featured ? "text-white" : "text-white"
               )} />
             </span>
-            </Link>
-          </button>
+          </Link>
         </div>
       </div>
     </motion.div>

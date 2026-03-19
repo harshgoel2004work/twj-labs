@@ -77,7 +77,8 @@ const WhyAI = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold text-center md:text-start tracking-tight leading-[1.1]"
+              className="text-4xl md:text-5xl  text-center md:text-start tracking-tight leading-[1.1]"
+              style={{ fontFamily: "'Syne',sans-serif" }}
             >
               When nothing works  <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/50">

@@ -9,7 +9,7 @@ const EcommerceFeatures = () => {
       <div className='flex flex-col items-center gap-2'>
         <CustomBadge title='Features' darkMode={true} />
         {/* Responsive Text Size */}
-        <h1 className='text-3xl md:text-5xl lg:text-[44px] font-semibold tracking-wide bg-clip-text text-transparent bg-linear-to-l from-[#ffffff] to-[#a299b2] text-center leading-tight max-w-3xl z-10'>
+        <h1 className='text-3xl md:text-5xl lg:text-[44px]  tracking-wide bg-clip-text text-transparent bg-linear-to-l from-[#ffffff] to-[#a299b2] text-center leading-tight max-w-3xl z-10' style={{ fontFamily: "'Syne',sans-serif" }}>
             Ecommerce that sells
         </h1>
       </div>
@@ -79,7 +79,7 @@ const EcommerceFeatures = () => {
                             alt='Webflow Development'
                             width={2000}
                             height={2000}
-                            className='w-[60%] md:w-[50%] h-auto object-cover z-[3] rounded-2xl mx-auto absolute top-10 md:top-20 left-1/2 -translate-x-1/2'
+                            className='w-[60%] md:w-[50%] h-auto object-cover z-[3] rounded-2xl mx-auto absolute top-10 md:top-10 left-1/2 -translate-x-1/2'
                         />
                     </div>
                 </div>

@@ -40,10 +40,7 @@ const SubservicesShared = ({
         )} 
       />
 
-      {/* 2. Ambient Glows */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-violet-600/5 blur-[120px] rounded-full pointer-events-none z-0" />
-      <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-indigo-500/5 blur-[100px] rounded-full pointer-events-none z-0" />
-
+      
       {/* Content Container */}
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
         
@@ -53,9 +50,10 @@ const SubservicesShared = ({
 
           <h1
             className={cn(
-              "text-4xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight leading-[1.2] max-w-3xl bg-clip-text text-transparent bg-gradient-to-b ",
+              "text-4xl md:text-4xl lg:text-5xl text-center tracking-tight leading-[1.2] max-w-3xl bg-clip-text text-transparent bg-gradient-to-b ",
               theme.headerGradient
             )}
+            style={{ fontFamily: "'Syne',sans-serif" }}
           >
             {title}
           </h1>

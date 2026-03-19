@@ -6,7 +6,11 @@ import { Spotlight } from "../ui/spotlight-new";
 import Image from "next/image";
 import CustomBadge from "../shared/custom-badge";
 
+import { useTranslations } from "next-intl";
+
 const HeroEcommerce = () => {
+  const t = useTranslations('ServicePages.ecommerce.Hero');
+
   return (
     <div className="w-full font-manrope relative text-white z-0 overflow-hidden">
       {/* === BACKGROUND EFFECTS === */}
@@ -32,7 +36,7 @@ const HeroEcommerce = () => {
       {/* === CONTENT === */}
       <div className="flex flex-col items-center justify-center space-y-4 px-6 md:px-12 lg:px-28 py-36 relative overflow-hidden">
         {/* Tag */}
-        <CustomBadge darkMode={true} title="Ecommerce Solutions" />
+        <CustomBadge darkMode={true} title={t('badge')} />
 
         {/* Heading */}
         <motion.h1
@@ -40,12 +44,10 @@ const HeroEcommerce = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true }}
-          className="text-4xl lg:text-5xl 2xl:text-6xl font-medium leading-snug text-center lg:max-w-xl 2xl:max-w-3xl text-transparent bg-clip-text bg-linear-to-r from-[#ffffff] to-[#d5d5d5]"
+          className="text-4xl lg:text-5xl 2xl:text-6xl  leading-snug text-center lg:max-w-xl 2xl:max-w-3xl text-transparent bg-clip-text bg-linear-to-r from-[#ffffff] to-[#d5d5d5]"
+           style={{ fontFamily: "'Syne',sans-serif" }}
         >
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-[#9993f1] to-[#5449e8]">
-            Building beautiful
-          </span>{" "}
-          stores that convert
+          {t('title')}
         </motion.h1>
 
         {/* Description */}
@@ -56,8 +58,7 @@ const HeroEcommerce = () => {
           viewport={{ once: true }}
           className="text-center text-white/60 font-medium max-w-lg"
         >
-          We specialize in creating stunning ecommerce websites that drive sales
-          and growth for your business.
+          {t('description')}
         </motion.p>
 
         {/* Image */}

@@ -9,14 +9,14 @@ const AIBento = () => {
       <div className='flex flex-col items-center gap-2'>
         <CustomBadge title='Features' darkMode={true} />
         {/* Responsive Text Size */}
-        <h1 className='text-3xl md:text-5xl lg:text-[44px] font-semibold tracking-wide bg-clip-text text-transparent bg-linear-to-l from-[#ffffff] to-[#a299b2] text-center leading-tight max-w-3xl z-10'>
+        <h1 className='text-3xl md:text-5xl lg:text-[44px] tracking-wide bg-clip-text text-transparent bg-linear-to-l from-[#ffffff] to-[#a299b2] text-center leading-tight max-w-3xl z-10' style={{ fontFamily: "'Syne',sans-serif" }}>
             AI that works for you
         </h1>
       </div>
       
       <div className='mt-16'>
         {/* Bento Grid Start */}
-        <div className='grid w-full max-w-6xl grid-cols-1 lg:grid-cols-3 gap-5 mx-auto'>
+        <div className='grid w-full max-w-7xl grid-cols-1 lg:grid-cols-3 gap-5 mx-auto'>
             
             {/* 1. Chatbot Card */}
             <div className='card col-span-1 flex flex-col bg-[#0b0a0f21] justify-between relative min-h-[350px] w-full max-w-full p-5 rounded-[20px] border border-solid font-light overflow-hidden transition-all duration-300 ease-in-out border-white/10 z-[10] group'>

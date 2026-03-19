@@ -6,47 +6,21 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { cn } from '@/lib/utils'
 import CustomBadge from './custom-badge'
 
-const faqs = [
-  {
-    question: "What services does your agency specialize in?",
-    answer:
-      "We design, build, and optimize high-performing digital experiences. Our core services include Webflow development, WordPress development, e-commerce solutions, AI integration & automation, custom software development, accessibility testing & compliance, web design, SEO optimization, website maintenance, migration, and copywriting.",
-  },
-  {
-    question: "How does your project process work?",
-    answer:
-      "Every project begins with discovery—understanding your goals, challenges, and audience. We then move into UX planning, UI design, development, testing, and final deployment. Throughout the process, you receive consistent updates, previews, and opportunities to provide feedback.",
-  },
-  {
-    question: "What is the typical timeline for a project?",
-    answer:
-      "Timelines vary depending on project scope. A standard website takes 3–6 weeks, an e-commerce build 4–8 weeks, AI integrations 1–4 weeks, and custom software projects can range from 1–3 months. We provide a clear timeline before starting.",
-  },
-  {
-    question: "Do you offer maintenance or ongoing support?",
-    answer:
-      "Yes. We provide monthly and quarterly maintenance plans that include updates, performance monitoring, security fixes, SEO maintenance, content updates, and ongoing support. Clients who build with us often choose long-term maintenance to keep their website healthy.",
-  },
-  {
-    question: "Can you improve or fix my existing website?",
-    answer:
-      "Absolutely. Whether your site needs design improvements, performance fixes, bug resolution, migrations, accessibility upgrades, or new features—we can help. We frequently work on inherited or partially completed projects.",
-  },
-  {
-    question: "How do payments and contracts work?",
-    answer:
-      "We typically take a 40–50% upfront deposit to secure your project, followed by one or two milestone payments. All projects include a clear scope, timeline, and agreement before work begins.",
-  },
-  {
-    question: "Do you work with clients internationally?",
-    answer:
-      "Yes. We work with clients across the US, Europe, Asia, and the Middle East. All communication is done through email, Notion, Slack, Zoom, or your preferred workflow.",
-  },
-];
-
+import { useTranslations } from 'next-intl'
 
 const FaqsSection = ({ darkMode = false }: { darkMode?: boolean }) => {
+  const t = useTranslations('Home.Faqs');
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
+
+  const faqs = [
+    { question: t('q1'), answer: t('a1') },
+    { question: t('q2'), answer: t('a2') },
+    { question: t('q3'), answer: t('a3') },
+    { question: t('q4'), answer: t('a4') },
+    { question: t('q5'), answer: t('a5') },
+    { question: t('q6'), answer: t('a6') },
+    { question: t('q7'), answer: t('a7') },
+  ];
 
   const toggleAccordion = (index: number) => {
     setActiveIndex(activeIndex === index ? null : index)
@@ -56,23 +30,23 @@ const FaqsSection = ({ darkMode = false }: { darkMode?: boolean }) => {
     <div
       className={cn(
         'w-full  px-6 lg:px-24 font-manrope py-20 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start transition-colors duration-300 max-w-[90rem] mx-auto',
-        darkMode ? 'bg-[#060609] text-white' : 'bg-[#F4F5F9] text-black'
+        darkMode ? ' text-white' : 'bg-[#F4F5F9] text-black'
       )}
     >
       {/* Left Column */}
       <div className='flex flex-col items-center md:items-start gap-2 col-span-1 px-4'>
-        <CustomBadge darkMode={darkMode} title="FAQs" />
+        <CustomBadge darkMode={darkMode} title={t('badge')} />
                       
         
         <h1 className={cn("text-4xl mt-1 md:text-5xl font-bold tracking-tight leading-[1.1] max-w-3xl bg-gradient-to-l md:text-start text-center from-white to-gray-400 bg-clip-text text-transparent py-1",darkMode
               ? 'bg-gradient-to-l from-white to-gray-400'
               : 'bg-gradient-to-l from-[#000000] to-[#3e374b]'
           )}>
-          Frequently Asked Questions
+          {t('title')}
                 </h1>
                 
                 <p className="opacity-60  max-w-xl mt-2 mb-5 md:text-start text-center">
-          Here are some of the most common questions we get asked about our services and processes.
+          {t('sub')}
                 </p>
        
       </div>

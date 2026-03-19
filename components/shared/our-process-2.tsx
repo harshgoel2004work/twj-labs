@@ -65,11 +65,17 @@ const OurProcessDynamicAlt = ({ slug, title, darkMode }: { slug:string, title: s
       {/* Header */}
       <div className="flex flex-col items-center gap-4 mb-16">
         <CustomBadge title={'Our Process'} darkMode={true} />
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-center leading-[1.1] max-w-3xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-          {title}
-        </h1>
-        <p className="text-white/60 text-center max-w-xl">
+         {/* ── headline ── */}
+        <h2 className="text-center text-[clamp(2rem,5vw,3.5rem)] leading-[1.12] tracking-tight mb-4 mt-5">
+          <span className="text-white">{title}</span>
+          <br />
+          <span className="text-white/30">Simplified</span>
+        </h2>
+
+        {/* ── sub ── */}
+        <p className="text-center text-[14.5px] leading-relaxed text-white/40 max-w-md">
           A streamlined approach to delivering exceptional digital experiences.
+          
         </p>
       </div>
 
@@ -90,8 +96,8 @@ const OurProcessDynamicAlt = ({ slug, title, darkMode }: { slug:string, title: s
               className={cn(
                 "relative rounded-2xl overflow-hidden cursor-pointer transition-colors duration-500 group border",
                 isActive
-                  ? "flex-[3] bg-[#0c0c12] border-white/10 shadow-2xl shadow-indigo-500/10"
-                  : "flex-[1] bg-white/[0.02] border-white/5 hover:bg-white/[0.05]"
+                  ? "flex-[3] bg-[#090a11] border-white/10 shadow-2xl shadow-indigo-500/10"
+                  : "flex-[1] bg-[#090a11] border-white/5 hover:bg-white/[0.05]"
               )}
               initial={false}
               animate={{

@@ -83,7 +83,8 @@ const WhyEcommerce = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className='text-4xl md:text-5xl font-bold tracking-tight leading-tight text-center md:text-start leading-[1.1]'
+            className='text-4xl md:text-5xl  tracking-tight leading-tight text-center md:text-start leading-[1.1]'
+            style={{ fontFamily: "'Syne',sans-serif" }}
           >
             Why Ecommerce is <br/>
             <span className="text-transparent bg-clip-text bg-linear-to-r text-center md:text-start from-indigo-600 to-indigo-500">
@@ -96,7 +97,7 @@ const WhyEcommerce = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className=" text-sm md:text-lg text-neutral-600 text-center md:text-start leading-relaxed"
+            className=" text-sm text-neutral-600 text-center md:text-start leading-relaxed"
           >
             In today&apos;s digital-first world, an online presence isn&apos;t just an option—it&apos;s the engine of your business. We build storefronts that turn visitors into loyal customers.
           </motion.p>

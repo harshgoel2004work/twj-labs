@@ -5,16 +5,21 @@ import React from 'react'
 import { GridScan } from '../GridScan'
 import CustomBadge from '../shared/custom-badge'
 
+import { useTranslations } from 'next-intl'
+
 const AiHero = () => {
+  const t = useTranslations('ServicePages.ai.Hero');
+  const tCommon = useTranslations('Navbar');
+
   return (
     <div className='w-full min-h-screen font-manrope relative text-white z-0 px-6 md:px-12 lg:px-24 overflow-x-hidden overflow-y-hidden pb-10'>
       <div className='absolute top-0 left-0 w-full h-full -z-10 opacity-20'>
         <GridScan
           sensitivity={0}
           lineThickness={1}
-          linesColor="#432dd7"
+          linesColor="#b6a4f9"
           gridScale={0.1}
-          scanColor="#615fff"
+          scanColor="#a78af4"
           scanOpacity={0.4}
           enablePost
           bloomIntensity={0.6}
@@ -26,30 +31,30 @@ const AiHero = () => {
         />
       </div>
 
-        <div className=' w-full pt-42 md:pt-56 pb-20  grid grid-cols-1 md:grid-cols-5 md:gap-14 px-4 top-0 left-0 font-manrope space-y-4 '>
+        <div className='max-w-7xl mx-auto w-full pt-42 md:pt-56 pb-20  grid grid-cols-1 md:grid-cols-5 md:gap-14 px-4 top-0 left-0 font-manrope space-y-4 '>
             <div className='flex flex-col items-center md:items-start col-span-3'>
-                    <CustomBadge darkMode={true} title="AI integration & automation" />
-                <h1 className='text-4xl md:text-5xl mt-3 font-semibold tracking-wide leading-tight max-w-3xl z-10 text-center md:text-start'>
-                    Turn Your Website Into an Intelligent Growth Machine.
+                    <CustomBadge darkMode={true} title={t('badge')} />
+                <h1 className='text-4xl md:text-5xl mt-3  tracking-wide leading-tight max-w-3xl z-10 text-center md:text-start' style={{ fontFamily: "'Syne',sans-serif" }}>
+                    {t('titlePart1')}{t('titlePart2')}{t('titlePart3')}{t('titlePart4')}{t('titlePart5')}
                 </h1>
             </div>
             
             <div className='flex flex-col justify-end col-span-2 space-y-4 items-center md:items-start '>
                 <p className='text-white/60 text-sm font-medium max-w-lg  pt-1 z-10 text-center md:text-start'>
-                    Leverage the power of AI to automate tasks, enhance user experiences, and drive smarter business decisions with our cutting-edge AI integration solutions.
+                    {t('description')}
                 </p>
                 <div className='pt-3 flex flex-row items-center gap-4 z-10 w-full sm:w-auto'>
           <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-6.5 py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
-            Contact Sales
+            {tCommon('contactSales')}
           </Link>
           <Link href={'/work'} className="w-full sm:w-auto justify-center px-6.5 py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
-            Our Work <ArrowRight size={16} />
+            {tCommon('work')} <ArrowRight size={16} />
           </Link>
         </div>
             </div>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-3 w-full gap-6'>
+      <div className='grid grid-cols-1 md:grid-cols-3 w-full gap-6 max-w-7xl mx-auto'>
           <div className='overflow-hidden rounded-xl w-full aspect-square relative'>
             <Image 
                 src={'/hero-ai-1-new.png'}

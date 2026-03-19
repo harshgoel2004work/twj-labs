@@ -7,8 +7,10 @@ import CustomBadge from "../shared/custom-badge";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
+import { useTranslations } from "next-intl";
+
 // --- COMPONENT: Editable Headline ---
-const EditableHeadline = () => {
+const EditableHeadline = ({ title }: { title: string }) => {
   const [isEditing, setIsEditing] = useState(true);
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -117,15 +119,13 @@ const EditableHeadline = () => {
         suppressContentEditableWarning={true}
         onKeyDown={checkLineLimit}
         onPaste={handlePaste}
-        className="text-4xl md:text-6xl 2xl:text-7xl font-semibold leading-snug text-center outline-none min-w-[200px] w-[80vw] md:max-w-[60vw] cursor-text caret-white overflow-hidden line-clamp-4 md:line-clamp-2"
+        className="text-4xl md:text-6xl 2xl:text-7xl  leading-snug text-center outline-none min-w-[200px] w-[80vw] md:max-w-[60vw] cursor-text caret-white overflow-hidden line-clamp-4 md:line-clamp-2"
         style={{
           textShadow: "0px 0px 0px rgba(255,255,255,0)",
+            fontFamily: "'Syne', sans-serif"
         }}
-      >
-        Designing Websites & Apps
-        <br />
-        <span className="opacity-90">that convert</span>
-      </h1>
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
     </motion.div>
   );
 };
@@ -133,6 +133,8 @@ const EditableHeadline = () => {
 // --- MAIN COMPONENT ---
 const HeroWebDesign = () => {
   const [isHovered, setIsHovered] = React.useState(false);
+  const t = useTranslations('ServicePages.webDesign.Hero');
+  const tCommon = useTranslations('Navbar');
 
   return (
     <div className="w-full pb-[20vh] md:pb-0 md:min-h-screen font-manrope relative text-white z-0 overflow-hidden">
@@ -162,9 +164,9 @@ const HeroWebDesign = () => {
         viewport={{ once: true, amount: 0.3 }}
         className="z-[25] relative w-fit mx-auto mt-32 md:mt-40 lg:mt-[22vh] space-y-5 px-4 flex flex-col items-center justify-center"
       >
-        <CustomBadge darkMode={true} title="Web Design Services" />
+        <CustomBadge darkMode={true} title={t('badge')} />
 
-        <EditableHeadline />
+        <EditableHeadline title={t.raw('title')} />
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -173,8 +175,7 @@ const HeroWebDesign = () => {
           viewport={{ once: true }}
           className="text-center text-white/60 font-medium max-w-2xl select-none text-sm md:text-base"
         >
-          We specialize in creating stunning web design solutions that drive sales
-          and growth for your business.
+          {t('description')}
         </motion.p>
 
         <div className="pt-3 flex items-center gap-4 z-10">
@@ -182,13 +183,13 @@ const HeroWebDesign = () => {
             href={"/contact-sales"}
             className="px-6.5 py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500"
           >
-            Contact Sales
+            {tCommon('contactSales')}
           </Link>
           <Link
             href={"/work"}
             className="px-6.5 py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center gap-2"
           >
-            Our Work <ArrowRight size={16} />
+            {tCommon('work')} <ArrowRight size={16} />
           </Link>
         </div>
       </motion.div>

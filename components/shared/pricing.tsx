@@ -56,9 +56,10 @@ const PricingShared = ({
        <CustomBadge darkMode={darkMode} title="Pricing" />
 
         <h1
-          className={`text-4xl md:text-4xl lg:text-5xl font-bold text-center tracking-tight leading-[1.2] max-w-3xl bg-clip-text text-transparent   ${
+        style={{ fontFamily: "'Syne',sans-serif" }}
+          className={`text-4xl md:text-4xl lg:text-5xl text-center tracking-tight leading-[1.2] max-w-3xl bg-clip-text text-transparent   ${
             darkMode
-              ? 'bg-gradient-to-b from-white to-gray-400'
+              ? 'bg-gradient-to-b from-white to-white'
               : 'bg-gradient-to-b from-[#000000] to-[#3e374b]'
           }`}
         >
@@ -84,7 +85,7 @@ const PricingShared = ({
             className={`card-glow w-full rounded-lg p-2 flex flex-col relative overflow-hidden backdrop-blur-md border transition-all duration-300 ease-in-out pb-8 z-[0]
               ${
                 darkMode
-                  ? 'bg-[#100e14]/30 border-white/5'
+                  ? 'bg-[#090a11]/50 border-white/5'
                   : 'bg-white/50 border-black/10 shadow-md'
               }`}
           >

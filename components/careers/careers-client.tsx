@@ -46,34 +46,36 @@ const CareersClient = ({ jobs }: { jobs: JobPost[] }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-24 pt-32">
         
         {/* --- HEADER --- */}
-        <div className="flex flex-col items-center text-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center gap-2 rounded-full px-4 py-1.5 bg-white/5 border border-white/10 backdrop-blur-md text-indigo-300 text-xs font-semibold uppercase tracking-widest shadow-sm mb-6"
-          >
-            <SparkleIcon size={14} className="fill-current" />
-            We are hiring
-          </motion.div>
-          
-          <motion.h1
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl md:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 mb-6"
-          >
-            Join the <span className="text-indigo-500">Revolution.</span>
-          </motion.h1>
-          
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-lg text-neutral-400 max-w-2xl"
-          >
-            We are looking for thinkers, makers, and doers. Help us build the next generation of digital experiences.
-          </motion.p>
-        </div>
+         {/* Header Section */}
+                <div className='w-full flex flex-col items-center justify-center text-center space-y-6'>
+                   <div
+                      className={`inline-flex items-center gap-2.5 mb-8 transition-all duration-700 ease-out rounded-full px-2 py-1.5 backdrop-blur-lg bg-white/5 border border-white/5`}
+                      style={{ transitionDelay: "0ms" }}
+                    >
+                      <span className="rounded-full bg-linear-to-b from-violet-700 to-violet-500 px-2.5 py-1 text-[11px] font-bold tracking-wider text-white uppercase">
+                        Agency
+                      </span>
+                      <span className="text-[13px] text-white/80 tracking-wide pr-2">
+                        Development & Design Agency
+                      </span>
+                    </div>
+                    
+                    <motion.h1 
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className='text-5xl md:text-6xl lg:text-6xl  tracking-tight text-white leading-[1.1] max-w-4xl'
+                        style={{ fontFamily: "'Syne',sans-serif" }}
+                    >
+                       Join the Revolution
+                    </motion.h1>
+                    
+                    {/* ── sub ── */}
+                <p className="text-center text-[14.5px] leading-relaxed text-white/40 max-w-md mb-9">
+                  We are looking for thinkers, makers, and doers. Help us build the next generation of digital experiences.
+                </p>
+                
+                </div>
 
         {/* --- FILTER BAR --- */}
         <div className="flex flex-wrap justify-center gap-2 mb-16">

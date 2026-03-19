@@ -4,7 +4,12 @@ import Link from 'next/link'
 import React from 'react'
 import CustomBadge from '../shared/custom-badge'
 
+import { useTranslations } from 'next-intl'
+
 const HeroAccessibility = () => {
+  const t = useTranslations('ServicePages.accessibility.Hero');
+  const tCommon = useTranslations('Navbar');
+
   return (
     <div className='w-full pb-20 font-manrope relative text-white z-0 px-6 md:px-12 lg:px-24 overflow-hidden'>
       
@@ -13,24 +18,24 @@ const HeroAccessibility = () => {
 
       {/* CONTENT */}
       <div className='w-full pt-32 md:pt-40 pb-10 md:pb-20 flex flex-col justify-center items-center top-0 left-0 font-manrope space-y-4'>
-        <CustomBadge darkMode={true} title="Accessibility Testing & Compliance" />
+        <CustomBadge darkMode={true} title={t('badge')} />
         
         {/* Responsive Text */}
-        <h1 className='text-4xl md:text-5xl font-semibold tracking-wide bg-clip-text text-transparent bg-linear-to-r from-[#ecebff] to-[#a199b2] text-center leading-tight max-w-2xl z-10'>
-          Making Internet Accessible for All
+        <h1 className='text-4xl md:text-6xl  tracking-wide bg-clip-text text-transparent bg-linear-to-r from-[#ecebff] to-[#a199b2] text-center leading-tight max-w-2xl z-10' style={{ fontFamily: "'Syne',sans-serif" }}  >
+          {t('title')}
         </h1>
 
         <p className='text-white/60 text-sm md:text-base font-medium max-w-lg text-center pt-1 z-10'>
-          We specialize in ensuring compliance with accessibility standards and enhancing user experience for all individuals.
+          {t('description')}
         </p>
 
         {/* Buttons: Stack on mobile, Row on Desktop */}
         <div className='pt-3 flex flex-row items-center gap-4 z-10 w-full sm:w-auto'>
           <Link href={'/contact-sales'} className="w-full sm:w-auto text-center px-6.5 py-3.5 rounded-full text-sm font-semibold bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 cursor-pointer hover:shadow-[inset_0_-8px_15px_rgba(0,0,0,0.6)] hover:shadow-violet-400 transition-all duration-500">
-            Contact Sales
+            {tCommon('contactSales')}
           </Link>
           <Link href={'/work'} className="w-full sm:w-auto justify-center px-6.5 py-3.5 rounded-full text-sm font-medium bg-white/10 backdrop-blur-md border border-white/20 text-white cursor-pointer hover:bg-white/20 transition-all duration-300 flex items-center gap-2">
-            Our Work <ArrowRight size={16} />
+            {tCommon('work')} <ArrowRight size={16} />
           </Link>
         </div>
       </div>

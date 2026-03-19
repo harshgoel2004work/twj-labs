@@ -57,7 +57,7 @@ export default function GlowingCard({
       className={cn(
         'relative group h-full w-full rounded-2xl border overflow-hidden transition-all duration-300',
         darkMode 
-          ? 'bg-[#0c0c12] border-white/10 hover:border-white/20' 
+          ? 'bg-[#090a11] border-white/10 hover:border-white/20' 
           : 'bg-white border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-md'
       )}
     >

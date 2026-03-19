@@ -8,7 +8,7 @@ const TestimonialsSection = ({ darkMode = false }: { darkMode: boolean }) => {
     <section className={cn(
       // ADDED: -mt-[1px] to fix the sub-pixel gap line on mobile
       'w-full py-24 px-6 relative flex flex-col items-center justify-center -mt-[1px]',
-      darkMode ? 'bg-[#060609] text-white' : 'bg-[#F4F5F9] text-black'
+      darkMode ? ' text-white' : 'bg-[#F4F5F9] text-black'
     )}>
       
       {/* Background Ambience */}

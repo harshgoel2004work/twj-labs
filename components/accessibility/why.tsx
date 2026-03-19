@@ -71,13 +71,14 @@ const WhyAccessibility = () => {
         <div className="lg:col-span-5  flex justify-start">
           <div className="lg:sticky lg:top-32 flex flex-col items-center md:items-start gap-6 ">
             <CustomBadge darkMode={true} title="Why Accessibility?" />
-
+            
             <motion.h1
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-4xl md:text-5xl font-bold tracking-tight text-center md:text-start leading-[1.1]"
+              className="text-4xl md:text-5xl  tracking-tight text-center md:text-start leading-[1.1]"
+              style={{ fontFamily: "'Syne',sans-serif" }}
             >
               Unlock inclusivity with <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/60">

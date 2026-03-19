@@ -9,6 +9,7 @@ import React, { useEffect } from 'react'
 import CustomBadge from '@/components/shared/custom-badge'
 import { getPricingPlans } from '@/actions/get-pricing'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -60,6 +61,7 @@ export const safeParse = (data: string | string[] | undefined | null): string[] 
 // ─── Component ────────────────────────────────────────────────────────────────
 
 const PricingHero = () => {
+  const t = useTranslations('Pricing');
   const [activeService, setActiveService] = React.useState<ServiceType>('webflow')
   const darkMode = true
 
@@ -149,18 +151,21 @@ const PricingHero = () => {
       {/* Main Container */}
       <div className='relative z-10 max-w-[90rem] mx-auto px-6 md:px-12 lg:px-24 py-24 md:py-32'>
 
-        {/* Header */}
+       {/* Header Section */}
         <div className='flex flex-col items-center gap-6 text-center'>
-          <CustomBadge title='Pricing' darkMode={darkMode} />
+          <CustomBadge title={t('badge')} darkMode={darkMode} />
+          
+           {/* ── headline ── */}
+        <h2 className="text-center text-[clamp(2rem,5vw,3.7rem)] font-medium leading-[1.12] tracking-tight" style={{ fontFamily: "'Syne',sans-serif" }}>
+          <span className="text-white">{t('titlePart1')}</span>
+          <br />
+          <span className="text-white/30">{t('titlePart2')}</span>
+        </h2>
 
-          <h1 className='text-4xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-[1.1] max-w-4xl bg-clip-text text-transparent bg-gradient-to-b from-white via-white to-white/60'>
-            Tailored Pricing Plans to <br className='hidden md:block' /> Suit Your Business Needs
-          </h1>
-
-          <p className='text-sm md:text-base md:text-lg text-neutral-400 max-w-2xl leading-relaxed'>
-            All packages are customizable to fit your needs. Let&apos;s hop on a call and scope out
-            your project details to find the perfect fit.
-          </p>
+        {/* ── sub ── */}
+        <p className="text-center text-[14.5px] leading-relaxed text-white/40 max-w-md mb-4">
+          {t('description')}
+        </p>
         </div>
 
         {/* Navigation Tabs */}
@@ -208,7 +213,7 @@ const PricingHero = () => {
 
               {loading && initialLoaded &&
                 displayedPlans?.map((_, index) => (
-                  <SkeletonCard key={`skeleton-${index}`} index={index} />
+                    <SkeletonCard key={`skeleton-${index}`} index={index} />
                 ))}
 
               {!loading &&
@@ -224,7 +229,7 @@ const PricingHero = () => {
 
               {!loading && !displayedPlans && (
                 <div className='col-span-full text-center text-slate-400 py-12'>
-                  Unable to load plans. Please try again later.
+                  {t('error')}
                 </div>
               )}
             </motion.div>
@@ -238,13 +243,13 @@ const PricingHero = () => {
           <div className='backdrop-blur-sm bg-black/40 absolute inset-0' />
           <div className='relative z-10 flex flex-col items-center gap-4'>
             <Spinner />
-            <span className='text-sm text-slate-300'>Loading pricing plans…</span>
+            <span className='text-sm text-slate-300'>{t('loading')}</span>
           </div>
         </div>
       )}
 
       <div aria-live='polite' className='sr-only'>
-        {loading ? 'Loading pricing plans' : 'Pricing plans loaded'}
+        {loading ? t('loading') : 'Pricing plans loaded'}
       </div>
     </div>
   )
@@ -260,7 +265,7 @@ export const SkeletonCard = ({ index = 0 }: { index?: number }) => (
     className='group relative w-full rounded-2xl p-0.5 flex flex-col'
   >
     <div className='relative h-full w-full rounded-xl overflow-hidden p-6 md:p-8 flex flex-col bg-neutral-950'>
-      <div className='absolute inset-0 z-0 opacity-30 pointer-events-none bg-[radial-gradient(#ffffff14_1px,transparent_1px)] [background-size:20px_20px]' />
+      <div className='absolute inset-0 z-0 opacity-30 pointer-events-none bg-[radial-gradient(#ffffff14_1px,transparent_1px)] bg-size-[20px_20px]' />
       <div className='relative z-10 mb-8'>
         <div className='h-6 w-32 rounded bg-slate-800 animate-pulse mb-3' />
         <div className='h-2 w-12 rounded bg-slate-800 animate-pulse mb-4' />
@@ -289,8 +294,8 @@ export const SkeletonCard = ({ index = 0 }: { index?: number }) => (
 
 const Spinner = () => (
   <svg className='animate-spin h-12 w-12 text-white' viewBox='0 0 24 24' role='img' aria-hidden='true'>
-    <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' fill='none' />
-    <path className='opacity-75' fill='currentColor' d='M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z' />
+    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z" />
   </svg>
 )
 
@@ -307,6 +312,7 @@ const PricingCard = ({
   index: number
   activeServiceName?: string
 }) => {
+  const t = useTranslations('Pricing');
   const featuresList = safeParse(plan.features)
   const notIncludedList = safeParse(plan.featuresNotIncluded)
 
@@ -326,8 +332,8 @@ const PricingCard = ({
         className={cn(
           'absolute inset-0 rounded-3xl transition-all duration-500',
           plan.featured
-            ? 'bg-gradient-to-b from-[#5449e8] to-transparent shadow-[inset_0_1px_0px_rgba(0,0,0,0.6)] shadow-violet-400 opacity-100 blur-[1px]'
-            : 'bg-gradient-to-b from-white/20 via-white/5 to-transparent opacity-50 group-hover:opacity-100',
+            ? 'bg-linear-to-b from-[#5449e8] to-transparent shadow-[inset_0_1px_0px_rgba(0,0,0,0.6)] shadow-violet-400 opacity-100 blur-[1px]'
+            : 'bg-linear-to-b from-white/20 via-white/5 to-transparent opacity-50 group-hover:opacity-100',
         )}
       />
 
@@ -338,7 +344,7 @@ const PricingCard = ({
           darkMode ? 'bg-[#0c0c12]' : 'bg-white',
         )}
       >
-        <div className='absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-white/[0.01] rounded-3xl to-transparent pointer-events-none' />
+        <div className='absolute top-0 left-0 right-0 h-48 bg-linear-to-b from-white/1 rounded-3xl to-transparent pointer-events-none' />
         <div
           className='absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none'
           style={{ backgroundImage: 'url("https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png")' }}
@@ -352,7 +358,7 @@ const PricingCard = ({
         {plan.featured && (
           <div className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2'>
             <span className='inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#5449e8] shadow-[inset_0_9px_15px_rgba(0,0,0,0.6)] shadow-violet-400 text-[10px] font-bold uppercase tracking-widest text-white border border-white/20'>
-              <Sparkles size={10} className='fill-white' /> Most Popular
+              <Sparkles size={10} className='fill-white' /> {t('mostPopular')}
             </span>
           </div>
         )}
@@ -368,14 +374,14 @@ const PricingCard = ({
         </div>
 
         {/* Divider */}
-        <div className='w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8' />
+        <div className='w-full h-px bg-linear-to-r from-transparent via-white/10 to-transparent mb-8' />
 
         {/* Features */}
         <div className='relative z-10 flex-grow space-y-5'>
           {plan.everythingIncludedPrev && (
             <p className='text-xs font-bold uppercase tracking-widest text-indigo-400 mb-4 flex items-center gap-2'>
               <span className='w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse' />
-              Everything in previous +
+              {t('everythingPrev')}
             </p>
           )}
 
@@ -400,7 +406,7 @@ const PricingCard = ({
 
             {notIncludedList.map((feature, i) => (
               <li key={`nf-${i}`} className='flex items-start gap-3 opacity-50 grayscale'>
-                <div className='mt-0.5 flex items-center justify-center w-5 h-5 rounded-full shrink-0 border border-white/5 bg-white/[0.02] text-slate-600'>
+                <div className='mt-0.5 flex items-center justify-center w-5 h-5 rounded-full shrink-0 border border-white/5 bg-white/2 text-slate-600'>
                   <X size={12} strokeWidth={3} />
                 </div>
                 <span className={cn('text-sm font-medium leading-tight line-through decoration-slate-600', darkMode ? 'text-slate-500' : 'text-slate-400')}>
@@ -422,9 +428,9 @@ const PricingCard = ({
             )}
           >
             <Link href={`/contact-sales?ser-int=${activeServiceName}&plan=${plan.name}`}>
-              <div className='absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out z-20' />
+              <div className='absolute inset-0 -translate-x-full group-hover/btn:translate-x-full bg-linear-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out z-20' />
               <span className='relative z-10 flex items-center justify-center gap-2'>
-                Contact Sales
+                {t('cta')}
                 <ArrowRight size={16} className='transition-transform duration-300 group-hover/btn:translate-x-1 text-white' />
               </span>
             </Link>

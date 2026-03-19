@@ -1,198 +1,181 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import { SparkleIcon } from "lucide-react";
-import React, { useState, useEffect, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import CustomBadge from "../shared/custom-badge";
+import React from 'react';
+import CustomBadge from '../shared/custom-badge';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-export const projectProcess = [
+// --- Types ---
+interface StageCardProps {
+  stageNumber: number;
+  stageKey: string;
+  icon: React.ReactNode;
+}
+
+// --- Icons (using standard SVGs to mimic the design) ---
+const RocketIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-200">
+    <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+    <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+    <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+    <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+  </svg>
+);
+
+const NetworkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-200">
+    <rect x="14" y="14" width="4" height="4" rx="1" />
+    <rect x="6" y="14" width="4" height="4" rx="1" />
+    <rect x="14" y="6" width="4" height="4" rx="1" />
+    <rect x="6" y="6" width="4" height="4" rx="1" />
+    <path d="M8 10v4" />
+    <path d="M16 10v4" />
+    <path d="M10 8h4" />
+    <path d="M10 16h4" />
+  </svg>
+);
+
+const SparkleIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-200">
+    <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/>
+  </svg>
+);
+
+// --- Data ---
+const STAGES_DATA = [
   {
-    step: 1,
-    title: "Discovery & Strategy",
-    tagline: "Understanding your goals and defining the roadmap.",
-    description:
-      "We start by understanding your business, target audience, and project objectives. Through research, consultations, and competitor analysis, we craft a clear strategy and project roadmap that aligns with your vision and goals.",
+    stageNumber: 1,
+    stageKey: "stage1",
+    icon: <RocketIcon />,
   },
   {
-    step: 2,
-    title: "Design & Planning",
-    tagline: "Transforming ideas into captivating, functional designs.",
-    description:
-      "Our design team creates visually stunning and user-friendly interfaces that reflect your brand identity. We plan every detail—from layout to user flow—to ensure a seamless and engaging experience.",
+    stageNumber: 2,
+    stageKey: "stage2",
+    icon: <NetworkIcon />,
   },
   {
-    step: 3,
-    title: "Development & Implementation",
-    tagline: "Building scalable, high-performing digital solutions.",
-    description:
-      "Once the design is approved, we bring it to life using modern frameworks and best development practices. Our team ensures every element is optimized for performance, security, and scalability.",
-  },
-  {
-    step: 4,
-    title: "Launch & Optimization",
-    tagline: "Delivering, testing, and continuously improving your product.",
-    description:
-      "After launch, we monitor performance and user feedback to ensure smooth operation. We provide ongoing optimization, updates, and support to help your project grow and stay ahead of the competition.",
-  },
+    stageNumber: 3,
+    stageKey: "stage3",
+    icon: <SparkleIcon />,
+  }
 ];
 
-const OurProjectProcess = () => {
-  const [activeStep, setActiveStep] = useState<number>(1);
-  const [progress, setProgress] = useState<number>(0);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
+// --- Components ---
+const StageCard: React.FC<StageCardProps> = ({ stageNumber, stageKey, icon }) => {
+  const t = useTranslations("Home.HowWeWork");
   
-  const DURATION = 10000; // 10 seconds per slide
-  const INTERVAL_TIME = 100; // Update tick
-
-  const handleNext = useCallback(() => {
-    setActiveStep((prev) => (prev === projectProcess.length ? 1 : prev + 1));
-    setProgress(0);
-  }, []);
-
-  // Timer Logic
-  useEffect(() => {
-    if (isPaused) return;
-
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          handleNext();
-          return 0;
-        }
-        // Calculate increment based on interval and total duration
-        return prev + (INTERVAL_TIME / DURATION) * 100;
-      });
-    }, INTERVAL_TIME);
-
-    return () => clearInterval(timer);
-  }, [isPaused, handleNext]);
-
-  // Manual Click Handler
-  const handleStepClick = (step: number) => {
-    setActiveStep(step);
-    setProgress(0);
-  };
+  // Dynamically get tags - supporting up to 3 tags as defined in locales
+  const tags = [];
+  if (t.has(`${stageKey}.tag1`)) tags.push(t(`${stageKey}.tag1`));
+  if (t.has(`${stageKey}.tag2`)) tags.push(t(`${stageKey}.tag2`));
+  if (t.has(`${stageKey}.tag3`)) tags.push(t(`${stageKey}.tag3`));
 
   return (
-    <section className="w-full px-6 md:px-12 lg:px-24 font-manrope py-24 bg-[#060609]">
-      {/* Header */}
-      <div className="flex flex-col items-center gap-4 mb-16">
-        <CustomBadge title={'Our Process'} darkMode={true} />
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-center leading-[1.1] max-w-3xl bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
-          How We Work On Our Projects
-        </h1>
-        <p className="text-white/60 text-center max-w-xl">
-           A streamlined workflow designed to take your idea from concept to reality efficiently.
-        </p>
+    <div className="relative overflow-hidden rounded-2xl border border-white/5 bg-gradient-to-br from-[#100a17] via-[#0a070f] to-[#09060b] p-8 shadow-2xl backdrop-blur-sm transition-all hover:border-white/10">
+      {/* Subtle top-left glow inside the card */}
+      <div className="absolute -left-10 -top-10 h-32 w-32 rounded-full bg-violet-600/10 blur-[40px] pointer-events-none"></div>
+
+      <div className="relative z-10 flex items-start justify-between mb-6">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 shadow-inner">
+          {icon}
+        </div>
+        <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-gray-300">
+          {t("stage")} {stageNumber}
+        </div>
       </div>
 
-      {/* Accordion Container */}
-      <div 
-        className="flex flex-col lg:flex-row gap-4 w-full h-auto lg:h-[500px] max-w-7xl mx-auto"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
-        {projectProcess.map((process) => {
-          const isActive = activeStep === process.step;
+      <h3 className="relative z-10 mb-4 text-xl font-semibold text-white">
+        {t(`${stageKey}.title`)}
+      </h3>
+      <p className="relative z-10 mb-8 text-sm leading-relaxed text-gray-400">
+        {t(`${stageKey}.description`)}
+      </p>
 
-          return (
-            <motion.div
-              key={process.step}
-              layout
-              onClick={() => handleStepClick(process.step)}
-              className={cn(
-                "relative rounded-2xl overflow-hidden cursor-pointer transition-colors duration-500 group border",
-                isActive 
-                  ? "flex-[3] bg-[#0c0c12] border-white/10 shadow-2xl shadow-indigo-500/10" 
-                  : "flex-[1] bg-white/[0.02] border-white/5 hover:bg-white/[0.05]"
-              )}
-              initial={false}
-              animate={{ 
-                flex: isActive ? 3 : 1,
-              }}
-              transition={{ type: "spring", stiffness: 200, damping: 30 }}
-            >
-              
-              {/* Progress Bar (Only visible when active) */}
-              {isActive && (
-                 <div className="absolute top-0 left-0 w-full h-1 bg-white/10 z-20">
-                    <motion.div 
-                        className="h-full bg-indigo-500"
-                        style={{ width: `${progress}%` }}
-                        transition={{ ease: "linear", duration: 0.1 }}
-                    />
-                 </div>
-              )}
-
-              {/* Background Glows */}
-              {isActive && (
-                <>
-                    <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-600/10 rounded-full blur-[80px] pointer-events-none" />
-                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-violet-600/10 rounded-full blur-[80px] pointer-events-none" />
-                </>
-              )}
-
-              {/* Content Wrapper */}
-              <div className="relative z-10 w-full h-full p-6 md:p-8 flex flex-col">
-                
-                {/* --- HEADER: Step Number --- */}
-                <div className="flex justify-between items-start mb-6">
-                    <div className={cn(
-                        "w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold border transition-colors duration-300",
-                        isActive 
-                            ? "bg-indigo-600 text-white border-indigo-500" 
-                            : "bg-white/5 text-slate-500 border-white/10 group-hover:border-white/20 group-hover:text-slate-300"
-                    )}>
-                        {process.step}
-                    </div>
-                </div>
-
-                {/* --- BODY: Active Content --- */}
-                <AnimatePresence mode="popLayout">
-                    {isActive ? (
-                        <motion.div 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            className="flex flex-col justify-end h-full"
-                        >
-                            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                                {process.title}
-                            </h2>
-                            <h3 className="text-indigo-300 text-sm font-semibold uppercase tracking-wider mb-4">
-                                {process.tagline}
-                            </h3>
-                            <p className="text-white/50 leading-relaxed text-sm md:text-base max-w-2xl">
-                                {process.description}
-                            </p>
-                        </motion.div>
-                    ) : (
-                        // --- BODY: Inactive Vertical Title (Desktop) ---
-                        <div className="hidden lg:flex flex-grow items-center justify-center">
-                             <h2 className="text-lg font-bold text-neutral-600 whitespace-nowrap -rotate-90 origin-center tracking-wider group-hover:text-neutral-400 transition-colors">
-                                {process.title}
-                            </h2>
-                        </div>
-                    )}
-                </AnimatePresence>
-
-                {/* Mobile/Tablet Title for Inactive State (Hidden on Desktop) */}
-                 {!isActive && (
-                    <div className="lg:hidden mt-4">
-                        <h2 className="text-lg font-bold text-slate-500 group-hover:text-slate-300 transition-colors">
-                             {process.title}
-                        </h2>
-                    </div>
-                 )}
-
-              </div>
-            </motion.div>
-          );
-        })}
+      <div className="relative z-10 flex flex-wrap gap-3">
+        {tags.map((tag, idx) => (
+          <span 
+            key={idx} 
+            className="rounded-lg border border-white/10 bg-[#ffffff08] px-4 py-2 text-xs font-medium text-gray-300 transition-colors hover:bg-white/10"
+          >
+            {tag}
+          </span>
+        ))}
       </div>
-    </section>
+    </div>
   );
 };
 
-export default OurProjectProcess;
+export default function OurProjectProcess({ namespace = "Home.HowWeWork" }: { namespace?: string }) {
+  const t = useTranslations(namespace as any);
+  const tStages = useTranslations("Home.HowWeWork");
+
+  return (
+    <section className="min-h-screen  py-24 px-6 md:px-12 lg:px-24 font-sans text-white">
+      <div className="mx-auto max-w-7xl">
+        
+        {/* Note the `items-start` here. This is CRITICAL for position: sticky to work on grid children */}
+        <div className="grid grid-cols-1 items-start gap-16 lg:grid-cols-7 lg:gap-24">
+          
+          {/* Left Column: Scrollable Content */}
+          <div className="flex flex-col col-span-4">
+            
+            {/* Header Section */}
+            <div className="mb-16">
+             <CustomBadge title={t('badge')} />
+              
+              {/* Headline */}
+        <h2
+          className="text-[clamp(2.2rem,5vw,3.5rem)]  leading-[1.12] tracking-tight mt-5"
+          style={{ fontFamily: "'Syne', sans-serif" }}
+        >
+          <span className="text-white">{t("title") || t("titleLine1")}{" "}</span>
+          
+          <span className="text-white/40">{t("description") || t("titleLine2")}</span>
+        </h2>
+
+        {/* Sub */}
+        {t.has("sub") && (
+          <p className="mt-5 max-w-xl text-[14.5px] leading-relaxed text-white/40">
+            {t("sub")}
+          </p>
+        )}
+            </div>
+
+            {/* Cards List */}
+            <div className="flex flex-col gap-8">
+              {STAGES_DATA.map((stage) => (
+                <StageCard key={stage.stageNumber} {...stage} />
+              ))}
+            </div>
+            
+          </div>
+
+          {/* Right Column: Sticky Image */}
+          {/* 'sticky top-24' keeps it fixed 6rem from the top of the viewport as the left side scrolls */}
+          <div className="sticky top-24 hidden h-fit w-full lg:block col-span-3">
+            <div className="relative w-full rounded-3xl p-1">
+              
+              {/* Outer Blue Glow behind the image */}
+              <div className="absolute inset-x-0 -bottom-10 mx-auto h-[120%] w-[90%] rounded-full bg-violet-600/30 blur-[100px] pointer-events-none"></div>
+              
+              {/* Image Container */}
+              <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-white/10 bg-gray-900 shadow-2xl">
+                <Image
+                  src="/ww2.svg"
+                  alt="Student working on laptop"
+                  width={1000}
+                  height={1000}
+                  className="h-full w-full object-cover  transition-transform duration-700 hover:scale-105"
+                />
+                
+                
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -46,7 +46,7 @@ export const LogoSymbol = () => {
 
 export const LogoSymbolWhite = () => {
   return (
-    <Link href={'/'} className=''>
+    <div className=''>
       <Image 
         src="/symbol-logo-white.svg"
         alt="Logo"
@@ -54,7 +54,7 @@ export const LogoSymbolWhite = () => {
         height={40}
         className='w-10'
       />
-    </Link>
+    </div>
   )
 }
 

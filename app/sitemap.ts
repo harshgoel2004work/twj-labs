@@ -1,5 +1,5 @@
 import { servicesForAI } from "@/data/services"
-import { getPosts } from "./(marketing)/blog/page"
+import { getPosts } from "@/lib/blog"
 import { useCases } from "@/data/use-cases"
 
 export default async function sitemap() {

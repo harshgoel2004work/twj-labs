@@ -11,12 +11,13 @@ export async function getSanityCaseStudies() {
   description,
   "heroImage": heroImage.asset->url,
   "gallery": coalesce(gallery[].asset->url, []),
+  "fullPageImage":fullPageImage.asset->url,
   conversionRate,
   userGrowth,
   technologies,
   projectType
 }`
-  
+
   const data = await client.fetch(query)
   return data
 }
@@ -32,6 +33,7 @@ export async function getSanityCaseStudyById(id: string) {
     description,
     "heroImage": heroImage.asset->url,
     "gallery": gallery[].asset->url, // Fetches the array of other images
+    "fullPageImage":fullPageImage.asset->url,
     projectType,
     completionDate,
     technologies,
@@ -45,7 +47,7 @@ export async function getSanityCaseStudyById(id: string) {
     conversionRate,
     userGrowth
   }`
-  
+
   const data = await client.fetch(query, { id })
   return data
 }
