@@ -1,162 +1,99 @@
 import React from 'react'
 
-const Loading = () => {
+export default function Loading() {
   return (
-    <div className='h-screen w-screen flex items-center justify-center' style={{
-      background: '#060609',
-      fontFamily: "'DM Mono', monospace",
-    }}>
+    <div
+      className="fixed inset-0 z-50 flex flex-col items-center justify-center"
+      style={{
+        background: 'linear-gradient(135deg, #0f0f17 0%, #0a0a12 100%)',
+      }}
+    >
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&display=swap');
-
-        @keyframes orbit {
-          from { transform: rotate(0deg) translateX(32px) rotate(0deg); }
-          to   { transform: rotate(360deg) translateX(32px) rotate(-360deg); }
+        @keyframes spin {
+          to { transform: rotate(360deg); }
         }
-        @keyframes orbit-reverse {
-          from { transform: rotate(0deg) translateX(52px) rotate(0deg); }
-          to   { transform: rotate(-360deg) translateX(52px) rotate(360deg); }
+        @keyframes pulse {
+          0%, 100% { opacity: 0.4; transform: scale(0.92); }
+          50%      { opacity: 1;   transform: scale(1.08); }
         }
-        @keyframes orbit-slow {
-          from { transform: rotate(45deg) translateX(72px) rotate(-45deg); }
-          to   { transform: rotate(405deg) translateX(72px) rotate(-405deg); }
+        @keyframes textFade {
+          0%, 100% { opacity: 0.6; }
+          50%      { opacity: 1; }
         }
-        @keyframes pulse-core {
-          0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 rgba(139,92,246,0.6); }
-          50% { transform: scale(1.15); opacity: 0.8; box-shadow: 0 0 0 12px rgba(139,92,246,0); }
-        }
-        @keyframes blink {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0; }
-        }
-        @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(6px); }
-          to   { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes ring-rotate {
-          from { transform: rotate(0deg); }
-          to   { transform: rotate(360deg); }
-        }
-        @keyframes ring-rotate-rev {
-          from { transform: rotate(0deg); }
-          to   { transform: rotate(-360deg); }
+        @keyframes typing {
+          from { width: 0; }
+          to   { width: 7ch; }
         }
 
-        .orbit-dot-1 {
-          animation: orbit 1.4s linear infinite;
+        .loader-ring {
+          animation: spin 1.6s cubic-bezier(0.5, 0, 0.5, 1) infinite;
         }
-        .orbit-dot-2 {
-          animation: orbit-reverse 2s linear infinite;
+        .pulse-ring {
+          animation: pulse 2.4s ease-in-out infinite;
         }
-        .orbit-dot-3 {
-          animation: orbit-slow 2.8s linear infinite;
+        .loading-text {
+          animation: textFade 3s ease-in-out infinite;
         }
-        .core {
-          animation: pulse-core 2s ease-in-out infinite;
-        }
-        .cursor {
-          animation: blink 1s step-end infinite;
-        }
-        .label {
-          animation: fadeIn 0.8s ease forwards;
-          animation-delay: 0.3s;
-          opacity: 0;
-        }
-        .ring-1 {
-          animation: ring-rotate 3s linear infinite;
-        }
-        .ring-2 {
-          animation: ring-rotate-rev 4s linear infinite;
+        .typing {
+          overflow: hidden;
+          white-space: nowrap;
+          border-right: 2px solid #a78bfa;
+          animation: 
+            typing 3.2s steps(7) infinite,
+            textFade 3s ease-in-out infinite;
         }
       `}</style>
 
-      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '32px' }}>
+      <div className="relative w-28 h-28">
 
-        {/* Orbital system */}
-        <div style={{ position: 'relative', width: '160px', height: '160px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        {/* Large faint pulse background */}
+        <div
+          className="absolute inset-0 pulse-ring rounded-full"
+          style={{
+            background: 'radial-gradient(circle, rgba(139,92,246,0.14) 0%, transparent 70%)',
+          }}
+        />
 
-          {/* Outer ring */}
-          <div className="ring-2" style={{
-            position: 'absolute',
-            width: '152px', height: '152px',
-            border: '1px solid rgba(139,92,246,0.12)',
+        {/* Main spinning ring */}
+        <div
+          className="loader-ring absolute inset-0"
+          style={{
+            border: '3px solid transparent',
+            borderTopColor: '#a78bfa',
+            borderRightColor: '#a78bfa88',
             borderRadius: '50%',
-            borderTopColor: 'rgba(167,139,250,0.35)',
-          }} />
+          }}
+        />
 
-          {/* Mid ring */}
-          <div className="ring-1" style={{
-            position: 'absolute',
-            width: '112px', height: '112px',
-            border: '1px solid rgba(99,102,241,0.12)',
-            borderRadius: '50%',
-            borderBottomColor: 'rgba(99,102,241,0.4)',
-            borderLeftColor: 'rgba(99,102,241,0.4)',
-          }} />
-
-          {/* Inner ring */}
-          <div style={{
-            position: 'absolute',
-            width: '72px', height: '72px',
-            border: '1px solid rgba(139,92,246,0.15)',
-            borderRadius: '50%',
-          }} />
-
-          {/* Orbiting dot 1 — closest, fast */}
-          <div className="orbit-dot-1" style={{
-            position: 'absolute',
-            width: '6px', height: '6px',
-            borderRadius: '50%',
-            background: '#a78bfa',
-            boxShadow: '0 0 12px 4px rgba(167,139,250,0.8)',
-          }} />
-
-          {/* Orbiting dot 2 — mid, reverse */}
-          <div className="orbit-dot-2" style={{
-            position: 'absolute',
-            width: '4px', height: '4px',
-            borderRadius: '50%',
-            background: 'rgba(129, 140, 248, 1)',
-            boxShadow: '0 0 10px 3px rgba(99,102,241,0.6)',
-          }} />
-
-          {/* Orbiting dot 3 — far, slow */}
-          <div className="orbit-dot-3" style={{
-            position: 'absolute',
-            width: '3.5px', height: '3.5px',
-            borderRadius: '50%',
-            background: 'rgba(167,139,250,0.6)',
-            boxShadow: '0 0 6px 1px rgba(167,139,250,0.3)',
-          }} />
-
-          {/* Core */}
-          <div className="core" style={{
-            width: '12px', height: '12px',
-            borderRadius: '50%',
-            background: 'radial-gradient(circle at 35% 35%, #c4b5fd, #6366f1)',
-          }} />
-        </div>
-
-        {/* Text */}
-        <div className="label" style={{ textAlign: 'center' }}>
-            <div style={{
-            fontSize: '11px',
-            letterSpacing: '0.25em',
-            color: 'rgba(167,139,250,0.8)',
-            textTransform: 'uppercase',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '4px',
-            fontWeight: 400
-          }}>
-            loading
-            <span className="cursor" style={{ color: 'rgba(167,139,250, 1)' }}>_</span>
-          </div>
-        </div>
+        {/* Inner glowing core */}
+        <div
+          className="absolute inset-[38%] rounded-full"
+          style={{
+            background: 'radial-gradient(circle at 30% 30%, #c4b5fd, #7c3aed 60%, #4c1d95 100%)',
+            boxShadow: '0 0 32px 8px rgba(139,92,246,0.45), inset 0 0 12px rgba(255,255,255,0.15)',
+          }}
+        />
 
       </div>
+
+      <div className="mt-10 flex flex-col items-center gap-2">
+        <div
+          className="typing text-[#a78bfa] font-mono text-sm tracking-wider uppercase font-light"
+          style={{ fontFamily: "'JetBrains Mono', 'DM Mono', monospace" }}
+        >
+          loading...
+        </div>
+
+        <div className="loading-text text-xs text-zinc-500 font-light tracking-widest mt-1">
+          please wait
+        </div>
+      </div>
+
+      {/* Optional: tiny orbiting accent dots (uncomment if you want more motion) */}
+      {/* 
+      <div className="absolute w-3 h-3 rounded-full bg-purple-400/60 blur-sm"
+        style={{ animation: 'orbit 3.8s linear infinite', transform: 'translateX(80px)' }} />
+      */}
     </div>
   )
 }
-
-export default Loading
