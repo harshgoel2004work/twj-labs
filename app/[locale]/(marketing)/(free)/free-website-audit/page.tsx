@@ -34,8 +34,8 @@ interface AuditResult {
 const getScoreColor = (s: number) => s >= 90 ? "#10b981" : s >= 50 ? "#f59e0b" : "#ef4444";
 const getScoreLabel = (s: number) => s >= 90 ? "Excellent" : s >= 50 ? "Needs Work" : "Poor";
 const GRADE_COLORS: Record<string, string> = {
-  "A+": "#10b981","A": "#10b981","A-": "#34d399","B+": "#6ee7b7","B": "#a3e635","B-": "#bef264",
-  "C+": "#fde047","C": "#f59e0b","C-": "#fb923c","D+": "#f97316","D": "#ef4444","D-": "#dc2626","F": "#991b1b",
+  "A+": "#10b981", "A": "#10b981", "A-": "#34d399", "B+": "#6ee7b7", "B": "#a3e635", "B-": "#bef264",
+  "C+": "#fde047", "C": "#f59e0b", "C-": "#fb923c", "D+": "#f97316", "D": "#ef4444", "D-": "#dc2626", "F": "#991b1b",
 };
 
 /* ─── Section wrapper card ───────────────────────────────────── */
@@ -122,8 +122,8 @@ function AuditRow({ item }: { item: AuditItem }) {
       <div className="flex items-start sm:items-center gap-3 px-5 py-4">
         <div className="mt-0.5 sm:mt-0">
           {isPass ? <CheckCircle2 size={16} className="text-emerald-400 shrink-0" />
-           : isFail ? <XCircle size={16} className="text-red-400 shrink-0" />
-           : <AlertTriangle size={16} className="text-amber-400 shrink-0" />}
+            : isFail ? <XCircle size={16} className="text-red-400 shrink-0" />
+              : <AlertTriangle size={16} className="text-amber-400 shrink-0" />}
         </div>
         <span className="flex-1 text-[14px] font-medium text-white/80 leading-snug">{item.title}</span>
         <div className="flex items-center gap-3 shrink-0">
@@ -285,7 +285,7 @@ function OGSection({ data, url }: { data: OGData; url: string }) {
                 style={{ background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.04)" }}>
                 <span className="text-[11px] text-white/40 font-mono shrink-0">{label}</span>
                 {val ? <span className="text-[11px] text-white/65 truncate max-w-[160px] text-right">{val}</span>
-                     : <span className="text-[11px] text-red-400/70 flex items-center gap-1 shrink-0"><AlertTriangle size={10} /> Missing</span>}
+                  : <span className="text-[11px] text-red-400/70 flex items-center gap-1 shrink-0"><AlertTriangle size={10} /> Missing</span>}
               </div>
             ))}
           </div>
@@ -357,7 +357,7 @@ async function fetchAudit(url: string, strategy: "mobile" | "desktop"): Promise<
   allRefs.forEach(({ id }: { id: string }) => {
     if (seen.has(id)) return; seen.add(id);
     const a = audits[id];
-    if (!a || ["informative","notApplicable"].includes(a.scoreDisplayMode) || a.score === null) return;
+    if (!a || ["informative", "notApplicable"].includes(a.scoreDisplayMode) || a.score === null) return;
     const item: AuditItem = { title: a.title, description: a.description?.replace(/\[.*?\]\(.*?\)/g, "").trim() ?? "", score: a.score, displayValue: a.displayValue };
     if (a.score >= 0.9) passed.push(item);
     else if (a.details?.type === "opportunity") opportunities.push(item);
@@ -408,23 +408,23 @@ export default function FreeAuditPage() {
 
   return (
     <div className="min-h-screen w-full  text-white overflow-x-hidden relative" >
-     <div className="z-[0] absolute top-0 left-0 w-screen h-full">
-       <LightRays
-    raysOrigin="bottom-center"
-    raysColor="#ab57ff"
-    raysSpeed={0.1}
-    lightSpread={0.5}
-    rayLength={3}
-    followMouse={false}
-    mouseInfluence={0.1}
-    noiseAmount={0}
-    distortion={0.3}
-    className="custom-rays"
-    pulsating={false}
-    fadeDistance={1}
-    saturation={1}
-/>
-     </div>
+      <div className="z-[0] absolute top-0 left-0 w-screen h-full">
+        <LightRays
+          raysOrigin="bottom-center"
+          raysColor="#ab57ff"
+          raysSpeed={0.1}
+          lightSpread={0.5}
+          rayLength={3}
+          followMouse={false}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0.3}
+          className="custom-rays"
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        />
+      </div>
       {/* Bg glows */}
       <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
         <div className="absolute top-[-20%] left-[10%] w-[600px] h-[600px] rounded-full opacity-20"
@@ -462,7 +462,7 @@ export default function FreeAuditPage() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
             className="w-full max-w-2xl flex flex-col gap-4 mt-4">
             <div className="flex items-center justify-center gap-3">
-              {(["mobile","desktop"] as const).map(s => (
+              {(["mobile", "desktop"] as const).map(s => (
                 <button key={s} onClick={() => setStrategy(s)}
                   className="flex items-center gap-2 rounded-full px-5 py-2 text-[13px] font-semibold transition-all duration-300"
                   style={{
@@ -500,7 +500,7 @@ export default function FreeAuditPage() {
 
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.5 }}
             className="flex flex-wrap items-center justify-center gap-4">
-            {["Performance","Security","SEO","Green Hosting","Tech Stack","HTML Validity","Social Cards"].map(t => (
+            {["Performance", "Security", "SEO", "Green Hosting", "Tech Stack", "HTML Validity", "Social Cards"].map(t => (
               <span key={t} className="text-[12px] text-white/35 flex items-center gap-1.5">
                 <CheckCircle2 size={11} className="text-white/20" /> {t}
               </span>
@@ -526,7 +526,7 @@ export default function FreeAuditPage() {
               </p>
             </div>
             <div className="flex flex-col gap-3 w-full max-w-sm">
-              {["PageSpeed & Core Web Vitals…","Mozilla Security Headers…","Green Web Foundation…","W3C HTML Validator…","Tech Stack Detection…","Open Graph & Social Cards…"].map((t, i) => (
+              {["PageSpeed & Core Web Vitals…", "Mozilla Security Headers…", "Green Web Foundation…", "W3C HTML Validator…", "Tech Stack Detection…", "Open Graph & Social Cards…"].map((t, i) => (
                 <motion.div key={t} initial={{ opacity: 0, x: -10 }} animate={{ opacity: elapsed > i * 3 ? 1 : 0.2, x: 0 }}
                   className="flex items-center gap-3 text-[13px] text-white/60 bg-white/[0.02] p-3 rounded-lg border border-white/5">
                   {elapsed > i * 3 ? <CheckCircle2 size={14} className="text-emerald-400" />

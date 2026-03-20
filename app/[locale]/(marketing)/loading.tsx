@@ -3,7 +3,7 @@ import React from 'react'
 const Loading = () => {
   return (
     <div className='h-screen w-screen flex items-center justify-center' style={{
-      background: '#08060f',
+      background: '#060609',
       fontFamily: "'DM Mono', monospace",
     }}>
       <style>{`
@@ -108,7 +108,7 @@ const Loading = () => {
             width: '6px', height: '6px',
             borderRadius: '50%',
             background: '#a78bfa',
-            boxShadow: '0 0 10px 3px rgba(167,139,250,0.7)',
+            boxShadow: '0 0 12px 4px rgba(167,139,250,0.8)',
           }} />
 
           {/* Orbiting dot 2 — mid, reverse */}
@@ -116,16 +116,17 @@ const Loading = () => {
             position: 'absolute',
             width: '4px', height: '4px',
             borderRadius: '50%',
-            background: 'rgba(99,102,241,0.9)',
-            boxShadow: '0 0 8px 2px rgba(99,102,241,0.5)',
+            background: 'rgba(129, 140, 248, 1)',
+            boxShadow: '0 0 10px 3px rgba(99,102,241,0.6)',
           }} />
 
           {/* Orbiting dot 3 — far, slow */}
           <div className="orbit-dot-3" style={{
             position: 'absolute',
-            width: '3px', height: '3px',
+            width: '3.5px', height: '3.5px',
             borderRadius: '50%',
-            background: 'rgba(167,139,250,0.4)',
+            background: 'rgba(167,139,250,0.6)',
+            boxShadow: '0 0 6px 1px rgba(167,139,250,0.3)',
           }} />
 
           {/* Core */}
@@ -138,17 +139,18 @@ const Loading = () => {
 
         {/* Text */}
         <div className="label" style={{ textAlign: 'center' }}>
-          <div style={{
+            <div style={{
             fontSize: '11px',
             letterSpacing: '0.25em',
-            color: 'rgba(167,139,250,0.45)',
+            color: 'rgba(167,139,250,0.8)',
             textTransform: 'uppercase',
             display: 'flex',
             alignItems: 'center',
             gap: '4px',
+            fontWeight: 400
           }}>
             loading
-            <span className="cursor" style={{ color: 'rgba(167,139,250,0.9)' }}>_</span>
+            <span className="cursor" style={{ color: 'rgba(167,139,250, 1)' }}>_</span>
           </div>
         </div>
 

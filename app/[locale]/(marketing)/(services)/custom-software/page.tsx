@@ -8,20 +8,100 @@ import OurProcessDynamic from '@/components/shared/our-process'
 import PricingShared from '@/components/shared/pricing';
 import SubservicesShared from '@/components/shared/subservices';
 import { ProcessType } from '@/types';
-import { Metadata } from 'next';
-
-
+import { Metadata } from "next";
+import {
+  baseUrl, buildHreflangAlternates, globalAreaServed,
+  twitterDefaults, robotsDefaults, globalKeywords,
+} from "@/lib/seo";
 import { getTranslations } from 'next-intl/server';
 
+const pageUrl = `${baseUrl}/services/custom-software`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      name: "Custom Software Development",
+      description:
+        "Bespoke web applications, internal tools, and business software built with React, Next.js, and modern tech. India-based development for global clients.",
+      url: pageUrl,
+      provider: { "@id": `${baseUrl}/#organization` },
+      areaServed: globalAreaServed,
+      serviceType: "Custom Software Development",
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+        { "@type": "ListItem", position: 2, name: "Services", item: `${baseUrl}/services` },
+        { "@type": "ListItem", position: 3, name: "Custom Software", item: pageUrl },
+      ],
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "Why outsource custom software development to India?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "India offers world-class software engineering talent at 40–70% lower cost than US, UK, or Australian agencies. TWJ Labs combines technical excellence with strong English communication, modern tooling (Next.js, TypeScript), and a proven delivery record for global clients.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What types of custom software does TWJ Labs build?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We build SaaS platforms, internal business tools, admin dashboards, CRM systems, API integrations, data pipelines, and full-stack web applications using React, Next.js, Node.js, and various database and cloud technologies.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do you handle custom software projects for US or Australian clients?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "We use async-first project management via Linear and Slack, schedule weekly video calls at client-friendly times, and provide full transparency through shared dashboards. Most US and AU clients find our workflow seamless despite the time zone difference.",
+          },
+        },
+      ],
+    },
+  ],
+};
+
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'ServicePages.customSoftware.Metadata' });
   return {
-    title: t('title'),
-    description: t('description'),
+    title: "Custom Software Development Agency | India-Based for US, UK & AU | TWJ Labs",
+    description:
+      "Bespoke web apps, SaaS, and internal tools built by TWJ Labs. India-based team serving the US, UK, Australia & Europe. 40–70% below Western agency costs. Free consultation.",
+
+    keywords: [
+      "custom software development India",
+      "outsource software development India",
+      "bespoke web application India",
+      "hire software developers India USA",
+      "custom web app agency UK",
+      "software development outsourcing Australia",
+      "Next.js custom software agency",
+      "offshore software development company",
+      "SaaS development agency India",
+      "internal tools development India",
+      ...globalKeywords.global,
+    ],
+
+    alternates: buildHreflangAlternates("/services/custom-software"),
+
+    openGraph: {
+      type: "website", locale: "en_US", url: pageUrl, siteName: "The Walking Jumbo",
+      title: "Custom Software Development | India Agency for Global Clients | TWJ Labs",
+      description: "Bespoke apps, SaaS & internal tools at offshore pricing. US, UK, AU & NZ clients served.",
+      images: [{ url: `${baseUrl}/opengraph-image.png`, width: 1200, height: 630 }],
+    },
+    twitter: { ...twitterDefaults, title: "Custom Software Agency | TWJ Labs India", description: "Bespoke SaaS & web apps at 40–70% below US rates.", images: [`${baseUrl}/opengraph-image.png`] },
+    robots: robotsDefaults,
   };
 }
-
 
 const CustomSoftwarePage = async ({ params }: { params: Promise<{ locale: string }> }) => {
   const { locale } = await params;
@@ -103,15 +183,15 @@ const CustomSoftwarePage = async ({ params }: { params: Promise<{ locale: string
 
   return (
     <div>
-        <HeroCustomSoft />
-        <OurProcessDynamic process={process} title={t('Process.title')} darkMode={true} image='/custom-step.svg'/>
-        <SubservicesShared subservices={subservices} title={t('Subservices.title')} darkMode={false}/>
-        <PricingShared forTitle={t('Pricing.forTitle')} title={t('Pricing.title')} darkMode={false}/>
-        <TheTWJDifference />
+      <HeroCustomSoft />
+      <OurProcessDynamic process={process} title={t('Process.title')} darkMode={true} image='/custom-step.svg' />
+      <SubservicesShared subservices={subservices} title={t('Subservices.title')} darkMode={false} />
+      <PricingShared forTitle={t('Pricing.forTitle')} title={t('Pricing.title')} darkMode={false} />
+      <TheTWJDifference />
 
-        <CaseStudiesSection darkMode={true}/>
-        <TestimonialsSection darkMode={true}/>
-        <FaqsSection darkMode={true}/>
+      <CaseStudiesSection darkMode={true} />
+      <TestimonialsSection darkMode={true} />
+      <FaqsSection darkMode={true} />
     </div>
   )
 }
