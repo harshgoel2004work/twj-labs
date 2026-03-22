@@ -55,9 +55,9 @@ const jsonLd = {
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   return {
-    title: "About TWJ Labs | India's Global Web Development Agency",
+    title: "About TWJ Labs | India's Global Web Agency",
     description:
-      "Meet the team behind TWJ Labs. A Ghaziabad-based web development agency delivering world-class Next.js, AI & SaaS products to clients in the US, UK, Australia, New Zealand & Europe.",
+      "Meet the team behind TWJ Labs. We deliver world-class Next.js, AI & SaaS products to clients in the US, UK, Australia, and Europe from our India-based studio.",
 
     keywords: [
       "about TWJ Labs",

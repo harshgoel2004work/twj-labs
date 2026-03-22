@@ -114,9 +114,9 @@ export default function CTAWithVerticalMarquee() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
                     {/* Left Content */}
                     <div className="space-y-8 max-w-xl">
-                        <h1 className="text-5xl md:text-6xl lg:text-6xl  leading-tight tracking-tight text-white animate-fade-in-up [animation-delay:200ms]" style={{ fontFamily: "'Syne', sans-serif" }}>
+                        <h2 className="text-5xl md:text-6xl lg:text-6xl  leading-tight tracking-tight text-white animate-fade-in-up [animation-delay:200ms]" style={{ fontFamily: "'Syne', sans-serif" }}>
                             Ready to transform your business?
-                        </h1>
+                        </h2>
                         <p className="text-lg text-muted-foreground leading-relaxed animate-fade-in-up [animation-delay:400ms]" style={{ fontFamily: "'Syne', sans-serif" }}>
                             Schedule a call with us to start your brand's trip to the stars... or maybe just to talk shop.
                         </p>

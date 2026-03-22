@@ -37,7 +37,7 @@ const slugify = (text: string) => {
 
 async function getPost(slug: string): Promise<SanityPostResponse | null> {
   const query = `
-    *[_type == "post" && slug.current == '${slug}'][0] {
+    *[_type == "post" && slug.current == $slug][0] {
       title,
       "subtitle": excerpt,
       publishedAt,
@@ -57,10 +57,10 @@ async function getPost(slug: string): Promise<SanityPostResponse | null> {
 
 
 export async function generateMetadata(
-  { params, searchParams }: { params: Promise<{ slug: string }>; searchParams: Record<string, string | string[]> },
+  { params, searchParams }: { params: Promise<{ slug: string; locale: string }>; searchParams: Record<string, string | string[]> },
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-  const slug = (await params).slug
+  const { slug } = await params;
  
   // fetch post information
   const post = await getPost(slug)
@@ -87,8 +87,8 @@ export async function generateMetadata(
   }
 }
 
-export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string }> }) {
-  const {slug} = await params;
+export default async function BlogArticlePage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params;
   const post = await getPost(slug);
 
   
@@ -147,5 +147,12 @@ export default async function BlogArticlePage({ params }: { params: Promise<{ sl
 export async function generateStaticParams() {
   const query = `*[_type == "post"]{ "slug": slug.current }`;
   const slugs = await client.fetch(query);
-  return slugs.map((s: any) => ({ slug: s.slug }));
+  const locales = ['en', 'hi']; 
+  
+  return locales.flatMap(locale => 
+    slugs.map((s: any) => ({ 
+      locale, 
+      slug: s.slug 
+    }))
+  );
 }

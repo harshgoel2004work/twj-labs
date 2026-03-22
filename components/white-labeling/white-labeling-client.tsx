@@ -74,7 +74,7 @@ export default function WhiteLabelingClient() {
               <div className="w-24 h-24 bg-[#1e1e20] rounded-[24px] shadow-2xl border border-white/5 flex items-center justify-center relative hover:scale-105 transition-transform cursor-pointer">
                 <Image
                 src="/symbol-logo-white.svg"
-                alt="logo"
+                alt="The Walking Jumbo Symbol White"
                 width={500}
                 height={500}
                 className="w-14"

@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { useTranslations } from "next-intl";
+import { LogoSymbolWhite } from "../shared/logo";
 
 const logos = [
   { name: "Partner 1", src: "/hero/logo-1.webp" },
@@ -277,7 +278,7 @@ export default function HeroSection() {
                   <motion.div style={{ y: y1 }} className="hidden md:block absolute -top-5 md:-top-10 -left-5 md:-left-50 rounded-lg opacity-20">
                     <Image
                       src={'/hero/hero-4-new.png'}
-                      alt=""
+                      alt="TWJ Labs Project Desktop View"
                       width={600}
                       height={400}
                       className="w-[40%] md:w-97"
@@ -287,7 +288,7 @@ export default function HeroSection() {
                   <motion.div style={{ y: y2 }} className="hidden md:block absolute -top-2 md:-top-4 -right-10 md:-right-50 rounded-lg opacity-20">
                     <Image
                       src={'/hero/hero-2-new.png'}
-                      alt=""
+                      alt="Analytics Dashboard Interface"
                       width={600}
                       height={400}
                       className="w-[40%] md:w-97"
@@ -297,7 +298,7 @@ export default function HeroSection() {
                   <motion.div style={{ y: y3 }} className="hidden md:block absolute -top-2 md:-top-96 left-10 md:left-50 rounded-lg opacity-40">
                     <Image
                       src={'/hero/hero-3-new.png'}
-                      alt=""
+                      alt="Mobile App UI Design"
                       width={600}
                       height={400}
                       className="w-[40%] md:w-97"
@@ -307,7 +308,7 @@ export default function HeroSection() {
                   <motion.div style={{ y: y4 }} className="hidden md:block absolute -top-2 md:-top-4 right-10 md:right-50 rounded-lg opacity-40">
                     <Image
                       src={'/hero/hero-1-new.png'}
-                      alt=""
+                      alt="Custom Software Development Project"
                       width={600}
                       height={400}
                       className="w-[40%] md:w-97"
@@ -318,13 +319,9 @@ export default function HeroSection() {
                   <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full p-4 md:p-10">
                     <div className="absolute top-0 left-0 w-full h-full bg-black blur-[15px] md:blur-[25px] z-[-1]"></div>
 
-                    <Image
-                      src={'/symbol-logo-white.svg'}
-                      alt=""
-                      width={200}
-                      height={200}
-                      className="w-12 md:w-24"
-                    />
+                    <div className="w-12 md:w-24">
+                      <LogoSymbolWhite />
+                    </div>
                   </div>
                 </div>
               </div>

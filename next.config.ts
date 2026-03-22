@@ -28,6 +28,20 @@ const nextConfig: NextConfig = {
         hostname: '*.fbcdn.net',
       },
     ],
+    minimumCacheTTL: 31536000, // 1 year cache for optimized images
+  },
+  async headers() {
+    return [
+      {
+        source: '/(.*).(jpg|jpeg|png|svg|webp|avif|ico|woff|woff2)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ];
   },
   async rewrites() {
     return [

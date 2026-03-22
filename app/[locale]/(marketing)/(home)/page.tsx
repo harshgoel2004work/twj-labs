@@ -101,11 +101,12 @@ const jsonLd = {
 export const metadata: Metadata = {
   // Title: leads with global appeal, includes India-pricing angle
   // (foreign clients searching "web agency India" have strong purchase intent)
-  title: "Global Web Development Agency | Next.js, AI & SaaS | TWJ Labs India",
+  // Title: Under 50 chars to fit in template (~70 total)
+  title: "Global Web Development Agency | Next.js & AI",
 
-  // Description: speaks to ALL markets — highlights offshore value prop
+  // Description: 120-160 characters
   description:
-    "TWJ Labs is a world-class web development agency based in India, serving clients in the US, UK, Australia, New Zealand & Europe. Next.js, AI integration, and SaaS at a fraction of Western agency rates.",
+    "TWJ Labs is a premier web development agency specializing in Next.js, AI, and Custom SaaS. We deliver high-performance digital solutions for global brands.",
 
   keywords: [
     // Global / offshore intent (highest value for international clients)

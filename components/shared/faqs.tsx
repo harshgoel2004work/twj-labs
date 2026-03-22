@@ -38,12 +38,12 @@ const FaqsSection = ({ darkMode = false }: { darkMode?: boolean }) => {
         <CustomBadge darkMode={darkMode} title={t('badge')} />
                       
         
-        <h1 className={cn("text-4xl mt-1 md:text-5xl font-bold tracking-tight leading-[1.1] max-w-3xl bg-gradient-to-l md:text-start text-center from-white to-gray-400 bg-clip-text text-transparent py-1",darkMode
+        <h2 className={cn("text-4xl mt-1 md:text-5xl font-bold tracking-tight leading-[1.1] max-w-3xl bg-gradient-to-l md:text-start text-center from-white to-gray-400 bg-clip-text text-transparent py-1",darkMode
               ? 'bg-gradient-to-l from-white to-gray-400'
               : 'bg-gradient-to-l from-[#000000] to-[#3e374b]'
           )}>
           {t('title')}
-                </h1>
+                </h2>
                 
                 <p className="opacity-60  max-w-xl mt-2 mb-5 md:text-start text-center">
           {t('sub')}

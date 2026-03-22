@@ -5,7 +5,8 @@ import { PageTransitionProvider } from "@/components/layout/page-transition";
 import {NextIntlClientProvider} from 'next-intl';
 import {getMessages} from 'next-intl/server';
 import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
+import { routing } from '@/i18n/routing';
+import Script from "next/script";
 
 
 const geistSans = Inter({
@@ -21,13 +22,13 @@ export const metadata: Metadata = {
 
   // 2. TITLE: Uses a template for inner pages, optimizing for brand + keywords
   title: {
-    default: "Best Web Development Agency in India | The Walking Jumbo",
-    template: "%s | The Walking Jumbo",
+    default: "Best Web Development Agency in India | TWJ Labs",
+    template: "%s | TWJ Labs",
   },
 
   // 3. DESCRIPTION: 155-160 characters, keyword-rich but readable
   description:
-    "TWJ Labs is a leading web development agency specializing in Next.js, AI Integration, and Custom SaaS. We transform businesses with scalable, high-performance digital solutions.",
+    "TWJ Labs is a premier web development agency specializing in Next.js, AI Integration, and Custom SaaS. We build high-performance digital solutions for global brands.",
 
   // 4. KEYWORDS: Mix of short-tail (broad) and long-tail (specific) keywords
   keywords: [
@@ -75,7 +76,6 @@ export const metadata: Metadata = {
 
   // 7. ALTERNATES: The Canonical Tag (The #1 fix for duplicate content issues)
   alternates: {
-    canonical: "/",
     languages: {
       "en-US": "/en-US",
     },
@@ -149,16 +149,18 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <head>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5202236007367090"
-     crossOrigin="anonymous"></script>
-      </head>
+      <head />
       <body
         className={`${geistSans.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5202236007367090"
+          strategy="lazyOnload"
+          crossOrigin="anonymous"
+        />
       </body>
     </html>
   );
